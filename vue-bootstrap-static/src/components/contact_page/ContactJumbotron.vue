@@ -1,7 +1,7 @@
 <template>
     <main class="jumbotron col-md-5">
-        <section class="col-md-10 p-5 m-auto">
-            <h1 class="display-4 text-white">Get Started Today!</h1>
+        <header class="col-md-10 p-5 m-auto">
+            <h1 class="text-white">Get Started Today!</h1>
             <p class="lead text-start text-white">We’re here to help your business thrive with the right technology solutions.
                                        If you’re ready to learn more about our services, or if you’d like to discuss your project and get a personalized quote, contact us today! 
                                        Our team is ready to support you every step of the way.</p>
@@ -22,7 +22,7 @@
             <p class="text-start text-white">Monday - Friday .......... 8:00am - 5:00pm EST</p>
 
             <p class="text-start text-white">Need help outside our business hours?<br><b><em>We offer emergency support 24/7!</em></b></p>
-        </section>
+        </header>
     </main>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
-    <main class="jumbotron col-md-12">
-        <section class="col-md-6">
+    <main class="jumbotron col-12">
+        <section class="col-md-5">
             <h1 class="display-4 text-white">Your Technology Needs, Our Expertise.</h1>
             <hr class="my-4 text-secondary">
             <p class="lead text-white">We specialize in providing top-tier services designed to meet all your business technology needs, including:</p>

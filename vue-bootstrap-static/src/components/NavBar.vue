@@ -18,17 +18,17 @@
       <section class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav col-md-5 d-flex justify-content-center me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <!-- Home Link -->
-          <li class="nav-item">
+          <li class="nav-item px-4">
             <router-link class="nav-link" to="/" aria-current="page" role="link">Home</router-link>
           </li>
 
           <!-- Services Dropdown -->
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown px-4">
             <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Services Dropdown">
               Services
             </button>
             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><router-link class="dropdown-item" to="/services#consulting" role="link">Consulting</router-link></li>
+              <li class="px-5"><router-link class="dropdown-item" to="/services#consulting" role="link">Consulting</router-link></li>
               <li><router-link class="dropdown-item" to="/services#support" role="link">Support</router-link></li>
               <li><router-link class="dropdown-item" to="/services#video-security" role="link">Video Security</router-link></li>
               <li><router-link class="dropdown-item" to="/services#voip" role="link">VoIP</router-link></li>
@@ -36,7 +36,7 @@
           </li>
 
           <!-- Support Dropdown -->
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown px-4">
             <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Support Dropdown">
               Support
             </button>
@@ -47,12 +47,12 @@
           </li>
 
           <!-- Pricing Link -->
-          <li class="nav-item">
+          <li class="nav-item px-4">
             <router-link class="nav-link" to="/pricing" role="link">Pricing</router-link>
           </li>
 
           <!-- Contact Link -->
-          <li class="nav-item">
+          <li class="nav-item px-4">
             <router-link class="nav-link" to="/contact" role="link">Contact</router-link>
           </li>
         </ul>
@@ -70,16 +70,19 @@
   </nav>
 </template>
   
-  <script>
-  export default {
-    name: 'NavBarComponent',
-  };
-  </script>
+<script>
+export default {
+  name: 'NavBarComponent',
+};
+</script>
 
 <style scoped>
 /* Desktop Screen Size Styling */
 @media only screen and (min-width: 1280px) {
 
+  nav {
+    height: 8vh;
+  }
 }
 
 /* Laptop Screen Size Styling */

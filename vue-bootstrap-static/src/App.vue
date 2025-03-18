@@ -33,7 +33,7 @@ export default {
 
 <style>
 #app {
-  width: 100vw;
+  width: 100%;
   text-align: center;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
@@ -42,5 +42,10 @@ export default {
   margin: 0;
   padding: 0;
   caret-color: transparent;
+}
+
+h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
 }
 </style>
