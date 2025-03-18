@@ -1,10 +1,15 @@
 <template>
-    <h1>{{ title }}</h1>
+    <PricingJumbotron />
 </template>
 
 <script>
+import PricingJumbotron from '@/components/pricing_page/PricingJumbotron.vue';
+
 export default {
     name: 'PricingView',
+    components: {
+        PricingJumbotron,
+    },
     data() {
         return {
             title: 'Pricing',

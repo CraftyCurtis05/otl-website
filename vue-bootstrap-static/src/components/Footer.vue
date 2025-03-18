@@ -1,81 +1,100 @@
+<!-- src/components/Footer.vue -->
 <template>
-    <footer class="bg-secondary text-white py-5">
-      <!-- Top part: Logo and Phrase on the left, Links on the right -->
-      <div class="container">
-        <div class="row mb-4">
-          <!-- Left side: Logo and Phrase -->
-          <div class="col-md-6 d-flex align-items-center">
-            <img src="@/assets/images/otl-logo.png" alt="Logo" width="120" class="me-3" />
-            <span>Our Company - Your Trusted Partner</span>
+  <footer class="bg-secondary text-white py-5" aria-labelledby="footer-heading">
+    <!-- Top part: Logo and Phrase on the left, Links on the right -->
+    <div class="container">
+      <div class="row mb-4">
+        <!-- Left side: Logo and Phrase -->
+        <section class="col-md-6 d-flex align-items-center">
+          <router-link class="navbar-brand" to="/" aria-label="Go to Home">
+            <img src="@/assets/images/otl-logo.png" alt="Five Nine Technologies logo" width="120" loading="lazy" />
+          </router-link>
+          <span>Your Technology Needs, Our Expertise.</span>
+        </section>
+
+        <!-- Right side: Links -->
+        <nav class="col-md-6 text-md-start">
+          <div class="row">
+            <!-- Explore Section -->
+            <section class="col-md-2">
+              <h5>Explore</h5>
+              <ul class="list-unstyled">
+                <li><router-link to="/" class="text-white" aria-label="Go to Home">Home</router-link></li>
+                <li><router-link to="/services" class="text-white" aria-label="View Services">Services</router-link></li>
+                <li><router-link to="/pricing" class="text-white" aria-label="View Pricing">Pricing</router-link></li>
+                <li><router-link to="/support" class="text-white" aria-label="Visit Support Page">Support</router-link></li>
+              </ul>
+            </section>
+
+            <!-- Services Section -->
+            <section class="col-md-2">
+              <h5>Services</h5>
+              <ul class="list-unstyled">
+                <li><router-link to="/services#consulting" class="text-white" aria-label="Consulting Services">Consulting</router-link></li>
+                <li><router-link to="/services#support" class="text-white" aria-label="Support Services">Support</router-link></li>
+                <li><router-link to="/services#video-security" class="text-white" aria-label="Video Security Services">Video Security</router-link></li>
+                <li><router-link to="/services#voip" class="text-white" aria-label="VoIP Services">VoIP</router-link></li>
+              </ul>
+            </section>
+
+            <!-- Support Section -->
+            <section class="col-md-2">
+              <h5>Support</h5>
+              <ul class="list-unstyled">
+                <li><router-link to="/support#emergency" class="text-white" aria-label="Emergency Support">Emergency</router-link></li>
+                <li><router-link to="/support#non-emergency" class="text-white" aria-label="Non-Emergency Support">Non-Emergency</router-link></li>
+              </ul>
+            </section>
+
+            <!-- Contact Us Section -->
+            <section class="col-md-5">
+              <h5>Contact Us</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <img src="@/assets/images/footer/phone_icon_white.png" width="20" alt="Phone icon" />
+                  <a href="tel:18448898885" class="text-white" aria-label="Call support at +1 (844) 889-8885">+1 (844) 889-8885</a>
+                </li>
+                <li>
+                  <img src="@/assets/images/footer/email_icon_white.png" width="25" alt="Email icon" />
+                  <a href="mailto:support@otlcommunications.com" class="text-white" aria-label="Email support at support@otlcommunications.com">support@otlcommunications.com</a>
+                </li>
+              </ul>
+              <h5>Hours of Operation</h5>
+              <p>M-F &nbsp;&nbsp; 8:00am - 5:00pm EST</p>
+            </section>
+
+            <!-- Scroll to Top Button Section -->
+            <section class="col-md-1 d-flex align-items-center">
+              <button class="btn btn-info" aria-label="Scroll to top of the page">^</button>
+            </section>
           </div>
-          
-          <!-- Right side: Links -->
-          <div class="col-md-6">
-            <div class="row">
-              <!-- Explore Section -->
-              <div class="col-md-3">
-                <h5>Explore</h5>
-                <ul class="list-unstyled">
-                    <li><router-link to="/" class="text-white">Home</router-link></li>
-                    <li><router-link to="/services" class="text-white">Services</router-link></li>
-                    <li><router-link to="/pricing" class="text-white">Pricing</router-link></li>
-                    <li><router-link to="/support" class="text-white">Support</router-link></li>
-                </ul>
-              </div>
-              <!-- Services Section -->
-              <div class="col-md-3">
-                <h5>Services</h5>
-                <ul class="list-unstyled">
-                    <li><router-link to="/services" class="text-white">Consulting</router-link></li>
-                    <li><router-link to="/services" class="text-white">Support</router-link></li>
-                    <li><router-link to="/services" class="text-white">Video Security</router-link></li>
-                    <li><router-link to="/services" class="text-white">VoIP</router-link></li>
-                </ul>
-              </div>
-              <!-- Support Section -->
-              <div class="col-md-3">
-                <h5>Support</h5>
-                <ul class="list-unstyled">
-                  <li><router-link to="/support" class="text-white">Emergency</router-link></li>
-                  <li><router-link to="/faq" class="text-white">Non-Emergency</router-link></li>
-                </ul>
-              </div>
-              <!-- Contact Us Section -->
-              <div class="col-md-3">
-                <h5>Contact Us</h5>
-                <ul class="list-unstyled">
-                  <li><a href="/contact" class="text-white">Get in Touch</a></li>
-                  <li><a href="/locations" class="text-white">Our Locations</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Line Divider -->
-        <hr class="text-white" />
-  
-        <!-- Bottom part: Copyright and Legal Links -->
-        <div class="row">
-          <div class="col-md-6">
-            <p class="mb-0">&copy; 2025 Our Company. All rights reserved.</p>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <ul class="list-unstyled d-inline-flex mb-0">
-              <li class="me-3"><a href="/privacy" class="text-white">Privacy Policy</a></li>
-              <li class="me-3"><a href="/sitemap" class="text-white">Sitemap</a></li>
-              <li><a href="/terms" class="text-white">Terms & Conditions</a></li>
-            </ul>
-          </div>
-        </div>
+        </nav>
       </div>
-    </footer>
-  </template>
+
+      <!-- Line Divider -->
+      <hr class="text-dark" />
+
+      <!-- Bottom part: Copyright and Legal Links -->
+      <div class="row">
+        <section class="col-md-6 text-md-start">
+          <p class="text-dark mb-0">&copy; 2025 Five Nine Technologies, LLC. All rights reserved.</p>
+        </section>
+        <nav class="col-md-6 text-md-end">
+          <ul class="list-unstyled d-inline-flex mb-0">
+            <li class="me-3"><router-link to="/privacy" class="text-dark" aria-label="View Privacy Policy">Privacy Policy</router-link></li>
+            <li class="me-3"><router-link to="/sitemap" class="text-dark" aria-label="View Sitemap">Sitemap</router-link></li>
+            <li><router-link to="/terms" class="text-dark" aria-label="View Terms & Conditions">Terms & Conditions</router-link></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</template>
 
 <script>
 export default {
     name: 'FooterComponent'
-}
+};
 </script>
 
 <style scoped>

@@ -41,5 +41,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
+  caret-color: transparent;
 }
 </style>

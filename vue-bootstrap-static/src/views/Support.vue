@@ -1,10 +1,15 @@
 <template>
-    <h1>{{ title }}</h1>
+    <SupportJumbotron />
 </template>
 
 <script>
+import SupportJumbotron from '@/components/support_page/SupportJumbotron.vue';
+
 export default {
     name: 'SupportView',
+    components: {
+        SupportJumbotron,
+    },
     data() {
         return {
             title: 'Support',

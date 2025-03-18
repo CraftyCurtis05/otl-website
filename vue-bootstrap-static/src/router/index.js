@@ -4,6 +4,9 @@ import ServicesView from '../views/Services.vue';
 import SupportView from '../views/Support.vue';
 import PricingView from '../views/Pricing.vue';
 import ContactView from '../views/Contact.vue';
+import PrivacyPolicyView from '../views/PrivacyPolicy.vue';
+import SitemapView from '../views/Sitemap.vue';
+import TermsConditionsView from '../views/TermsConditions.vue';
 
 // Helper function to generate meta tags
 const generateMetaTags = (title, description) => ([
@@ -58,6 +61,21 @@ const routes = [
       metaTags: generateMetaTags('Contact Us Page', 'This is the contact us page of OTL On The Line Communications website.'),
     }
   },
+  {
+    path: '/privacy',
+    name: 'PrivacyPolicyView',
+    component: PrivacyPolicyView,
+  },
+  {
+    path: '/sitemap',
+    name: 'SitemapView',
+    component: SitemapView,
+  },
+  {
+    path: '/terms',
+    name: 'TermsConditionsView',
+    component: TermsConditionsView,
+  }
 ];
 
 const router = createRouter({

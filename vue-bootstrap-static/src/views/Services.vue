@@ -1,10 +1,15 @@
 <template>
-    <h1>{{ title }}</h1>
+    <ServicesJumbotron />
 </template>
 
 <script>
+import ServicesJumbotron from '@/components/services_page/ServicesJumbotron.vue';
+
 export default {
     name: 'ServicesView',
+    components: {
+        ServicesJumbotron,
+    },
     data() {
         return {
             title: 'Services',

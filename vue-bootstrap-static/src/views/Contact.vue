@@ -1,11 +1,21 @@
 <!-- Contact View -->
 <template>
-    <h1>{{ title }}</h1>
+  <main class="d-flex flex-row">
+    <ContactJumbotron />
+    <ContactForm />
+  </main>
 </template>
 
 <script>
+import ContactJumbotron from '@/components/contact_page/ContactJumbotron.vue';
+import ContactForm from '@/components/contact_page/ContactForm.vue';
+
 export default {
     name: 'ContactView',
+    components: {
+        ContactJumbotron,
+        ContactForm,
+    },
     data() {
         return {
             title: 'Contact Us',

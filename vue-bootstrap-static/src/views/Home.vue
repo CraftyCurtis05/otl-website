@@ -1,10 +1,15 @@
 <template>
-    <h1>{{ title }}</h1>
+    <HomeJumbotron />
 </template>
 
 <script>
+import HomeJumbotron from '@/components/home_page/HomeJumbotron.vue';
+
 export default {
     name: 'HomeView',
+    components: {
+        HomeJumbotron,
+    },
     data() {
         return {
             title: 'Home',
