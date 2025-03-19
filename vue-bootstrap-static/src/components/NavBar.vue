@@ -81,7 +81,7 @@ export default {
 @media only screen and (min-width: 1280px) {
 
   nav {
-    height: 8vh;
+    height: 65px;
   }
 }
 

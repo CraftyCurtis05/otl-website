@@ -1,14 +1,30 @@
 <template>
-    <HomeJumbotron />
+    <main>
+        <HomeJumbotron />
+        <section class="card-container d-flex flex-row w-100">
+            <ConsultingCard/>
+            <SupportCard/>
+            <VideoSecurityCard/>
+            <VoIPCard/>
+        </section>
+    </main>
 </template>
 
 <script>
+import ConsultingCard from '@/components/home_page/home_cards/ConsultingCard.vue';
+import SupportCard from '@/components/home_page/home_cards/SupportCard.vue';
+import VideoSecurityCard from '@/components/home_page/home_cards/VideoSecurityCard.vue';
+import VoIPCard from '@/components/home_page/home_cards/VoIPCard.vue';
 import HomeJumbotron from '@/components/home_page/HomeJumbotron.vue';
 
 export default {
     name: 'HomeView',
     components: {
         HomeJumbotron,
+        ConsultingCard,
+        SupportCard,
+        VideoSecurityCard,
+        VoIPCard
     },
     data() {
         return {

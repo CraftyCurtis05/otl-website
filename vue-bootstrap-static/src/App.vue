@@ -44,6 +44,11 @@ export default {
   caret-color: transparent;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 h1 {
   font-family: 'Georgia', serif;
   font-size: 2rem;

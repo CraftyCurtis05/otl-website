@@ -51,11 +51,11 @@
               <h5>Contact Us</h5>
               <ul class="list-unstyled">
                 <li>
-                  <img src="@/assets/images/footer/phone_icon_white.png" width="20" alt="Phone icon" />
+                  <img src="@/assets/images/icons/phone_icon_white.png" width="20" alt="Phone icon" />
                   <a href="tel:18448898885" class="text-white" aria-label="Call support at +1 (844) 889-8885">+1 (844) 889-8885</a>
                 </li>
                 <li>
-                  <img src="@/assets/images/footer/email_icon_white.png" width="25" alt="Email icon" />
+                  <img src="@/assets/images/icons/email_icon_white.png" width="25" alt="Email icon" />
                   <a href="mailto:support@otlcommunications.com" class="text-white" aria-label="Email support at support@otlcommunications.com">support@otlcommunications.com</a>
                 </li>
               </ul>
