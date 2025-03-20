@@ -1,7 +1,7 @@
 <template>
     <main class="jumbotron">
         <section class="text-container col-md-6">
-            <h1 class="text-white">Your Technology Needs,<br>Our Expertise.</h1>
+            <h1 class="h2 text-white"><b>Your Technology Needs,<br>Our Expertise.</b></h1>
             <hr class="text-secondary mx-auto">
             <article class="text mx-auto">
                 <p class="text-white">We specialize in providing top-tier services designed to meet all your business technology needs, including:</p>
@@ -29,7 +29,7 @@ export default {
 <style scoped>
 .jumbotron {
     width: 100%;
-    height: 25rem;
+    height: 22rem;
     background-image: url('@/assets/images/home_page/home_jumbotron.png');
     background-size: 100% 100%;
     background-position: center;
@@ -39,17 +39,19 @@ export default {
 .text-container {
     line-height: 1.3;
     padding-top: 3%;
+    margin-left: 5%;
 }
 
 hr {
-    width: 35%;
+    width: 25%;
     border: 3px solid;
+    padding: 0;
+    margin-block: .6rem;
 }
 
 .text {
-    width: 85%;
-    font-family: 'Helvetica', sans-serif;
-    font-size: 1.5rem;
+    width: 70%;
+    font-size: 1.3rem;
 }
 
 .text-info {
@@ -62,7 +64,7 @@ hr {
     justify-content: center;
     align-items: center;
     width: 30%;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: black;
     background: linear-gradient(to right, #80E0FC, #187EC1);
     margin: 0 auto;
@@ -79,7 +81,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15%;
+    width: 12%;
     height: auto;
 }
 
@@ -124,12 +126,12 @@ hr {
 .btn:hover .btn-text {
     color: white;
     font-weight: 500;
-    transform: scale(1.1); /* Scale only the text inside the button */
+    transform: scale(1.05); /* Scale only the text inside the button */
 }
 
 .btn:hover .btn-img {
-    width: 20%;
-    transform: translateX(8px);
+    width: 15%;
+    transform: translateX(5px);
 }
 
 .btn:hover .black-img {

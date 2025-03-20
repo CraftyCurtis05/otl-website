@@ -36,7 +36,7 @@ export default {
   width: 100%;
   text-align: center;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
@@ -51,6 +51,5 @@ main {
 
 h1 {
   font-family: 'Georgia', serif;
-  font-size: 2rem;
 }
 </style>

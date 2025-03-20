@@ -96,7 +96,6 @@ main {
 }
 
 label {
-  font-family: 'Helvetica', sans-serif;
   font-size: 1.2rem;
 }
 

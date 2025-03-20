@@ -1,7 +1,13 @@
 <template>
     <main>
-        <HomeJumbotron />
-        <section class="card-container d-flex flex-row w-100">
+        <section class="jumbotron">
+            <HomeJumbotron />
+        </section>
+        <section class="banner">
+            <span>WHAT WE OFFER</span>
+            <hr class="text-secondary p-0 m-0 mx-auto">
+        </section>
+        <section class="card-container d-flex flex-row flex-wrap w-100 pt-2">
             <ConsultingCard/>
             <SupportCard/>
             <VideoSecurityCard/>
@@ -62,6 +68,16 @@ export default {
 /* Desktop Screen Size Styling */
 @media only screen and (min-width: 1280px) {
 
+    .banner {
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding-top: .25rem;
+    }
+
+    hr {
+        width: 11%;
+        border: 2px solid;
+    }
 }
 
 /* Laptop Screen Size Styling */
