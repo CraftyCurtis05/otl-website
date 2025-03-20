@@ -7,7 +7,7 @@
                 <span class="text-blue">consulting, support, installation, maintenance, and VoIP solutions</span>
                 —designed to optimize your business with tailored, innovative technology.
             </p>
-            <router-link class="btn btn-md" to="/services" role="button">
+            <router-link class="btn btn-md" to="/contact" role="button">
                 <span class="btn-text">CONTACT US&nbsp;</span>
                 <div class="btn-img">
                     <img class="black-img" :src="blackImg"/>

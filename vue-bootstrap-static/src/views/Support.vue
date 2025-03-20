@@ -1,14 +1,27 @@
 <template>
-    <SupportJumbotron />
+    <main>
+        <section class="jumbotron">
+            <SupportJumbotron />
+        </section>
+        <section class="banner">
+            <span>SUPPORT OPTIONS</span>
+            <hr class="text-secondary p-0 m-0 mx-auto">
+        </section>
+        <section class="list-container">
+            <SupportList />
+        </section>
+    </main>
 </template>
 
 <script>
 import SupportJumbotron from '@/components/support_page/SupportJumbotron.vue';
+import SupportList from '@/components/support_page/SupportList.vue';
 
 export default {
     name: 'SupportView',
     components: {
         SupportJumbotron,
+        SupportList
     },
     data() {
         return {
@@ -46,6 +59,16 @@ export default {
 /* Desktop Screen Size Styling */
 @media only screen and (min-width: 1280px) {
 
+    .banner {
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding-top: .25rem;
+    }
+
+    hr {
+        width: 11%;
+        border: 2px solid;
+    }
 }
 
 /* Laptop Screen Size Styling */

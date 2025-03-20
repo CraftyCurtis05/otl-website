@@ -7,7 +7,7 @@
                 <span class="text-blue">business hours, after-hours emergency support, or ongoing IT management,</span>
                 we have flexible options to meet your needs.
             </p>
-            <router-link class="btn btn-md" to="/services" role="button">
+            <router-link class="btn btn-md" to="/contact" role="button">
                 <span class="btn-text">GET SUPPORT&nbsp;</span>
                 <div class="btn-img">
                     <img class="black-img" :src="blackImg"/>

@@ -1,5 +1,5 @@
 <template>
-    <section class=".jumbotron">
+    <section class="jumbotron">
         <ServicesJumbotron />
     </section>
     <section class="banner">

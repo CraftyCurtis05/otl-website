@@ -4,7 +4,7 @@
             <h1 class="title">Power Your Success with<br>Flexible Pricing.</h1>
             <hr class="line">
             <p class="text">Flexible, transparent pricing to give you the best value on all our tech services.</p>
-            <router-link class="btn btn-md" to="/services" role="button">
+            <router-link class="btn btn-md" to="/contact" role="button">
                 <span class="btn-text">GET A QUOTE&nbsp;</span>
                 <div class="btn-img">
                     <img class="black-img" :src="blackImg"/>
