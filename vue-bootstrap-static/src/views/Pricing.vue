@@ -1,14 +1,36 @@
 <template>
-    <PricingJumbotron />
+    <main>
+        <section class="jumbotron">
+            <PricingJumbotron />
+        </section>
+        <section class="banner">
+            <span>OUR PRICES</span>
+            <hr class="text-secondary p-0 m-0 mx-auto">
+        </section>
+        <section class="card-container d-flex flex-row flex-wrap justify-content-center w-100 pt-1">
+            <ConsultingCard/>
+            <SupportCard/>
+            <VideoSecurityCard/>
+            <VoIPCard/>
+        </section>
+    </main>
 </template>
 
 <script>
 import PricingJumbotron from '@/components/pricing_page/PricingJumbotron.vue';
+import ConsultingCard from '@/components/pricing_page/pricing_cards/ConsultingCard.vue';
+import SupportCard from '@/components/pricing_page/pricing_cards/SupportCard.vue';
+import VideoSecurityCard from '@/components/pricing_page/pricing_cards/VideoSecurityCard.vue';
+import VoIPCard from '@/components/pricing_page/pricing_cards/VoIPCard.vue';
 
 export default {
     name: 'PricingView',
     components: {
         PricingJumbotron,
+        ConsultingCard,
+        SupportCard,
+        VideoSecurityCard,
+        VoIPCard
     },
     data() {
         return {
@@ -46,6 +68,16 @@ export default {
 /* Desktop Screen Size Styling */
 @media only screen and (min-width: 1280px) {
 
+    .banner {
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding-top: .25rem;
+    }
+
+    hr {
+        width: 11%;
+        border: 2px solid;
+    }
 }
 
 /* Laptop Screen Size Styling */
