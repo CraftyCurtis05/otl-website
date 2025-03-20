@@ -1,14 +1,34 @@
 <template>
-    <ServicesJumbotron />
+    <section class=".jumbotron">
+        <ServicesJumbotron />
+    </section>
+    <section class="banner">
+        <span>OUR SERVICES</span>
+        <hr class="text-secondary p-0 m-0 mx-auto">
+    </section>
+    <section class="card-container d-flex flex-row flex-wrap w-100 pt-2">
+        <ConsultingCard/>
+        <SupportCard/>
+        <VideoSecurityCard/>
+        <VoIPCard/>
+    </section>
 </template>
 
 <script>
 import ServicesJumbotron from '@/components/services_page/ServicesJumbotron.vue';
+import ConsultingCard from '@/components/services_page/services_cards/ConsultingCard.vue';
+import SupportCard from '@/components/services_page/services_cards/SupportCard.vue';
+import VideoSecurityCard from '@/components/services_page/services_cards/VideoSecurityCard.vue';
+import VoIPCard from '@/components/services_page/services_cards/VoIPCard.vue';
 
 export default {
     name: 'ServicesView',
     components: {
         ServicesJumbotron,
+        ConsultingCard,
+        SupportCard,
+        VideoSecurityCard,
+        VoIPCard
     },
     data() {
         return {
@@ -46,6 +66,16 @@ export default {
 /* Desktop Screen Size Styling */
 @media only screen and (min-width: 1280px) {
 
+    .banner {
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding-top: .25rem;
+    }
+
+    hr {
+        width: 11%;
+        border: 2px solid;
+    }
 }
 
 /* Laptop Screen Size Styling */
