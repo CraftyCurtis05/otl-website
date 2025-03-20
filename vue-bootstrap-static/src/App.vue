@@ -49,7 +49,13 @@ main {
   flex-direction: column;
 }
 
-h1 {
+h1,
+h2 {
   font-family: 'Georgia', serif;
+  color: black;
+}
+
+h2 {
+  font-size: 1.5rem;
 }
 </style>

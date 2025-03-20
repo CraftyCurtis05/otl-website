@@ -6,7 +6,7 @@
         <span>OUR SERVICES</span>
         <hr class="text-secondary p-0 m-0 mx-auto">
     </section>
-    <section class="card-container d-flex flex-row flex-wrap w-100 pt-2">
+    <section class="card-container d-flex flex-row flex-wrap justify-content-center w-100 pt-1">
         <ConsultingCard/>
         <SupportCard/>
         <VideoSecurityCard/>

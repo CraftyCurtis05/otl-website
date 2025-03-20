@@ -1,13 +1,13 @@
 <template>
     <main class="jumbotron">
-        <section class="col-md-6 mx-auto text-center">
-            <h1 class="display-4 text-white">Expert Support When You Need It Most.</h1>
+        <article class="container col-md-6">
+            <h1 class="title">Expert Support When You<br>Need It Most.</h1>
             <hr class="my-4 text-secondary">
             <p class="lead text-white">We offer expert support for Cisco, Ubiquiti, and Fortinet systems. Whether you need assistance during business hours, after-hours emergency support, or ongoing IT management, we have flexible options to meet your needs.</p>
             <p class="lead">
                 <router-link class="btn btn-primary btn-lg" to="/contact" role="button">Get Support</router-link>
             </p>
-        </section>
+        </article>
     </main>
 </template>
 

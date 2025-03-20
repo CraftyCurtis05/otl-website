@@ -1,41 +1,101 @@
 <template>
-    <div class="card w-25">
-        <div class="card-body">
-            <router-link to="/services#voip" class="link">
-                <h2 class="card-title h5"><b>VoIP Solutions</b></h2>
-            </router-link>
-            <p class="card-text text"><em>Click to learn more</em></p>
-        </div>
-        <router-link to="/services#voip" class="link">
-            <img src="@/assets/images/services_page/cards/voip_card.png" class="card-img-top mx-auto" alt="VoIP Solutions Image"/>
-        </router-link>    
-        <p>Enhance communication with reliable, cost-effective VoIP solutions.</p>
-    </div>
+    <router-link to="/services#voip" class="link">
+        <article class="card">
+            <section class="card-body">
+                <h1 class="card-title">VoIP Solutions</h1>
+                <span class="card-text">Click to learn more</span>
+            </section>
+            <section class="image-container">
+                <img :src="imageSrc" class="card-img-top" alt="VoIP Solutions Image"/>
+            </section>
+            <section class="card-text"> 
+                <p>Enhance communication with reliable, cost-effective VoIP solutions.</p>
+            </section>
+        </article>
+    </router-link>
 </template>
 
 <script>
+import image from '@/assets/images/services_page/cards/voip_card.png';
+
 export default {
     name: 'ConsultingCard',
+    data() {
+        return {
+            imageSrc: image
+        };
+    }
 };
 </script>
 
 <style scoped>
-.card {
-    line-height: 1.4;
-    padding-bottom: 1rem;
-}
-
 .link {
     text-decoration: none;
-    color: black;
 }
 
-.card-img-top {
-    width: 50%;
-    font-size: 1.5rem;
+.card {
+    width: 390px;
+    border: 0;
+    line-height: 1.2;
+    transition: all 0.4s ease;
+}
+
+.card h1 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
 }
 
 .card-body{
     padding: .5rem;
+}
+
+.card-click {
+    font-size: .95rem;
+    font-style: italic;
+    color: #002373;
+}
+
+.image-container {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #545454;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: .5rem;
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-text {
+    width: 60%;
+    margin: auto;
+}
+
+.card:hover {
+    background-color: #8b8b8b;
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.card:hover .link {
+    font-weight: 800;
+}
+
+.card:hover .card-click {
+    text-decoration: underline;
+}
+
+.card:hover .image-container {
+    border-color: #00FFFF;
+    box-shadow: 0 0 15px 5px rgba(128, 224, 252, 0.9);
+    transform: translateY(-1px);
 }
 </style>
