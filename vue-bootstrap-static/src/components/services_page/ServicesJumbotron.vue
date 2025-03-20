@@ -78,7 +78,7 @@ hr {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 20%;
+    width: 17%;
     font-size: 1rem;
     color: black;
     background: linear-gradient(to right, #80E0FC, #187EC1);
