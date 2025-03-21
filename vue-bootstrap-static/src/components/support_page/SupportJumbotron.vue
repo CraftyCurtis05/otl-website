@@ -36,7 +36,7 @@ export default {
 <style scoped>
 .jumbotron {
     height: 18rem;
-    background-image: url('@/assets/images/services_page/services_jumbotron.png');
+    background-image: url('@/assets/images/support_page/support_jumbotron.png');
     background-size: cover;
     background-position: center center;
     color: white;
