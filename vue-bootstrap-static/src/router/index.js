@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/Home.vue';
-import ServicesView from '../views/Services.vue';
-import SupportView from '../views/Support.vue';
-import PricingView from '../views/Pricing.vue';
-import ContactView from '../views/Contact.vue';
-import PrivacyPolicyView from '../views/PrivacyPolicy.vue';
-import SitemapView from '../views/Sitemap.vue';
-import TermsConditionsView from '../views/TermsConditions.vue';
+import HomeView from '@/views/HomeView.vue';
+import ServicesView from '@/views/ServicesView.vue';
+import SupportView from '@/views/SupportView.vue';
+import PricingView from '@/views/PricingView.vue';
+import ContactView from '@/views/ContactView.vue';
+import PrivacyPolicyView from '@/views/PrivacyPolicyView.vue';
+import SitemapView from '@/views/SitemapView.vue';
+import TermsConditionsView from '@/views/TermsConditionsView.vue';
 
 // Helper function to generate meta tags
 const generateMetaTags = (title, description) => ([

@@ -1,13 +1,13 @@
 <!-- src/components/Footer.vue -->
 <template>
-  <footer class="bg-secondary text-white py-5" aria-labelledby="footer-heading">
+  <footer class="text-white py-5" aria-labelledby="footer-heading">
     <!-- Top part: Logo and Phrase on the left, Links on the right -->
     <div class="container">
       <div class="row mb-4">
         <!-- Left side: Logo and Phrase -->
         <section class="col-md-6 d-flex align-items-center">
           <router-link class="navbar-brand" to="/" aria-label="Go to Home">
-            <img src="@/assets/images/otl-logo.png" alt="Five Nine Technologies logo" width="120" loading="lazy" />
+            <img src="@/assets/images/logo.png" alt="Five Nine Technologies logo" width="120" loading="lazy" />
           </router-link>
           <span>Your Technology Needs, Our Expertise.</span>
         </section>
@@ -101,6 +101,9 @@ export default {
 /* Desktop Screen Size Styling */
 @media only screen and (min-width: 1280px) {
 
+  footer {
+    background: #545454;
+  }
 }
 
 /* Laptop Screen Size Styling */

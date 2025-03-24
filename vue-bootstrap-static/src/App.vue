@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import NavBarComponent from './components/NavBar.vue'
-import FooterComponent from './components/Footer.vue'
+import NavBarComponent from '@/components/NavBar.vue'
+import FooterComponent from '@/components/Footer.vue'
 
 export default {
   name: 'App',
