@@ -1,3 +1,4 @@
+<!-- src/views/ServicesView.vue -->
 <template>
     <section class="jumbotron">
         <ServicesJumbotron />
@@ -7,28 +8,19 @@
         <hr class="text-secondary p-0 m-0 mx-auto">
     </section>
     <section class="card-container d-flex flex-row flex-wrap justify-content-center w-100 pt-1">
-        <ConsultingCard/>
-        <SupportCard/>
-        <VideoSecurityCard/>
-        <VoIPCard/>
+        <CardDeck/>
     </section>
 </template>
 
 <script>
 import ServicesJumbotron from '@/components/services/ServicesJumbotron.vue';
-import ConsultingCard from '@/components/services/cards/ConsultingCard.vue';
-import SupportCard from '@/components/services/cards/SupportCard.vue';
-import VideoSecurityCard from '@/components/services/cards/VideoSecurityCard.vue';
-import VoIPCard from '@/components/services/cards/VoIPCard.vue';
+import CardDeck from '@/components/services/CardDeck.vue';
 
 export default {
     name: 'ServicesView',
     components: {
         ServicesJumbotron,
-        ConsultingCard,
-        SupportCard,
-        VideoSecurityCard,
-        VoIPCard
+        CardDeck
     },
     data() {
         return {

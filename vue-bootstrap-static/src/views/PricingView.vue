@@ -1,36 +1,28 @@
+<!-- src/views/PricingView.vue -->
 <template>
     <main>
         <section class="jumbotron">
             <PricingJumbotron />
         </section>
         <section class="banner">
-            <span>OUR PRICES</span>
-            <hr class="text-secondary p-0 m-0 mx-auto">
+            <h1>OUR PRICES</h1>
+            <hr>
         </section>
-        <section class="card-container d-flex flex-row flex-wrap justify-content-center w-100 pt-1">
-            <ConsultingCard/>
-            <SupportCard/>
-            <VideoSecurityCard/>
-            <VoIPCard/>
+        <section class="card-container">
+            <CardDeck />
         </section>
     </main>
 </template>
 
 <script>
 import PricingJumbotron from '@/components/pricing/PricingJumbotron.vue';
-import ConsultingCard from '@/components/pricing/cards/ConsultingCard.vue';
-import SupportCard from '@/components/pricing/cards/SupportCard.vue';
-import VideoSecurityCard from '@/components/pricing/cards/VideoSecurityCard.vue';
-import VoIPCard from '@/components/pricing/cards/VoIPCard.vue';
+import CardDeck from '@/components/pricing/CardDeck.vue';
 
 export default {
     name: 'PricingView',
     components: {
         PricingJumbotron,
-        ConsultingCard,
-        SupportCard,
-        VideoSecurityCard,
-        VoIPCard
+        CardDeck
     },
     data() {
         return {
@@ -58,9 +50,9 @@ export default {
                 { hid: 'og:type', property: 'og:type', content: 'website' },
                 { hid: 'og:site_name', property: 'og:site_name', content: siteName },
                 { hid: 'og:locale', property: 'og:locale', content: locale },
-            ],
+            ]
         };
-    },
+    }
 };
 </script>
 
@@ -69,14 +61,32 @@ export default {
 @media only screen and (min-width: 1280px) {
 
     .banner {
-        font-size: 1.3rem;
-        font-weight: 600;
-        padding-top: .25rem;
+        padding: .5vw;
     }
 
-    hr {
-        width: 11%;
-        border: 2px solid;
+    .banner h1 {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .banner h1,
+    .banner hr {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .banner hr {
+        width: 10%;
+        color: #545454;
+        border: 2px solid #545454;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
     }
 }
 

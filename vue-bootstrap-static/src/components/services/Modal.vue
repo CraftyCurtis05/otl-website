@@ -1,24 +1,11 @@
 <!-- src/components/services/Modal.vue -->
 <template>
-  <article
-    v-if="isModalVisible"
-    class="modal fade show"
-    :id="modalId"
-    tabindex="-1"
-    :aria-labelledby="modalLabelId"
-    aria-hidden="false"
-    style="display: block;"
-  >
+  <article v-if="isModalVisible" class="modal fade show" :id="modalId" tabindex="-1" aria-labelledby="modalLabelId" aria-hidden="false" style="display: block;">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
       <div class="modal-content">
         <section class="modal-header">
           <h1 class="modal-title" :id="modalLabelId">{{ modalTitle }}</h1>
-          <button
-            type="button"
-            class="btn-close btn-close-white"
-            @click="closeModal"
-            aria-label="Close"
-          ></button>
+          <button type="button" class="btn-close btn-close-white" @click="closeModal" aria-label="Close"></button>
         </section>
         <section class="modal-body">
           <aside class="modal-top">
@@ -39,8 +26,11 @@
               <hr>
               <p>{{ modalOffer }}:</p>
               <ul v-if="modalOfferings && modalOfferings.length">
-                <li v-for="(offering, index) in modalOfferings" :key="index">{{ offering }}</li>
+                <li v-for="(offering, index) in modalOfferings" :key="index">
+                  <b>{{ offering.label }}</b>{{ offering.text }}
+                </li>
               </ul>
+              <p v-else>No offerings available.</p>
             </div>
           </aside>
           <aside>
@@ -48,12 +38,8 @@
           </aside>
         </section>
         <section class="modal-footer">
-          <router-link v-if="modalContactLink" :to="modalContactLink" class="btn btn-link">
-            Contact Us
-          </router-link>
-          <router-link v-if="modalPricingLink" :to="modalPricingLink" class="btn btn-link">
-            View Pricing
-          </router-link>
+          <router-link v-if="modalContactLink" :to="modalContactLink" class="btn btn-link">Contact Us</router-link>
+          <router-link v-if="modalPricingLink" :to="modalPricingLink" class="btn btn-link">View Pricing</router-link>
           <button type="button" class="btn btn-secondary" @click="closeModal">Close</button>
         </section>
       </div>
@@ -65,19 +51,55 @@
 export default {
   name: "ServicesModal",
   props: {
-    modalId: { type: String, required: true },
-    modalLabelId: { type: String, required: true },
-    modalTitle: { type: String, required: true },
-    modalService: String,
-    modalNeeds: String,
-    modalImageSrc: String,
-    modalOffer: String,
-    modalOfferings: Array,
-    modalContact: String,
-    modalContactLink: String,
-    modalPricingLink: String,
-    isModalVisible: Boolean,
-  },
+    modalId: { 
+      type: String, 
+      required: true 
+    },
+    modalLabelId: { 
+      type: String, 
+      required: true 
+    },
+    modalTitle: { 
+      type: String, 
+      required: true 
+    },
+    modalService: { 
+      type: String, 
+      required: true 
+    },
+    modalNeeds: { 
+      type: String, 
+      required: true 
+    },
+    modalImageSrc: { 
+      type: String, 
+      required: true 
+    },
+    modalOffer: { 
+      type: String, 
+      required: true 
+    },
+    modalOfferings: {
+      type: Array,
+      required: true,
+      default: () => []
+    },
+    modalContact: { 
+      type: String, 
+      required: true 
+    },
+    modalContactLink: { 
+      type: String, 
+      required: true 
+    },
+    modalPricingLink: { 
+      type: String, 
+      required: true 
+    },
+    isModalVisible: {
+      type: Boolean
+    }
+  },  
   methods: {
     closeModal() {
       this.$emit("update:isModalVisible", false); // Emit event to parent to close the modal

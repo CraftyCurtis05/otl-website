@@ -1,12 +1,11 @@
 <!-- src/components/services/Card.vue -->
 <template>
   <div>
-
     <!-- Card -->
     <article class="card" @click="openModal">
       <section class="header">
         <h1 class="title">{{ title }}</h1>
-        <p class="link">{{ linkText }}</p>
+        <p class="link">Click to learn more</p>
       </section>
       <section class="img-container">
         <img :src="cardImageSrc" class="card-img" alt="Card Image" />
@@ -15,8 +14,8 @@
         <p>{{ description }}</p>
       </section>
     </article>
-  
-    <!-- Trigger Modal -->
+
+    <!-- Modal Trigger -->
     <ServicesModal
       :modalId="modalId"
       :modalLabelId="modalLabelId"
@@ -44,30 +43,71 @@ export default {
     ServicesModal,
   },
   props: {
-    title: String,
-    description: String,
-    cardImageSrc: String,
-    linkText: { type: String, default: 'Click to learn more' },
-    modalId: String,
-    modalLabelId: String,
-    modalTitle: String,
-    modalImageSrc: String,
-    modalService: String,
-    modalNeeds: String,
-    modalOffer: String,
-    modalOfferings: Array,
-    modalContact: String,
-    modalContactLink: String,
-    modalPricingLink: String,
+    title: { 
+      type: String, 
+      required: true 
+    },
+    description: { 
+      type: String, 
+      required: true 
+    },
+    cardImageSrc: { 
+      type: String, 
+      required: true 
+    },
+    modalId: { 
+      type: String, 
+      required: true 
+    },
+    modalLabelId: { 
+      type: String, 
+      required: true 
+    },
+    modalTitle: { 
+      type: String, 
+      required: true 
+    },
+    modalImageSrc: { 
+      type: String, 
+      required: true 
+    },
+    modalService: { 
+      type: String, 
+      required: true 
+    },
+    modalNeeds: { 
+      type: String, 
+      required: true 
+    },
+    modalOffer: { 
+      type: String, 
+      required: true 
+    },
+    modalOfferings: {
+      type: Array,
+      default: () => []
+    },
+    modalContact: { 
+      type: String, 
+      required: true 
+    },
+    modalContactLink: { 
+      type: String, 
+      required: true 
+    },
+    modalPricingLink: { 
+      type: String, 
+      required: true 
+    }
   },
   data() {
     return {
-      isModalVisible: false,
+      isModalVisible: false
     };
   },
   methods: {
     openModal() {
-      this.isModalVisible = true;
+      this.isModalVisible = true
     }
   }
 };
