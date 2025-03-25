@@ -4,20 +4,19 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
       <div class="modal-content">
         <section class="modal-header">
-          <h1 class="modal-title" :id="modalLabelId">{{ modalTitle }}</h1>
+          <h1 class="modal-title" :id="modalLabelId">{{ title }}</h1>
           <button type="button" class="btn-close btn-close-white" @click="closeModal" aria-label="Close"></button>
         </section>
         <section class="modal-body">
           <aside class="modal-top">
             <div class="col-8">
-              <h2>Why do I need {{ modalService }} services?</h2>
+              <h2>Why do I need {{ title }}?</h2>
               <hr>
               <p>{{ modalNeeds }}</p>
             </div>
             <div class="col-4">
-              <div v-if="modalImageSrc">
-                <img :src="modalImageSrc" alt="Modal Image" class="img-fluid" />
-              </div>
+              <img v-if="imageSrc" :src="require(`@/assets/images/services/modals/${imageSrc}`)" :alt="`${title} Modal Image`" class="img-fluid" />
+              <p v-else>Image not available</p>
             </div>
           </aside>
           <aside class="modal-bottom">
@@ -27,7 +26,7 @@
               <p>{{ modalOffer }}:</p>
               <ul v-if="modalOfferings && modalOfferings.length">
                 <li v-for="(offering, index) in modalOfferings" :key="index">
-                  <b>{{ offering.label }}</b>{{ offering.text }}
+                  <b>{{ offering.label }}: </b>{{ offering.text }}
                 </li>
               </ul>
               <p v-else>No offerings available.</p>
@@ -38,8 +37,8 @@
           </aside>
         </section>
         <section class="modal-footer">
-          <router-link v-if="modalContactLink" :to="modalContactLink" class="btn btn-link">Contact Us</router-link>
-          <router-link v-if="modalPricingLink" :to="modalPricingLink" class="btn btn-link">View Pricing</router-link>
+          <router-link to="/contact" class="btn">Contact Us</router-link>
+          <router-link v-if="modalPricingLink" :to="modalPricingLink" class="btn">View Pricing</router-link>
           <button type="button" class="btn btn-secondary" @click="closeModal">Close</button>
         </section>
       </div>
@@ -51,6 +50,14 @@
 export default {
   name: "ServicesModal",
   props: {
+    title: {
+      type: String,
+      required: true
+    },
+    imageSrc: {
+      type: String,
+      required: true
+    },
     modalId: { 
       type: String, 
       required: true 
@@ -59,19 +66,7 @@ export default {
       type: String, 
       required: true 
     },
-    modalTitle: { 
-      type: String, 
-      required: true 
-    },
-    modalService: { 
-      type: String, 
-      required: true 
-    },
     modalNeeds: { 
-      type: String, 
-      required: true 
-    },
-    modalImageSrc: { 
       type: String, 
       required: true 
     },
@@ -85,10 +80,6 @@ export default {
       default: () => []
     },
     modalContact: { 
-      type: String, 
-      required: true 
-    },
-    modalContactLink: { 
       type: String, 
       required: true 
     },
@@ -134,40 +125,8 @@ export default {
   display: flex;
   flex-direction: row;
 }
+.btn-secondary {
 
-.btn-link {
-  width: 30%;
-  text-decoration: none;
-  font-size: .9rem;
-  font-weight: 500;
-  color: black;
-  background: linear-gradient(to right, #80E0FC, #187EC1);
-  margin: 0 auto;
-  transition: all 0.3s ease;
-}
-
-.btn-link:hover {
-  color: white;
-  background-image: radial-gradient(circle, #80E0FC, #187EC1, #074c7b);
-  background-size: 300% 300%;
-  border-color: #00FFFF;
-  box-shadow: 0 0 15px 5px rgba(128, 224, 252, 0.4);
-  transform: scale(1.1);
-  transform: translateY(-1px);
-  animation: gradient-animation 4s ease infinite;
-}
-
-/* Animation for button */
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 </style>
   

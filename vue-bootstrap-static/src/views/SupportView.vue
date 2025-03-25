@@ -4,24 +4,24 @@
             <SupportJumbotron />
         </section>
         <section class="banner">
-            <span>SUPPORT OPTIONS</span>
-            <hr class="text-secondary p-0 m-0 mx-auto">
+            <h1>SUPPORT OPTIONS</h1>
+            <hr>
         </section>
-        <section class="list-container">
-            <SupportList />
+        <section class="card-container">
+            <SupportCard />
         </section>
     </main>
 </template>
 
 <script>
 import SupportJumbotron from '@/components/support/SupportJumbotron.vue';
-import SupportList from '@/components/support/SupportList.vue';
+import SupportCard from '@/components/support/SupportCard.vue';
 
 export default {
     name: 'SupportView',
     components: {
         SupportJumbotron,
-        SupportList
+        SupportCard
     },
     data() {
         return {
@@ -31,7 +31,7 @@ export default {
             imageUrl: 'https://otlcommunications.com/images/logo.png',
             url: 'https://otlcommunications.com/support',
             siteName: 'OTL On The Line Communications',
-            locale: 'en_US',
+            locale: 'en_US'
         };
     },
     metaInfo() {
@@ -48,41 +48,23 @@ export default {
                 { hid: 'og:url', property: 'og:url', content: url },
                 { hid: 'og:type', property: 'og:type', content: 'website' },
                 { hid: 'og:site_name', property: 'og:site_name', content: siteName },
-                { hid: 'og:locale', property: 'og:locale', content: locale },
-            ],
+                { hid: 'og:locale', property: 'og:locale', content: locale }
+            ]
         };
-    },
+    }
 };
 </script>
 
 <style scoped>
 /* Desktop Screen Size Styling */
-@media only screen and (min-width: 1280px) {
-
-    .banner {
-        font-size: 1.3rem;
-        font-weight: 600;
-        padding-top: .25rem;
-    }
-
-    hr {
-        width: 11%;
-        border: 2px solid;
-    }
-}
+@media only screen and (min-width: 1280px) {}
 
 /* Laptop Screen Size Styling */
-@media only screen and (min-width: 769px) and (max-width: 1279px) {
-    
-}
+@media only screen and (min-width: 769px) and (max-width: 1279px) {}
 
 /* Tablet Screen Size Styling */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-    
-}
+@media only screen and (min-width: 481px) and (max-width: 768px) { }
 
 /* Mobile Screen Size Styling */
-@media only screen and (max-width: 480px) {
-    
-}
+@media only screen and (max-width: 480px) {}
 </style>

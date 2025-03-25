@@ -29,75 +29,96 @@ export default {
                     title: "Consulting Services",
                     pricing: [
                         {
-                            title: 'Hourly Consulting',
-                            prices: [
-                                { label: 'Business Hours', amount: '$150.00 per hour' },
-                                { label: 'After Hours', amount: '$250.00 per hour' }
+                            title: 'Consulting Services',
+                            amounts: [
+                                { amount: 'Pricing is available by proposal only' }
                             ]
                         }
                     ],
-                    contactText: "Contact us to schedule an appointment, and our team will discuss your specific project and provide a tailored quote.",
-                    contactLink: '/contact',
-                    learnMoreLink: '/services#consulting',
-                    buttonText: 'GET STARTED TODAY!'
+                    contactText: "Contact us to discuss your specific project and our team will provide a tailored quote.",
+                    learnMoreLink: '/services#consulting'
                 },
                 {
                     title: "Support Services",
                     pricing: [
                         {
                             title: 'Hourly Support (Business Hours)',
-                            prices: [
-                                { label: 'Standard', amount: '$150.00 per hour' }
-                            ]
+                            amounts: [
+                                { amount: '$150.00 per hour (8 AM - 5 PM EST, Monday to Friday)' }
+                            ]    
                         },
                         {
                             title: 'Emergency Support',
-                            prices: [
-                                { label: 'Emergency', amount: '$250.00 per hour' }
+                            amounts: [
+                                { amount: '$250.00 per hour (after business hours or for urgent issues)' }
+                            ]    
+                        },
+                        {
+                            title: 'Discounted Hourly Blocks (Business Hours)',
+                            amounts: [
+                                { label: '10 hours: ', amount: '$1,400.00' },
+                                { label: '25 hours: ', amount: '$3,000.00' },
+                                { label: '50 hours: ', amount: '$5,000.00' }
+                            ]
+                        },
+                        {
+                            title: 'Discounted Hourly Blocks (*Anytime Hours)',
+                            amounts: [
+                                { label: '10 hours: ', amount: '$2,000.00' },
+                                { label: '25 hours: ', amount: '$4,250.00' },
+                                { label: '50 hours: ', amount: '$6,500.00' },
+                                { amount: '*Anytime hours are available 24/7, ideal for after-hours work or tasks within maintenance windows. These hours must be purchased before the project, with additional blocks available as needed.' }
                             ]
                         }
                     ],
-                    contactText: "*Anytime hours are available 24/7, ideal for after-hours work or tasks within maintenance windows.",
-                    contactLink: '/contact',
-                    learnMoreLink: '/services#support',
-                    buttonText: 'GET STARTED TODAY!'
+                    contactText: "Contact us to discuss your support needs and find the best solution for your business.",
+                    learnMoreLink: '/services#support'
                 },
                 {
                     title: "Video Security Services",
                     pricing: [
                         {
                             title: 'Cameras, Door Access, and NVR Solutions',
-                            prices: [
-                                { label: 'Pricing', amount: 'Available by proposal only.' }
+                            amounts: [
+                                { amount: 'Pricing is available by proposal only' }
                             ]
                         }
                     ],
-                    contactText: "Contact us for a customized quote to fit your security needs.",
-                    contactLink: '/contact',
-                    learnMoreLink: '/services#video-security',
-                    buttonText: 'GET STARTED TODAY!'
+                    contactText: "Contact us for a customized quote to fit your business security needs.",
+                    learnMoreLink: '/services#video-security'
                 },
                 {
                     title: "VoIP Services",
                     pricing: [
                         {
                             title: 'Hosted VoIP Extension',
-                            prices: [
-                                { label: 'Per Extension', amount: '$20.00 per month' }
+                            amounts: [
+                                { label: 'Per Extension: ', amount: '*$20.00 per month (includes all standard features)' },
+                                { amount: '*Discounts available for multiple extensions and multi-location setups.' }
                             ]
                         },
                         {
                             title: 'Advanced Features',
-                            prices: [
-                                { label: 'Call Recording', amount: '$1.00 per GB per month' },
-                                { label: 'Mobile App', amount: '$5.00 per month, per extension' }
+                            amounts: [
+                                { label: 'Call Center: ', amount: '*Quoted' },
+                                { label: 'Call Recording: ', amount: '$1.00 per GB, per month' },
+                                { label: 'Conferencing: ', amount: '*Quoted (more than 3-way call)' },
+                                { label: 'Dictation: ', amount: '$1.00 per month, per extension' },
+                                { label: 'Hotelling: ', amount: '*Quoted' },
+                                { label: 'Mobile App: ', amount: '$5.00 per month, per extension' },
+                                { label: 'SMS: ', amount: '$5.00 per month, per extension' },
+                                { label: 'Salesforce Connector: ', amount: '*Quoted' },
+                                { label: 'Switchboard: ', amount: '$1.00 per month, per extension' },
+                                { label: 'Teams Integration: ', amount: '$10.00 per month, per extension' },
+                                { label: 'WhatsApp Connector: ', amount: '$5.00 per month, per extension' },
+                                { label: 'Remote Extension: ', amount: '$5.00 per month, per extension' },
+                                { amount: '*Quoted for custom pricing based on your needs.' },
+                                { label: 'All pricing is per month, excluding taxes and fees.'}
                             ]
                         }
                     ],
-                    contactText: "*Quoted for custom pricing based on your needs.",
-                    contactLink: '/contact',
-                    learnMoreLink: '/services#voip',
-                    buttonText: 'GET STARTED TODAY!'
+                    contactText: "Contact us to learn more about our VoIP solutions and the best plan for your business.",
+                    learnMoreLink: '/services#voip'
                 }
             ]
         };
@@ -106,39 +127,15 @@ export default {
 </script>
 
 <style scoped>
-.card-deck {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    justify-content: space-around;
-    gap: 1vw;
-}
-
 /* Desktop: 4 cards per row */
-@media (min-width: 1280px) {
-    .card {
-        flex: 1 1 calc(25% - 2rem); /* Each card takes up 25% of the row width */
-    }
-}
+@media (min-width: 1280px) {}
 
 /* Laptop: 2 cards per row */
-@media (max-width: 1279px) and (min-width: 769px) {
-    .card {
-        flex: 1 1 calc(45% - 2rem); /* Each card takes up 45% of the row width */
-    }
-}
+@media (max-width: 1279px) and (min-width: 769px) {}
 
 /* Tablet: 1 card per row */
-@media (max-width: 768px) {
-    .card {
-        flex: 1 1 calc(90% - 2rem); /* Each card takes up 90% of the row width */
-    }
-}
+@media (max-width: 768px) {}
 
 /* Mobile: 1 card per row */
-@media (max-width: 480px) {
-    .card {
-        flex: 1 1 calc(100% - 2rem); /* Each card takes up 100% of the row width */
-    }
-}
+@media (max-width: 480px) {}
 </style>

@@ -1,14 +1,13 @@
 <!-- src/components/services/Card.vue -->
 <template>
-  <div>
-    <!-- Card -->
     <article class="card" @click="openModal">
       <section class="header">
         <h1 class="title">{{ title }}</h1>
         <p class="link">Click to learn more</p>
       </section>
       <section class="img-container">
-        <img :src="cardImageSrc" class="card-img" alt="Card Image" />
+        <img v-if="imageSrc" :src="require(`@/assets/images/services/cards/${imageSrc}`)" class="card-img" :alt="`${title} Card Image`" />
+        <p v-else>Image not available</p>
       </section>
       <section class="text">
         <p>{{ description }}</p>
@@ -17,21 +16,18 @@
 
     <!-- Modal Trigger -->
     <ServicesModal
+      :title="title"
+      :imageSrc="imageSrc"
       :modalId="modalId"
       :modalLabelId="modalLabelId"
-      :modalTitle="modalTitle"
-      :modalService="modalService"
       :modalNeeds="modalNeeds"
-      :modalImageSrc="modalImageSrc"
       :modalOffer="modalOffer"
       :modalOfferings="modalOfferings"
       :modalContact="modalContact"
-      :modalContactLink="modalContactLink"
       :modalPricingLink="modalPricingLink"
       :isModalVisible="isModalVisible"
       @update:isModalVisible="isModalVisible = $event"
     />
-  </div>
 </template>
   
 <script>
@@ -51,7 +47,7 @@ export default {
       type: String, 
       required: true 
     },
-    cardImageSrc: { 
+    imageSrc: { 
       type: String, 
       required: true 
     },
@@ -60,18 +56,6 @@ export default {
       required: true 
     },
     modalLabelId: { 
-      type: String, 
-      required: true 
-    },
-    modalTitle: { 
-      type: String, 
-      required: true 
-    },
-    modalImageSrc: { 
-      type: String, 
-      required: true 
-    },
-    modalService: { 
       type: String, 
       required: true 
     },
@@ -88,10 +72,6 @@ export default {
       default: () => []
     },
     modalContact: { 
-      type: String, 
-      required: true 
-    },
-    modalContactLink: { 
       type: String, 
       required: true 
     },

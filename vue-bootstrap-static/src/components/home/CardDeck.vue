@@ -74,33 +74,15 @@ export default {
 </script>
 
 <style scoped>
-.card-deck {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem; /* Space between cards */
-  justify-content: space-between;
-}
+/* Desktop: 4 cards per row */
+@media (min-width: 1280px) {}
 
-.card {
-  flex: 1 1 calc(25% - 1rem); /* 4 cards across on large screens */
-  margin-bottom: 1rem;
-}
+/* Laptop: 2 cards per row */
+@media (max-width: 1279px) and (min-width: 769px) {}
 
-@media (max-width: 1200px) {
-  .card {
-    flex: 1 1 calc(33.33% - 1rem); /* 3 cards across on medium screens */
-  }
-}
+/* Tablet: 1 card per row */
+@media (max-width: 768px) {}
 
-@media (max-width: 768px) {
-  .card {
-    flex: 1 1 calc(50% - 1rem); /* 2 cards across on smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    flex: 1 1 100%; /* 1 card across on extra small screens */
-  }
-}
+/* Mobile: 1 card per row */
+@media (max-width: 480px) {}
 </style>

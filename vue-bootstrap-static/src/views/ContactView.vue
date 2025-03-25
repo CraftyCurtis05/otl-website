@@ -1,4 +1,4 @@
-<!-- Contact View -->
+<!-- src/views/ContactView.vue -->
 <template>
   <main class="d-flex flex-row">
     <ContactJumbotron />

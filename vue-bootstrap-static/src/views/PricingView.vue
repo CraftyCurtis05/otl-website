@@ -32,7 +32,7 @@ export default {
             imageUrl: 'https://otlcommunications.com/images/logo.png',
             url: 'https://otlcommunications.com/pricing',
             siteName: 'OTL On The Line Communications',
-            locale: 'en_US',
+            locale: 'en_US'
         };
     },
     metaInfo() {
@@ -49,7 +49,7 @@ export default {
                 { hid: 'og:url', property: 'og:url', content: url },
                 { hid: 'og:type', property: 'og:type', content: 'website' },
                 { hid: 'og:site_name', property: 'og:site_name', content: siteName },
-                { hid: 'og:locale', property: 'og:locale', content: locale },
+                { hid: 'og:locale', property: 'og:locale', content: locale }
             ]
         };
     }
@@ -58,50 +58,14 @@ export default {
 
 <style scoped>
 /* Desktop Screen Size Styling */
-@media only screen and (min-width: 1280px) {
-
-    .banner {
-        padding: .5vw;
-    }
-
-    .banner h1 {
-        font-size: 1.25rem;
-        font-weight: bold;
-    }
-
-    .banner h1,
-    .banner hr {
-        padding: 0;
-        margin: 0 auto;
-    }
-
-    .banner hr {
-        width: 10%;
-        color: #545454;
-        border: 2px solid #545454;
-    }
-
-    .card-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-    }
-}
+@media only screen and (min-width: 1280px) {}
 
 /* Laptop Screen Size Styling */
-@media only screen and (min-width: 769px) and (max-width: 1279px) {
-    
-}
+@media only screen and (min-width: 769px) and (max-width: 1279px) {}
 
 /* Tablet Screen Size Styling */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-    
-}
+@media only screen and (min-width: 481px) and (max-width: 768px) {}
 
 /* Mobile Screen Size Styling */
-@media only screen and (max-width: 480px) {
-    
-}
+@media only screen and (max-width: 480px) {}
 </style>
