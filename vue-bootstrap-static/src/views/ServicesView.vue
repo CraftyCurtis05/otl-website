@@ -1,7 +1,7 @@
 <!-- src/views/ServicesView.vue -->
 <template>
     <section class="jumbotron">
-        <ServicesJumbotron />
+        <JumbotronDeck />
     </section>
     <section class="banner">
         <h1>OUR SERVICES</h1>
@@ -13,13 +13,13 @@
 </template>
 
 <script>
-import ServicesJumbotron from '@/components/services/ServicesJumbotron.vue';
+import JumbotronDeck from '@/components/JumbotronDeck.vue';
 import CardDeck from '@/components/services/CardDeck.vue';
 
 export default {
     name: 'ServicesView',
     components: {
-        ServicesJumbotron,
+        JumbotronDeck,
         CardDeck
     },
     data() {

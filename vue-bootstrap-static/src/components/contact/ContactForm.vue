@@ -40,7 +40,7 @@
         <textarea id="message" name="message" v-model="formData.message" required></textarea>
       </section>
 
-      <button type="submit">Send</button>
+      <button type="submit" class="btn">Send</button>
       <div v-if="successMessage" class="success-message">{{ successMessage }}</div>
       <div v-if="errorMessage" class="error-message">{{ errorMessage }}</div>
     </form>
@@ -125,5 +125,9 @@ textarea {
 .error-message {
   color: red;
   margin-top: 10px;
+}
+
+button {
+  margin: auto;
 }
 </style>

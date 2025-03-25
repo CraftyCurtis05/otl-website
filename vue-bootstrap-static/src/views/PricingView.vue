@@ -2,7 +2,7 @@
 <template>
     <main>
         <section class="jumbotron">
-            <PricingJumbotron />
+            <JumbotronDeck />
         </section>
         <section class="banner">
             <h1>OUR PRICES</h1>
@@ -15,13 +15,13 @@
 </template>
 
 <script>
-import PricingJumbotron from '@/components/pricing/PricingJumbotron.vue';
+import JumbotronDeck from '@/components/JumbotronDeck.vue';
 import CardDeck from '@/components/pricing/CardDeck.vue';
 
 export default {
     name: 'PricingView',
     components: {
-        PricingJumbotron,
+        JumbotronDeck,
         CardDeck
     },
     data() {

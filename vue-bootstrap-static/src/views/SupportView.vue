@@ -1,7 +1,7 @@
 <template>
     <main>
         <section class="jumbotron">
-            <SupportJumbotron />
+            <JumbotronDeck />
         </section>
         <section class="banner">
             <h1>SUPPORT OPTIONS</h1>
@@ -14,13 +14,13 @@
 </template>
 
 <script>
-import SupportJumbotron from '@/components/support/SupportJumbotron.vue';
+import JumbotronDeck from '@/components/JumbotronDeck.vue';
 import SupportCard from '@/components/support/SupportCard.vue';
 
 export default {
     name: 'SupportView',
     components: {
-        SupportJumbotron,
+        JumbotronDeck,
         SupportCard
     },
     data() {
