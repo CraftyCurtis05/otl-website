@@ -15,29 +15,34 @@
       return {
         jumbotrons: [
           {
-            image: require('@/assets/images/pricing/pricing_jumbotron.png'),
-            title: 'Power Your Success with Flexible Pricing.',
-            text: 'Flexible, transparent pricing to give you the best value on all our tech services.',
-            buttonText: 'GET A QUOTE',
-            buttonLink: '/contact',
-            routeName: 'PricingView'
-          },
-          {
-            image: require('@/assets/images/services/services_jumbotron.png'),
+            image: 'services/services_jumbotron.png',
             title: 'Maximize Your Business Tech Potential.',
-            text: 'We provide a range of services—including <span class="text-blue">consulting, support, installation, maintenance, and VoIP solutions</span>—designed to optimize your business with tailored, innovative technology.',
+            text1: 'We provide a range of services—including ',
+            blueText: 'consulting, support, installation, maintenance, and VoIP solutions',
+            text2: '—designed to optimize your business with tailored, innovative technology.',
             buttonText: 'CONTACT US',
             buttonLink: '/contact',
             routeName: 'ServicesView'
           },
           {
-            image: require('@/assets/images/support/support_jumbotron.png'),
-
+            image: 'support/support_jumbotron.png',
             title: 'Expert Support When You Need It Most.',
-            text: 'We offer expert support for Cisco, Ubiquiti, and Fortinet systems. Whether you need assistance during <span class="text-blue">business hours, after-hours emergency support, or ongoing IT management,</span> we have flexible options to meet your needs.',
+            text1: 'We offer expert support for Cisco, Ubiquiti, and Fortinet systems. Whether you need assistance during ',
+            blueText: ' business hours, after-hours emergency support, or ongoing IT management, ',
+            text2: 'we have flexible options.',
             buttonText: 'GET SUPPORT',
             buttonLink: '/contact',
             routeName: 'SupportView'
+          },
+          {
+            image: 'pricing/pricing_jumbotron.png',
+            title: 'Power Your Success with Flexible Pricing.',
+            text1: 'Transparent, flexible pricing for all our tech services—whether its ',
+            blueText: 'one-time support, ongoing maintenance, or custom solutions',
+            text2: ', we offer clear, affordable options tailored to your needs.',
+            buttonText: 'GET A QUOTE',
+            buttonLink: '/contact',
+            routeName: 'PricingView'
           }
         ]
       };

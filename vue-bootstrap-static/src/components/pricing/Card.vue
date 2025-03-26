@@ -1,6 +1,6 @@
 <!-- src/components/pricing/Card.vue -->
 <template>
-    <article class="card">
+    <article class="card" :id="`#${id}`">
         <h1 class="title">{{ title }}</h1>
         <section v-if="pricing" class="dropdown-container">
             <details v-for="(item, index) in pricing" :key="index" class="dropdown">
@@ -30,6 +30,10 @@
 export default {
     name: 'ServiceCard',
     props: {
+        id: {
+            type: String,
+            required: true
+        },
         title: {
             type: String,
             required: true

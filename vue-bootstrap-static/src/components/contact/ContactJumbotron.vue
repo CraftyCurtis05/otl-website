@@ -1,12 +1,12 @@
 <!-- src/components/contact/ContactJumbotron.vue -->
 <template>
     <main class="jumbotron col-md-5">
-        <header class="col-md-10 p-5 m-auto">
-            <h1 class="text-white">Get Started Today!</h1>
-            <p class="lead text-start text-white">We’re here to help your business thrive with the right technology solutions.
-                                                    If you’re ready to learn more about our services, or if you’d like to discuss your project and get a personalized quote, contact us today! 
-                                                    Our team is ready to support you every step of the way.</p>
-            <p class="text-start text-info">Fill out the form or reach us via email or phone. Please allow 24 hours during business hours for a reply.</p>
+        <header class="col-md-10">
+            <h1>Get Started Today!</h1>
+            <p>We’re here to help your business thrive with the right technology solutions. If you’re ready to learn more about our services, 
+                or if you’d like to discuss your project and get a personalized quote, contact us today! Our team is ready to support you every step of the way.
+            </p>
+            <span class="text-info">Fill out the form or reach us via email or phone. Please allow 24 hours during business hours for a reply.</span>
         
             <ul class="list-unstyled text-start">
                 <li>
@@ -36,8 +36,20 @@ export default {
 <style scoped>
 .jumbotron {
     height: 100vh;
+    color: white;
+    text-align: start;
     background-image: url('@/assets/images/contact/contact_jumbotron.png');
     background-size: cover; /* Optional: Adjusts the image to cover the entire element */
     background-position: center center; /* Optional: Centers the image */
+    padding: 4vw 2vw;
+    margin: auto;
+}
+
+.jumbotron h1 {
+    text-align: center;
+}
+
+.jumbotron span {
+    
 }
 </style>

@@ -8,7 +8,7 @@
     <router-view />
   </main>
 
-  <footer id="bottom">
+  <footer>
     <FooterComponent />
   </footer>
 
@@ -28,10 +28,11 @@ export default {
     NavBarComponent,
     FooterComponent
   }
-}
+};
 </script>
 
 <style>
+/* Global Styling */
 #app {
   width: 100%;
   text-align: center;
@@ -59,6 +60,26 @@ h2 {
   font-size: 1.5rem;
 }
 
+.text-blue {
+  color: #80E0FC;
+}
+
+/* Jumbotron Styling */
+.jumbotron {
+  color: white;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  line-height: 1.3;
+}
+
+.jumbotron hr {
+  width: 20%;
+  color: #545454;
+  border: .3rem solid #545454;
+}
+
+/* Banner Styling */
 .banner {
   padding: .5vw;
 }
@@ -89,8 +110,13 @@ h2 {
   width: 100%;
 }
 
+/* Button Styling */
 .btn {
-  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
   font-size: .9rem;
   color: black;
   background: linear-gradient(to right, #80E0FC, #187EC1);
@@ -98,14 +124,39 @@ h2 {
 }
 
 .btn,
-.btn-text {
+.btn-text,
+.btn-img {
   transition: all 0.3s ease;
+}
+
+.btn-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12%;
+  height: auto;
+}
+
+.btn-img img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.btn-img .black-img {
+  opacity: 1;
+}
+
+.btn-img .white-img {
+  opacity: 0;
 }
 
 .btn:hover {
   color: black;
   background-image: radial-gradient(circle, #80E0FC, #187EC1, #074c7b);
   background-size: 300% 300%;
+  border-color: #00FFFF;
   transform: scale(1.1);
   transform: translateY(-1px);
   box-shadow: 0 0 15px 5px rgba(128, 224, 252, 0.4);
@@ -121,8 +172,23 @@ h2 {
 .btn:hover .btn-text {
   color: white;
   font-weight: 500;
+  transform: scale(1.05);
 }
 
+.btn:hover .btn-img {
+  width: 15%;
+  transform: translateX(5px);
+}
+
+.btn:hover .black-img {
+  opacity: 0;
+}
+
+.btn:hover .white-img {
+  opacity: 1;
+}
+
+/* Link Styling */
 .link {
   text-decoration: none;
   color: #0984D0;
@@ -136,39 +202,40 @@ h2 {
   text-decoration: underline;
 }
 
+/* Card Styling */
 .card-deck {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    justify-content: space-around;
-    gap: 1vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  justify-content: space-around;
+  gap: 1vw;
 }
 
 /* Desktop: 4 cards per row */
 @media (min-width: 1280px) {
-    .card {
-        flex: 1 1 calc(25% - 2rem); /* Each card takes up 25% of the row width */
-    }
+  .card {
+    flex: 1 1 calc(25% - 2rem); /* Each card takes up 25% of the row width */
+  }
 }
 
 /* Laptop: 2 cards per row */
 @media (max-width: 1279px) and (min-width: 769px) {
-    .card {
-        flex: 1 1 calc(45% - 2rem); /* Each card takes up 45% of the row width */
-    }
+  .card {
+    flex: 1 1 calc(45% - 2rem); /* Each card takes up 45% of the row width */
+   }
 }
 
 /* Tablet: 1 card per row */
 @media (max-width: 768px) {
-    .card {
-        flex: 1 1 calc(90% - 2rem); /* Each card takes up 90% of the row width */
-    }
+  .card {
+    flex: 1 1 calc(90% - 2rem); /* Each card takes up 90% of the row width */
+  }
 }
 
 /* Mobile: 1 card per row */
 @media (max-width: 480px) {
-    .card {
-        flex: 1 1 calc(100% - 2rem); /* Each card takes up 100% of the row width */
-    }
+  .card {
+    flex: 1 1 calc(100% - 2rem); /* Each card takes up 100% of the row width */
+  }
 }
 </style>

@@ -1,8 +1,10 @@
+<!-- src/components/home/CardDeck.vue -->
 <template>
   <article class="card-deck">
     <ServiceCard
       v-for="(service, index) in services"
       :key="index"
+      :id="service.id"
       :title="service.title"
       :image="service.image"
       :description="service.description"
@@ -24,6 +26,7 @@ export default {
     return {
       services: [
         {
+          id: 'consulting',
           title: 'Consulting',
           image: 'consulting_icon.png',
           description: 'Personalized consulting services to help you choose the best technology solutions for your business.',
@@ -35,6 +38,7 @@ export default {
           link: '/services#consulting',
         },
         {
+          id: 'support',
           title: 'Support',
           image: 'support_icon.png',
           description: 'Receive expert assistance for all your VoIP and network communication system needs.',
@@ -46,6 +50,7 @@ export default {
           link: '/services#support',
         },
         {
+          id: 'video-security',
           title: 'Video Security',
           image: 'video_security_icon.png',
           description: 'Solutions for your video security needs, including cameras, door access systems and NVR integration.',
@@ -57,6 +62,7 @@ export default {
           link: '/services#video-security',
         },
         {
+          id: 'voip',
           title: 'VoIP Solutions',
           image: 'voip_icon.png',
           description: 'VoIP services including hosting, installation, and support to keep your business connected.',

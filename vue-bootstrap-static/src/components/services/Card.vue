@@ -1,6 +1,6 @@
 <!-- src/components/services/Card.vue -->
 <template>
-    <article class="card" @click="openModal">
+    <article class="card" @click="openModal" v-bind="$attrs">
       <section class="header">
         <h1 class="title">{{ title }}</h1>
         <p class="link">Click to learn more</p>

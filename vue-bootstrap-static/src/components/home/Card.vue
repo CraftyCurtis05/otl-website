@@ -1,6 +1,6 @@
 <!-- src/components/home/Card.vue -->
 <template>
-    <article class="card">
+    <article class="card" :id="`#${id}`">
       <router-link :to="link" class="link">
         <img :src="require(`@/assets/images/home/icons/${image}`)" class="card-img" :alt="`${title} Icon Image`" />
       </router-link>
@@ -25,6 +25,10 @@
 export default {
   name: 'ServiceCard',
   props: {
+    id: {
+      type: String,
+      required: true
+    },
     title: {
       type: String,
       required: true,

@@ -64,8 +64,8 @@
             </section>
 
             <!-- Scroll to Top Button Section -->
-            <section class="col-md-1 d-flex align-items-center">
-              <button class="btn btn-info" aria-label="Scroll to top of the page">^</button>
+            <section class="col-md-1">
+              <button @click="scrollToTop" class="btn btn-info" aria-label="Scroll to top of the page">^</button>
             </section>
           </div>
         </nav>
@@ -93,7 +93,15 @@
 
 <script>
 export default {
-    name: 'FooterComponent'
+  name: 'FooterComponent',
+  methods: {
+    scrollToTop() {
+      const topElement = document.getElementById('top');
+      if (topElement) {
+        topElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
 };
 </script>
 
@@ -103,6 +111,11 @@ export default {
 
   footer {
     background: #545454;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
   }
 }
 

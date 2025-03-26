@@ -4,6 +4,7 @@
         <ServiceCard
             v-for="(card, index) in serviceCards"
             :key="index"
+            :id="card.id"
             :title="card.title"
             :pricing="card.pricing"
             :contactText="card.contactText"
@@ -26,6 +27,7 @@ export default {
         return {
             serviceCards: [
                 {
+                    id: 'consulting',
                     title: "Consulting Services",
                     pricing: [
                         {
@@ -39,6 +41,7 @@ export default {
                     learnMoreLink: '/services#consulting'
                 },
                 {
+                    id: 'support',
                     title: "Support Services",
                     pricing: [
                         {
@@ -75,6 +78,7 @@ export default {
                     learnMoreLink: '/services#support'
                 },
                 {
+                    id: 'video-security',
                     title: "Video Security Services",
                     pricing: [
                         {
@@ -88,6 +92,7 @@ export default {
                     learnMoreLink: '/services#video-security'
                 },
                 {
+                    id: 'voip',
                     title: "VoIP Services",
                     pricing: [
                         {
