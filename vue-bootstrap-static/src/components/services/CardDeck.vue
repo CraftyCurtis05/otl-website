@@ -6,7 +6,7 @@
       :key="index"
       :title="card.title"
       :description="card.description"
-      :imageSrc="card.imageSrc"
+      :image="card.image"
       :modalId="card.modalId"
       :modalLabelId="card.modalLabelId"
       :modalNeeds="card.modalNeeds"
@@ -34,7 +34,7 @@ export default {
         {
           title: "Consulting Services",
           description: "Let us tailor a solution that drives efficiency, productivity, and growth for your business.",
-          imageSrc: 'consulting.png',
+          image: 'consulting.png',
           modalId: "consultingModal",
           modalLabelId: "consultingModalLabel",
           modalNeeds: "Consulting helps ensure that your technology infrastructure is aligned with your business goals, optimized for performance, and scalable for future growth. By leveraging expert insights, you can make informed decisions on the best technology solutions, improve network efficiency, and proactively address potential issues before they impact your operations.",
@@ -51,7 +51,7 @@ export default {
         {
           title: "Support Services",
           description: "Count on our support to minimize downtime and keep your business running smoothly.",
-          imageSrc: 'support.png',
+          image: 'support.png',
           modalId: "supportModal",
           modalLabelId: "supportModalLabel",
           modalNeeds: "Support services are essential to ensure your IT systems—whether network, VoIP, or other communication platforms—run smoothly and efficiently. With expert assistance readily available, you can address issues quickly, minimize downtime, and keep your operations running at full capacity. Our support ensures your systems are functioning optimally, and you have access to help when you need it most.",
@@ -69,7 +69,7 @@ export default {
         {
           title: "Video Security Services",
           description: "Secure your business with advanced video surveillance for peace of mind.",
-          imageSrc:'video_security.png',
+          image:'video_security.png',
           modalId: "videoSecurityModal",
           modalLabelId: "videoSecurityModalLabel",
           modalNeeds: "Video security is essential for protecting your business from potential threats, ensuring the safety of employees, assets, and property. With advanced surveillance systems, you can monitor critical areas in real-time, deter criminal activity, and have access to valuable video footage for security and compliance purposes.",
@@ -86,7 +86,7 @@ export default {
         {
           title: "VoIP Services",
           description: "Enhance communication with reliable, cost-effective VoIP solutions.",
-          imageSrc: 'voip.png',
+          image: 'voip.png',
           modalId: "voipModal",
           modalLabelId: "voipModalLabel",
           modalNeeds: "VoIP (Voice over Internet Protocol) services provide a cost-effective, flexible, and reliable communication solution for your business. With VoIP, you can enhance communication, improve collaboration, and streamline your operations. Whether you're looking to reduce phone costs or integrate advanced features like voicemail-to-email and call management systems, VoIP is the modern solution for efficient business communication.",

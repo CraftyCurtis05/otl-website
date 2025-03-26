@@ -6,7 +6,7 @@
         <p class="link">Click to learn more</p>
       </section>
       <section class="img-container">
-        <img v-if="imageSrc" :src="require(`@/assets/images/services/cards/${imageSrc}`)" class="card-img" :alt="`${title} Card Image`" />
+        <img v-if="image" :src="require(`@/assets/images/services/cards/${image}`)" class="card-img" :alt="`${title} Card Image`" />
         <p v-else>Image not available</p>
       </section>
       <section class="text">
@@ -17,7 +17,7 @@
     <!-- Modal Trigger -->
     <ServicesModal
       :title="title"
-      :imageSrc="imageSrc"
+      :image="image"
       :modalId="modalId"
       :modalLabelId="modalLabelId"
       :modalNeeds="modalNeeds"
@@ -47,7 +47,7 @@ export default {
       type: String, 
       required: true 
     },
-    imageSrc: { 
+    image: { 
       type: String, 
       required: true 
     },
@@ -94,63 +94,5 @@ export default {
 </script>
 
 <style scoped>
-.card {
-  width: 390px;
-  border: 0;
-  padding: .5rem;
-  line-height: 1.2;
-  transition: all 0.4s ease;
-}
 
-.title {
-  font-size: 1.35rem;
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
-}
-
-.link {
-  text-decoration: none;
-  font-size: .95rem;
-  font-style: italic;
-  color: #002373;
-}
-
-.img-container {
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  border: 5px solid #545454;
-  border-radius: 50%;
-  margin: auto;
-  margin-bottom: .5rem;
-  overflow: hidden;
-}
-
-.card-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.text {
-  width: 60%;
-  margin: auto;
-}
-
-.card:hover {
-  background-color: #8b8b8b;
-  transform: scale(1.1);
-  z-index: 10;
-}
-
-.card:hover .link {
-  text-decoration: underline;
-}
-
-.card:hover .img-container {
-  border-color: #00FFFF;
-  box-shadow: 0 0 15px 5px rgba(128, 224, 252, 0.9);
-  transform: translateY(-1px);
-}
 </style>  

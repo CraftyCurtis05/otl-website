@@ -15,7 +15,7 @@
               <p>{{ modalNeeds }}</p>
             </div>
             <div class="col-4">
-              <img v-if="imageSrc" :src="require(`@/assets/images/services/modals/${imageSrc}`)" :alt="`${title} Modal Image`" class="img-fluid" />
+              <img v-if="image" :src="require(`@/assets/images/services/modals/${image}`)" :alt="`${title} Modal Image`" class="img-fluid" />
               <p v-else>Image not available</p>
             </div>
           </aside>
@@ -54,7 +54,7 @@ export default {
       type: String,
       required: true
     },
-    imageSrc: {
+    image: {
       type: String,
       required: true
     },

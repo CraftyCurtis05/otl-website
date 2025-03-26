@@ -54,6 +54,7 @@ h1,
 h2 {
   font-family: 'Georgia', serif;
   color: black;
+  font-weight: bold;
 }
 
 h2 {
@@ -112,48 +113,43 @@ h2 {
 
 /* Button Styling */
 .btn {
+  color: black;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 20%;
-  font-size: .9rem;
-  color: black;
+  width: 90%;
   background: linear-gradient(to right, #80E0FC, #187EC1);
-  margin: 0 auto;
+  margin: 1vw auto;
 }
 
 .btn,
 .btn-text,
-.btn-img {
+.btn img {
   transition: all 0.3s ease;
 }
 
-.btn-img {
+.btn .img-container {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 12%;
-  height: auto;
+  width: 10%;
 }
 
-.btn-img img {
+.btn img {
   position: absolute;
   width: 100%;
-  height: auto;
 }
 
-.btn-img .black-img {
+.btn .img-black {
   opacity: 1;
 }
 
-.btn-img .white-img {
+.btn .img-white {
   opacity: 0;
 }
 
 .btn:hover {
-  color: black;
   background-image: radial-gradient(circle, #80E0FC, #187EC1, #074c7b);
   background-size: 300% 300%;
   border-color: #00FFFF;
@@ -175,27 +171,23 @@ h2 {
   transform: scale(1.05);
 }
 
-.btn:hover .btn-img {
-  width: 15%;
+.btn:hover img {
+  width: 125%;
   transform: translateX(5px);
 }
 
-.btn:hover .black-img {
+.btn:hover .img-black {
   opacity: 0;
 }
 
-.btn:hover .white-img {
+.btn:hover .img-white {
   opacity: 1;
 }
 
 /* Link Styling */
 .link {
+  color: #002373;
   text-decoration: none;
-  color: #0984D0;
-}
-
-.link p {
-  padding: .5rem;
 }
 
 .link:hover {
@@ -209,6 +201,60 @@ h2 {
   justify-content: space-evenly;
   justify-content: space-around;
   gap: 1vw;
+}
+
+.card {
+  border: 0;
+  line-height: 1.5;
+  padding: .25vw;
+  transition: all 0.4s ease;
+}
+
+.card .card-link,
+.card .body,
+.card .text {
+  color: black;
+  text-decoration: none;
+}
+
+.card h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card img {
+  width: 20%;
+}
+
+.card ul {
+  list-style-type: disc;
+}
+
+.card li {
+  text-align: start;
+}
+
+.card .link-blue {
+  color: #002373;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.card:hover {
+  background-color: #8b8b8b;
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.card:hover .link,
+.card:hover h1 {
+  text-decoration: underline;
+}
+
+.card:hover .img-container {
+  border-color: #00FFFF;
+  box-shadow: 0 0 15px 5px rgba(128, 224, 252, 0.9);
+  transform: translateY(-1px);
 }
 
 /* Desktop: 4 cards per row */

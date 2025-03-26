@@ -37,8 +37,8 @@ export default {
                             ]
                         }
                     ],
-                    contactText: "Contact us to discuss your specific project and our team will provide a tailored quote.",
-                    learnMoreLink: '/services#consulting'
+                    text: "Contact us to discuss your specific project and our team will provide a tailored quote.",
+                    link: '/services#consulting'
                 },
                 {
                     id: 'support',
@@ -74,8 +74,8 @@ export default {
                             ]
                         }
                     ],
-                    contactText: "Contact us to discuss your support needs and find the best solution for your business.",
-                    learnMoreLink: '/services#support'
+                    text: "Contact us to discuss your support needs and find the best solution for your business.",
+                    link: '/services#support'
                 },
                 {
                     id: 'video-security',
@@ -88,8 +88,8 @@ export default {
                             ]
                         }
                     ],
-                    contactText: "Contact us for a customized quote to fit your business security needs.",
-                    learnMoreLink: '/services#video-security'
+                    text: "Contact us for a customized quote to fit your business security needs.",
+                    link: '/services#video-security'
                 },
                 {
                     id: 'voip',
@@ -122,8 +122,8 @@ export default {
                             ]
                         }
                     ],
-                    contactText: "Contact us to learn more about our VoIP solutions and the best plan for your business.",
-                    learnMoreLink: '/services#voip'
+                    text: "Contact us to learn more about our VoIP solutions and the best plan for your business.",
+                    link: '/services#voip'
                 }
             ]
         };

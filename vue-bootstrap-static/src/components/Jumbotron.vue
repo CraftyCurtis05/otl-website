@@ -13,9 +13,9 @@
         <p class="text">{{ item.text1 }}<span class="text-blue">{{ item.blueText }}</span>{{ item.text2 }}</p>
         <router-link v-if="item.buttonText" :to="item.buttonLink" class="btn btn-md" role="button">
           <span class="btn-text">{{ item.buttonText }}&nbsp;</span>
-          <div class="btn-img">
-            <img class="black-img" :src="imageBlack" />
-            <img class="white-img" :src="imageWhite" />
+          <div class="img-container">
+            <img class="img-black" :src="imageBlack" />
+            <img class="img-white" :src="imageWhite" />
           </div>
         </router-link>
       </section>
@@ -69,7 +69,6 @@ hr,
 h1 {
   width: 30%;
   font-size: 2.1rem;
-  font-weight: bold;
 }
 
 h1,
@@ -83,7 +82,8 @@ h1,
 }
 
 .btn {
-  width: 15%;
-  margin-block: 1vw;
+  display: flex;
+  flex-direction: row;
+  width: 10%;
 }
 </style>

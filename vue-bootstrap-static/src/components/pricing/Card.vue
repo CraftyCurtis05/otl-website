@@ -2,8 +2,8 @@
 <template>
     <article class="card" :id="`#${id}`">
         <h1 class="title">{{ title }}</h1>
-        <section v-if="pricing" class="dropdown-container">
-            <details v-for="(item, index) in pricing" :key="index" class="dropdown">
+        <section v-if="pricing" class="body">
+            <details v-for="(item, index) in pricing" :key="index">
                 <summary>{{ item.title }}</summary>
                 <ul v-for="(subItem, subIndex) in item.amounts" :key="subIndex">
                     <li><b>{{ subItem.label }}</b>{{ subItem.amount }}</li>
@@ -13,13 +13,13 @@
 
         <!-- Contact Section -->
         <section class="contact">
-            <p v-if="contactText" class="text">{{ contactText }}</p>
+            <p v-if="contactText" class="text">{{ text }}</p>
 
             <router-link to="/contact" class="btn btn-md" role="button">
                 <span class="btn-text">GET STARTED TODAY!</span>
             </router-link>
 
-            <router-link :to="learnMoreLink" class="link">
+            <router-link :to="link" class="link">
                 <p>Learn More About Our {{ title }} Services</p>
             </router-link>
         </section>
@@ -42,11 +42,11 @@ export default {
             type: Array,
             default: () => []
         },
-        contactText: {
+        text: {
             type: String,
             default: ''
         },
-        learnMoreLink: {
+        link: {
             type: String,
             default: ''
         }
@@ -60,38 +60,15 @@ export default {
     text-align: center;
 }
 
-.title {
+.card .title {
     font-size: 1.35rem;
     font-weight: 700;
     padding: .5rem;
     margin: 0;
 }
 
-.dropdown-container,
-.contact {
-    padding-block: .5rem;
-    padding-inline: 1rem;
-}
-
-.dropdown-container {
+.card details {
     text-align: left;
-}
-
-.dropdown {
-    padding-inline-start: .1rem;
-}
-
-summary {
-    font-weight: bold;
-    padding: .2rem;
-}
-
-ul {
-    padding-inline-start: 2rem;
-}
-
-ul li {
-    padding-block: .2rem;
 }
 
 .contact .text {

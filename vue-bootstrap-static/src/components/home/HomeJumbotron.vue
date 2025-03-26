@@ -9,9 +9,9 @@
                 <p class="text-blue">Support, Installation, Maintenance, Consulting & VoIP Solutions</p>
                 <router-link class="btn btn-md" to="/services" role="button">
                     <span class="btn-text">LEARN MORE&nbsp;</span>
-                    <div class="btn-img">
-                        <img class="black-img" :src="imageBlack"/>
-                        <img class="white-img" :src="imageWhite"/>
+                    <div class="img-container">
+                        <img class="img-black" :src="imageBlack"/>
+                        <img class="img-white" :src="imageWhite"/>
                     </div>
                 </router-link>
             </section>
@@ -60,11 +60,9 @@ h1 {
     font-weight: bold;
 }
 
-.text {
-    font-size: 1.3rem;
-}
-
 .btn {
+    display: flex;
+    flex-direction: row;
     width: 30%;
 }
 </style>
