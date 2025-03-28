@@ -1,7 +1,12 @@
 <!-- src/components/Navbar.vue -->
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
+  <nav 
+    class="navbar navbar-expand-lg navbar-dark" 
+    role="navigation"
+    aria-label="Navigation Bar"
+    >
     <div class="container-fluid">
+      <!-- Logo Link  -->
       <header class="navbar-brand">
         <router-link to="/" aria-label="Go to homepage">
           <img 
@@ -13,6 +18,7 @@
         </router-link>
       </header>
 
+      <!-- Toggler Button -->
       <button 
         class="navbar-toggler" 
         type="button" 
@@ -21,12 +27,12 @@
         aria-controls="navbarScroll" 
         aria-expanded="false" 
         aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
+        ><span class="navbar-toggler-icon"></span>
       </button>
 
       <section class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav navbar-nav-scroll">
+          <!-- Home Link -->
           <li class="nav-item">
             <router-link 
               class="nav-link" 
@@ -39,6 +45,7 @@
               >Home
             </router-link>
           </li>
+
           <!-- Services Dropdown -->
           <li class="nav-item dropdown">
             <router-link 
@@ -133,7 +140,6 @@
             </ul>
           </li>
 
-
           <!-- Pricing Link -->
           <li class="nav-item">
             <router-link 
@@ -161,7 +167,7 @@
           </li>
         </ul>
 
-        <!-- Search Section (Aside) -->
+        <!-- Search Section -->
         <aside class="form-container">
           <form @submit.prevent="submitSearch" role="search" aria-label="Search Form">
             <label for="navbarSearch" class="visually-hidden">Search</label>
@@ -257,6 +263,7 @@ export default {
 </script>
 
 <style scoped>
+/* Base styling for all screen sizes */
 nav {
   background-color: #545454;
   height: 3.5rem;
@@ -286,6 +293,8 @@ nav {
 .nav-item {
   font-size: 1.1rem;
   text-align: start;
+  padding: 0;
+  margin: 0;
   transition: all 0.3s ease;
 }
 
