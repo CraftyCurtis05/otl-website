@@ -10,8 +10,8 @@
                 <router-link class="btn btn-md" to="/services" role="button">
                     <span class="btn-text">LEARN MORE&nbsp;</span>
                     <div class="img-container">
-                        <img class="img-black" :src="imageBlack"/>
-                        <img class="img-white" :src="imageWhite"/>
+                        <img class="img-black" :src="imageBlack" loading="lazy"/>
+                        <img class="img-white" :src="imageWhite" loading="lazy"/>
                     </div>
                 </router-link>
             </section>

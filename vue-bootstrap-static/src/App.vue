@@ -55,10 +55,24 @@ h2 {
   font-family: 'Georgia', serif;
   color: black;
   font-weight: bold;
+  text-decoration: none;
 }
 
 h2 {
   font-size: 1.5rem;
+}
+
+ul,
+li {
+  width: 100%;
+}
+
+li {
+  font-size: .99rem;
+  list-style: none;
+  text-align: start;
+  margin: .5vw;
+  margin-left: -2vw;
 }
 
 .text-blue {
@@ -222,6 +236,10 @@ h2 {
   font-weight: bold;
 }
 
+.card .img-container {
+  transition: all 0.3s ease;
+}
+
 .card img {
   width: 20%;
 }
@@ -241,9 +259,10 @@ h2 {
 }
 
 .card:hover {
-  background-color: #8b8b8b;
+  background-color: #b1b1b1;
   transform: scale(1.05);
   z-index: 10;
+  cursor: pointer;
 }
 
 .card:hover .link,

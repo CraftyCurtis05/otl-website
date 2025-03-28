@@ -33,7 +33,7 @@ export default {
           listItems: [
             { label: 'Network Analysis', description: 'Optimize performance' },
             { label: 'Network Design', description: 'Custom network solutions' },
-            { label: 'Consulting Expertise', description: 'Tailored recommendations' },
+            { label: 'Consulting Expertise', description: 'Specialized Guidance' },
           ],
           link: '/services#consulting',
         },
@@ -55,9 +55,9 @@ export default {
           image: 'video_security_icon.png',
           description: 'Solutions for your video security needs, including cameras, door access systems and NVR integration.',
           listItems: [
-            { label: 'Cameras', description: 'Advanced video surveillance solutions' },
+            { label: 'Cameras', description: 'Advanced surveillance solutions' },
             { label: 'Door Access', description: 'Secure entry systems' },
-            { label: 'NVR Integration', description: 'Video storage and management' },
+            { label: 'NVR Integration', description: 'Video storage & management' },
           ],
           link: '/services#video-security',
         },
@@ -68,7 +68,7 @@ export default {
           description: 'VoIP services including hosting, installation, and support to keep your business connected.',
           listItems: [
             { label: 'VoIP Service', description: 'Reliable communication solutions' },
-            { label: 'Installation', description: 'Professional setup and configuration' },
+            { label: 'Installation', description: 'Professional setup & configuration' },
             { label: 'Support', description: 'Ongoing assistance for connectivity' },
           ],
           link: '/services#voip',

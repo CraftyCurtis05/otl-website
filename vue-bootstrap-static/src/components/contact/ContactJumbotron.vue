@@ -10,11 +10,11 @@
         
             <ul class="list-unstyled text-start">
                 <li>
-                  <img src="@/assets/images/icons/phone_icon_white.png" width="20" alt="Phone icon" />
+                  <img src="@/assets/images/icons/phone_icon_white.png" width="20" alt="Phone icon" loading="lazy"/>
                   <a href="tel:18448898885" class="text-white" aria-label="Call support at +1 (844) 889-8885">+1 (844) 889-8885</a>
                 </li>
                 <li>
-                  <img src="@/assets/images/icons/email_icon_white.png" width="25" alt="Email icon" />
+                  <img src="@/assets/images/icons/email_icon_white.png" width="25" alt="Email icon" loading="lazy"/>
                   <a href="mailto:support@otlcommunications.com" class="text-white" aria-label="Email support at support@otlcommunications.com">support@otlcommunications.com</a>
                 </li>
             </ul>

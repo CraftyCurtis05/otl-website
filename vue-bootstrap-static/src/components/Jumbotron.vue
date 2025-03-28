@@ -6,6 +6,7 @@
       :key="index" 
       class="jumbotron"
       :style="{ backgroundImage: `url(${require('@/assets/images/' + item.image)})` }"
+      loading="eager"
     >
       <section class="text-container">
         <h1>{{ item.title }}</h1>
@@ -14,8 +15,8 @@
         <router-link v-if="item.buttonText" :to="item.buttonLink" class="btn btn-md" role="button">
           <span class="btn-text">{{ item.buttonText }}&nbsp;</span>
           <div class="img-container">
-            <img class="img-black" :src="imageBlack" />
-            <img class="img-white" :src="imageWhite" />
+            <img class="img-black" :src="imageBlack" loading="lazy" />
+            <img class="img-white" :src="imageWhite" loading="lazy" />
           </div>
         </router-link>
       </section>

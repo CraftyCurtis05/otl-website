@@ -1,12 +1,12 @@
 <!-- src/components/services/Card.vue -->
 <template>
     <article class="card" @click="openModal" v-bind="$attrs">
-      <section class="header">
-        <h1 class="title">{{ title }}</h1>
+      <section class="body">
+        <h1>{{ title }}</h1>
         <p class="link">Click to learn more</p>
       </section>
       <section class="img-container">
-        <img v-if="image" :src="require(`@/assets/images/services/cards/${image}`)" class="card-img" :alt="`${title} Card Image`" />
+        <img v-if="image" :src="require(`@/assets/images/services/cards/${image}`)" :alt="`${title} Card Image`" loading="lazy"/>
         <p v-else>Image not available</p>
       </section>
       <section class="text">
@@ -94,5 +94,30 @@ export default {
 </script>
 
 <style scoped>
+.card .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #8b8b8b;
+  margin: auto;
+}
 
-</style>  
+.card .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.card:hover h1 {
+  text-decoration: none;
+}
+
+.card:hover .img-container {
+  border-color: #00FFFF;
+}
+</style> 

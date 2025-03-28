@@ -1,3 +1,4 @@
+<!-- src/views/SupportView.vue -->
 <template>
     <main>
         <section class="jumbotron">

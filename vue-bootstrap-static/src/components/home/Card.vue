@@ -2,7 +2,7 @@
 <template>
     <article class="card" :id="`#${id}`">
       <router-link :to="link" class="card-link">
-        <img :src="require(`@/assets/images/home/icons/${image}`)" :alt="`${title} Icon Image`" />
+        <img :src="require(`@/assets/images/home/icons/${image}`)" :alt="`${title} Icon Image`" loading="lazy"/>
         <section class="body">
           <h1>{{ title }}</h1>
           <p class="text">{{ description }}</p>
@@ -48,3 +48,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+li {
+  width: 100%;
+}
+</style>

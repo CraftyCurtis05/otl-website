@@ -2,11 +2,11 @@
 <template>
     <article class="list-container">
       <section v-for="(item, index) in supportInfo" :key="index" class="list">
-        <h1 class="title">{{ item.title }}</h1>
-        <hr class="line">
-        <ul class="list-items">
+        <h1><router-link to="#contact" class="title">{{ item.title }}</router-link></h1>
+        <hr>
+        <ul>
           <li v-for="(subItem, subIndex) in item.details" :key="subIndex" class="list-item">
-            <b>{{ subItem.label }}:</b> {{ subItem.text }}
+            <b>{{ subItem.label }}:</b>{{ subItem.text }}
           </li>
         </ul>
       </section>
@@ -77,136 +77,12 @@
   </script>
 
 <style scoped>
-.list-container {
-    margin: 1% 5%;
-}
-
-.list {
-    text-align: left;
-    padding: .3vw;
-}
-
 .title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin: 0;
+  color: black;
+  text-decoration: none;
 }
 
-.line {
-    width: 10%;
-    border: 2px solid;
-    margin: .25rem;
-}
-
-.list-items {
-    list-style: disc;
-}
-
-.more-info {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    margin: auto;
-}
-
-.link {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #0984D0;
-}
-
-.btn-container {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    margin: 1rem auto;
-}
-
-.btn-container .btn {
-    margin-inline: 1rem;
-}
-
-.btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    font-size: 1rem;
-    color: black;
-    background: linear-gradient(to right, #80E0FC, #187EC1);
-    margin: 0 auto;
-}
-
-.btn,
-.btn-text,
-.btn-img {
-    transition: all 0.3s ease;
-}
-
-.btn-img {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 12%;
-    height: auto;
-}
-
-.btn-img img {
-    position: absolute;
-    width: 100%;
-    height: auto;
-}
-
-.btn-img .black-img {
-    opacity: 1;
-}
-
-.btn-img .white-img {
-    opacity: 0;
-}
-
-.btn:hover {
-    color: black;
-    background-image: radial-gradient(circle, #80E0FC, #187EC1, #074c7b);
-    background-size: 300% 300%;
-    transform: scale(1.1);
-    transform: translateY(-1px);
-    box-shadow: 0 0 15px 5px rgba(128, 224, 252, 0.4); /* Glowing effect */
-    border-color: #00FFFF; /* Optional: Change the border color to match the glow */
-    animation: gradient-animation 4s ease infinite;
-}
-
-/* Animation for button */
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.btn:hover .btn-text {
-    color: white;
-    font-weight: 500;
-    transform: scale(1.05); /* Scale only the text inside the button */
-}
-
-.btn:hover .btn-img {
-    width: 15%;
-    transform: translateX(5px);
-}
-
-.btn:hover .black-img {
-    opacity: 0;
-}
-
-.btn:hover .white-img {
-    opacity: 1;
+.title:hover {
+  text-decoration: underline;
 }
 </style>
