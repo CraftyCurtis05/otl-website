@@ -7,7 +7,7 @@
         <!-- Left side: Logo and Phrase -->
         <section class="col-md-6 d-flex align-items-center">
           <router-link class="navbar-brand" to="/" aria-label="Go to Home">
-            <img src="@/assets/images/logo.png" alt="Five Nine Technologies logo" width="120" loading="lazy" />
+            <img src="@/assets/images/logo.png" alt="Logo Image" width="120" loading="eager" />
           </router-link>
           <span>Your Technology Needs, Our Expertise.</span>
         </section>

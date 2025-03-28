@@ -6,7 +6,6 @@
       :key="index" 
       class="jumbotron"
       :style="{ backgroundImage: `url(${require('@/assets/images/' + item.image)})` }"
-      loading="eager"
     >
       <section class="text-container">
         <h1>{{ item.title }}</h1>
