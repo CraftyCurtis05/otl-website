@@ -1,30 +1,50 @@
 <!-- src/components/Footer.vue -->
 <template>
   <footer aria-label="Footer">
+
+    <!-- Scroll to Top Button Section -->
+    <section class="top-btn">
+      <button 
+        @click="scrollToTop" 
+        class="btn btn-container" 
+        aria-label="Back to top"
+        title="Back to top"
+      >
+        <div class="img-container">
+          <img class="img-black" :src="image3" loading="lazy"/>
+          <img class="img-white" :src="image4" loading="lazy"/>
+        </div>  
+      </button>
+    </section>
+
     <div class="footer-container">
 
       <!-- Left side: Logo and Phrase -->
-      <section class="left">
-        <router-link 
-          class="navbar-brand" 
-          to="/" 
-          aria-label="Go to homepage"
-          >
-          <img 
-            :src="logo" 
-            alt="Logo Image" 
-            loading="lazy"
-            title="Go to homepage"
-          />
-        </router-link>
-        <span>Your Technology Needs, Our Expertise.</span>
+      <section class="left-container">
+        <div class="logo-container">
+          <router-link 
+            class="navbar-brand" 
+            to="/" 
+            aria-label="Go to homepage"
+            >
+            <img 
+              :src="logo" 
+              alt="Logo Image" 
+              loading="lazy"
+              title="Go to homepage"
+            />
+          </router-link>
+        </div>
+        <div class="text-container">
+          <span>Your Technology Needs, Our Expertise.</span>
+        </div>
       </section>
 
       <!-- Right side: Links -->
-      <nav>
+      <section class="right-container">
         <div class="row">
           <!-- Explore Section -->
-          <section class="col-2">
+          <section class="explore-container col-2">
             <ul>
               <li class="title">Explore</li>
               <li>
@@ -67,7 +87,7 @@
           </section>
 
           <!-- Services Section -->
-          <section class="col-2">
+          <section class="services-container col-2">
             <ul>
               <li class="title">Services</li>
               <li>
@@ -110,7 +130,7 @@
           </section>
 
           <!-- Support Section -->
-          <section class="col-2">
+          <section class="support-container col-2">
             <ul>
               <li class="title">Support</li>
               <li>
@@ -135,7 +155,7 @@
           </section>
 
           <!-- Contact Us Section -->
-          <section class="col-md-5">
+          <section class="contact-container col-6">
             <ul>
               <li class="title">Contact Us</li>
               <li>
@@ -178,19 +198,8 @@
               </li>
             </ul>
           </section>
-
-          <!-- Scroll to Top Button Section -->
-          <section class="col-md-1">
-            <button 
-              @click="scrollToTop" 
-              class="btn" 
-              aria-label="Back to top"
-              title="Back to top"
-              >^
-            </button>
-          </section>
         </div>
-      </nav>
+      </section>
     </div>  
 
     <!-- Line Divider -->
@@ -240,6 +249,8 @@
 import logo from '@/assets/images/logo.png';
 import image1 from '@/assets/images/icons/phone_icon_white.png';
 import image2 from '@/assets/images/icons/email_icon_white.png';
+import image3 from '@/assets/images/icons/top_arrow_black.png';
+import image4 from '@/assets/images/icons/top_arrow_white.png';
 
 export default {
   name: 'FooterComponent',
@@ -247,7 +258,9 @@ export default {
     return {
       logo: logo,
       image1: image1,
-      image2: image2
+      image2: image2,
+      image3: image3,
+      image4: image4
     }
   },
   methods: {
@@ -269,7 +282,65 @@ footer {
   width: 100%;
 }
 
+.btn-container,
+.btn .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-container {
+  background: transparent;
+  border: none;
+  margin: 0 auto;
+  width: 100%;
+  height: 5vh;
+}
+
+.btn .img-container {
+  position: relative;
+}
+
+.btn img {
+  width: 20%;
+  min-width: 25px;
+  height: auto;
+}
+
+.btn .img-black {
+  opacity: 0;
+}
+
+.btn .img-white {
+  opacity: 1;
+}
+
+.btn:hover .img-black {
+  opacity: 1;
+}
+
+.btn:hover .img-white {
+  opacity: 0;
+}
+
+.btn:hover {
+  background-image: none;
+  border-color: none;
+  box-shadow: none;
+  transform: scale(1);
+  transform: translateY(0px);
+}
+
+.btn:hover img {
+  width: 23%;
+  min-width: 30px;
+  transform: translateX(0px);
+  transform: translateY(-1px);
+}
+
 .footer-container,
+.left-container,
+.text-container,
 .copyright-container,
 .copyright-container ul,
 .links,
@@ -279,7 +350,6 @@ footer {
   margin: 0;
 }
 
-
 .footer-container {
   flex-direction: row;
   align-items: center;
@@ -287,20 +357,46 @@ footer {
   width: 100%;
 }
 
-.left {
-  padding-inline-end: 5vw;
+.left-container {
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.logo-container {
+  width: 15%;
 }
 
 .navbar-brand img {
-  width: 15%;
+  width: 100%;
+}
+
+.text-container {
+  flex-wrap: wrap;
+  text-align: left;
+  padding: 1%;
+  width: 25%;
+}
+
+.right-container {
+  padding-top: 1vw;
+}
+
+.title {
+  font-weight: bold;
 }
 
 ul {
   list-style: none;
 }
 
-li {
+.text-white {
   color: white;
+  text-decoration: none;
+}
+
+.text-white:hover {
+  text-decoration: underline;
 }
 
 .icon {
@@ -342,10 +438,6 @@ li {
   padding-inline: 1.5vw;
 }
 
-.btn {
-  margin-block: 5vw;
-  margin-inline-end: 50%;
-}
 /* Desktop Screen Size Styling */
 @media only screen and (min-width: 1280px) {}
 

@@ -36,12 +36,12 @@ export default {
 
 <style scoped>
 .jumbotron {
-    height: 22rem;
+    height: 23rem;
     background-image: url('@/assets/images/home/home_jumbotron.png');
 }
 
 .text-container {
-    margin-top: 1vw;
+    margin-top: 2vw;
 }
 
 h1,
@@ -53,7 +53,7 @@ hr,
 
 h1,
 .text {
-    margin-block: .5vw;
+    margin-block: 1vw;
 }
 
 h1 {
@@ -63,6 +63,7 @@ h1 {
 .btn {
     display: flex;
     flex-direction: row;
+    margin-top: 1vw;
     width: 30%;
 }
 </style>

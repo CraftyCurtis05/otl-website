@@ -4,17 +4,17 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
       <div class="modal-content">
         <section class="modal-header">
-          <h1 class="modal-title" :id="modalLabelId">{{ title }}</h1>
+          <h1 class="modal-title" :id="modalLabelId">About Our {{ title }}</h1>
           <button type="button" class="btn-close btn-close-white" @click="closeModal" aria-label="Close"></button>
         </section>
         <section class="modal-body">
           <aside class="modal-top">
-            <div class="col-8">
+            <div class="text col-9">
               <h2>Why do I need {{ title }}?</h2>
               <hr>
               <p>{{ modalNeeds }}</p>
             </div>
-            <div class="col-4">
+            <div class="col-3 img-container">
               <img v-if="image" :src="require(`@/assets/images/services/modals/${image}`)" :alt="`${title} Modal Image`" class="img-fluid" loading="lazy"/>
               <p v-else>Image not available</p>
             </div>
@@ -37,8 +37,8 @@
           </aside>
         </section>
         <section class="modal-footer">
-          <router-link to="/contact" class="btn">Contact Us</router-link>
-          <router-link v-if="modalPricingLink" :to="modalPricingLink" class="btn">View Pricing</router-link>
+          <router-link to="/contact" class="btn btn-contact">Contact Us</router-link>
+          <router-link v-if="modalPricingLink" :to="modalPricingLink" class="btn btn-pricing">View Pricing</router-link>
           <button type="button" class="btn btn-secondary" @click="closeModal">Close</button>
         </section>
       </div>
@@ -100,9 +100,15 @@ export default {
 </script>
   
 <style scoped>
+.modal {
+  left: 25%;
+  width: 50%;
+}
+
 .modal-content {
-  border-color: #00FFFF;;
-  box-shadow: 0 0 15px 5px rgba(128, 224, 252, 0.4);
+  border-color: #0a65b0;
+  box-shadow: 0 0 15px 5px rgba(124, 237, 254, 0.4);
+  margin: auto;
 }
 
 .modal-header,
@@ -113,20 +119,97 @@ export default {
 }
 
 .modal-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: white;
 }
 
-.modal-body {
+.modal-body,
+.modal-top,
+.modal-bottom,
+h2,
+hr,
+li,
+h3 {
+  font-size: 1.1rem;
+  line-height: 1.5;
   text-align: start;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-body {
+  padding: 3%;
 }
 
 .modal-top {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
-.btn-secondary {
 
+h2 {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.modal-top .text {
+  width: 60%;
+}
+
+hr,
+.modal-top p {
+  width: 90%;
+}
+
+hr {
+  padding-block: .5%;
+}
+
+.img-container {
+  width: 40%;
+}
+
+img {
+  height: 100%;
+}
+
+.modal-bottom,
+li {
+  padding-block: 1%;
+}
+
+h3 {
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  width: 80%;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: end;
+  align-items: center;
+}
+
+.btn-contact,
+.btn-pricing {
+  margin-inline: 1%;
+  width: 30%;
+}
+
+.btn-contact:hover,
+.btn-pricing:hover {
+  color: white;
+}
+
+.btn-secondary {
+  background: grey;
+  color: black;
+  margin-left: 15%;
+  width: 10%;
 }
 </style>
   

@@ -48,9 +48,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-li {
-  width: 100%;
-}
-</style>

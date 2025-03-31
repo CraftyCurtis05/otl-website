@@ -1,17 +1,17 @@
 <!-- src/components/services/Card.vue -->
 <template>
     <article class="card" @click="openModal" v-bind="$attrs">
-      <section class="body">
+      <div class="body">
         <h1>{{ title }}</h1>
         <p class="link">Click to learn more</p>
-      </section>
-      <section class="img-container">
-        <img v-if="image" :src="require(`@/assets/images/services/cards/${image}`)" :alt="`${title} Card Image`" loading="lazy"/>
-        <p v-else>Image not available</p>
-      </section>
-      <section class="text">
-        <p>{{ description }}</p>
-      </section>
+        <section class="img-container">
+          <img v-if="image" :src="require(`@/assets/images/services/cards/${image}`)" :alt="`${title} Card Image`" loading="lazy"/>
+          <p v-else>Image not available</p>
+        </section>
+        <section class="text">
+          <p>{{ description }}</p>
+        </section>
+      </div>
     </article>
 
     <!-- Modal Trigger -->
@@ -94,6 +94,20 @@ export default {
 </script>
 
 <style scoped>
+.card .body {
+  padding-block: 5%;
+}
+
+.card h1,
+.card .link {
+  padding: 0;
+  margin: 0;
+}
+
+.card .link {
+  padding-bottom: 2%;
+}
+
 .card .img-container {
   display: flex;
   justify-content: center;
@@ -113,11 +127,15 @@ export default {
   transition: all 0.3s ease;
 }
 
+.card .text {
+  padding-top: 3%;
+}
+
 .card:hover h1 {
   text-decoration: none;
 }
 
 .card:hover .img-container {
-  border-color: #00FFFF;
+  border-color: #0a65b0;
 }
 </style> 

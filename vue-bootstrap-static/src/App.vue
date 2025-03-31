@@ -136,6 +136,7 @@ li {
   width: 90%;
   background: linear-gradient(to right, #80E0FC, #187EC1);
   margin: 1vw auto;
+  overflow: hidden;
 }
 
 .btn,
@@ -147,6 +148,7 @@ li {
 .btn .img-container {
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 10%;
 }
@@ -154,6 +156,7 @@ li {
 .btn img {
   position: absolute;
   width: 100%;
+  max-width: 100%;
 }
 
 .btn .img-black {
@@ -167,10 +170,10 @@ li {
 .btn:hover {
   background-image: radial-gradient(circle, #80E0FC, #187EC1, #074c7b);
   background-size: 300% 300%;
-  border-color: #00FFFF;
+  border-color: #0a65b0;
   transform: scale(1.1);
   transform: translateY(-1px);
-  box-shadow: 0 0 15px 5px rgba(128, 224, 252, 0.4);
+  box-shadow: 0 0 15px 5px rgba(124, 237, 254, 0.4);
   animation: gradient-animation 4s ease infinite;
 }
 
@@ -222,6 +225,7 @@ li {
   border: 0;
   line-height: 1.5;
   padding: .25vw;
+  padding-top: 1vw;
   transition: all 0.4s ease;
 }
 
@@ -230,6 +234,10 @@ li {
 .card .text {
   color: black;
   text-decoration: none;
+}
+
+.card .body {
+  padding-top: 5%;
 }
 
 .card h1 {
@@ -247,10 +255,12 @@ li {
 
 .card ul {
   list-style-type: disc;
+  padding-bottom: 5%;
 }
 
 .card li {
   text-align: start;
+  width: 100%;
 }
 
 .card .link-blue {
@@ -272,8 +282,8 @@ li {
 }
 
 .card:hover .img-container {
-  border-color: #00FFFF;
-  box-shadow: 0 0 15px 5px rgba(128, 224, 252, 0.9);
+  border-color: #0a65b0;
+  box-shadow: 0 0 15px 5px rgba(124, 237, 254, 0.9);
   transform: translateY(-1px);
 }
 
