@@ -8,7 +8,6 @@
             :title="card.title"
             :pricing="card.pricing"
             :text="card.text"
-            :link="card.link"
         />
     </div>
 </template>
@@ -36,7 +35,6 @@ export default {
                         }
                     ],
                     text: "Contact us to discuss your specific project and our team will provide a tailored quote.",
-                    link: '/services#consulting'
                 },
                 {
                     id: 'support',
@@ -75,8 +73,7 @@ export default {
                             extra: '(24/7 availability, pre-purchased hours, add-ons)'
                         }
                     ],
-                    text: "Contact us to discuss your support needs and find the best solution for your business.",
-                    link: '/services#support'
+                    text: "Contact us to discuss your support needs and find the best solution for your business."
                 },
                 {
                     id: 'video-security',
@@ -89,8 +86,7 @@ export default {
                             ]
                         }
                     ],
-                    text: "Contact us for a customized quote to fit your business security needs.",
-                    link: '/services#video-security'
+                    text: "Contact us for a customized quote to fit your business security needs."
                 },
                 {
                     id: 'voip',
@@ -161,8 +157,7 @@ export default {
                             extra: '(*Add-ons pricing is monthly, excluding taxes and fees)'
                         }
                     ],
-                    text: "Contact us to learn more about our VoIP solutions and the best plan for your business.",
-                    link: '/services#voip'
+                    text: "Contact us to learn more about our VoIP solutions and the best plan for your business."
                 }
             ]
         };

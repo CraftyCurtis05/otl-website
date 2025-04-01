@@ -1,3 +1,4 @@
+<!-- src/App.vue -->
 <template>
   
   <nav id="top">

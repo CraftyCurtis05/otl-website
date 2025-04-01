@@ -221,14 +221,14 @@ export default {
       query = query.trim().toLowerCase();
 
       const routes = {
-        home: /\b(home|about|main|start|welcome|site|on the line|otl|communication|dashboard|who we are|company|meet|mission|what we do|overview|information|what do we offer|learn about|why choose)\b/,
+        home: /\b(home|about|main|start|welcome|site|on the line|otl|dashboard|who we are|company|meet|mission|what we do|overview|information|what do we offer|learn about|why choose)\b/,
         services: /\b(services|service|offer|offering|solution|benefit|operation|product|capabilities|feature|provision|resource|expertise|option|function|list services|explore|our services|otl communication services|technology solutions|security solutions|communication solutions|professional services|explore services)\b/,
         consulting: /\b(consulting|business consulting|strategic consulting|IT consulting|advice|infrastructure|analysis|strategy|operational efficiency|network design consulting|technology solutions consulting)\b/,
         support: /\b(support|support service|network support|emergency support|24\/7 support|hourly support|monthly retainer support|it support services|business support services|technical support services|flexible support)\b/,
         videoSecurity: /\b(video|video security|camera|surveillance|video security systems|security cameras|monitoring|access control|network video recorders|nvr)\b/,
-        voip: /\b(voip|voip solutions|voip services|phone systems|voip installation|hosted voip|voip setup|voip maintenance|voice over internet protocol)\b/,
+        voip: /\b(voip|voip solutions|voip services|communication|phone systems|voip installation|voip features|hosted voip|voip setup|voip maintenance|voice over internet protocol)\b/,
         assistance: /\b(assistance|remote support|onsite support|after hours support|emergency support)\b/,
-        pricing: /\b(pricing|cost|how much|prices|quote|rate|fee|charge|value|estimate|bulk pricing|per extension|monthly retainer)\b/,
+        pricing: /\b(pricing|cost|how much|prices|quote|rate|fee|charge|value|estimate|bulk pricing|per extension|monthly retainer|hourly|discount|features)\b/,
         contact: /\b(contact|get in touch|request a quote|reach out|phone|email|form|message|inquiries|representative|connect|correspond|talk|call|notify|approach|interact|engage|consult|speak|inquire|ping)\b/
       };
 
@@ -269,13 +269,25 @@ nav {
   height: 3.5rem;
 }
 
+.navbar-brand,
+.navbar-nav,
+.dropdown-item,
+form {
+  display: flex;
+  align-items: center;
+}
+
 .navbar-brand {
-  text-align: start;
+  justify-content: start;
+  flex-shrink: 0;
   width: 25%;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar-brand img {
   width: 3.25rem;
+  height: auto;
 }
 
 .navbar-collapse {
@@ -285,14 +297,12 @@ nav {
 }
 
 .navbar-nav {
-  display: flex;
   justify-content: center;
   margin: 0 auto;
 }
 
 .nav-item {
   font-size: 1.1rem;
-  text-align: start;
   padding: 0;
   margin: 0;
   transition: all 0.3s ease;
@@ -306,14 +316,33 @@ nav {
   text-decoration: line-through;
 }
 
+.dropdown {
+  z-index: 20;
+}
+
+.dropdown-item {
+  justify-content: start;
+  margin-left: 19%;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgb(84, 84, 84, 0.5);
+  font-weight: bold;
+}
+
+.form-container {
+  width: 35%;
+}
+
 form {
-  display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
 }
 
 form .btn {
-  width: 35%;
+  width: 50%;
 }
 
 /* Desktop Screen Size Styling */

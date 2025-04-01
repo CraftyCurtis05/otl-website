@@ -1,6 +1,9 @@
+<!-- src/views/PrivacyPolicyView.vue -->
 <template>
-    <h1>Privacy Policy View</h1>
-    <h2>Under construction</h2>
+    <article class="container">
+        <h1>Privacy Policy View</h1>
+        <h2>Under construction</h2>
+    </article>
 </template>
 
 <script>
@@ -10,6 +13,10 @@ export default {
 </script>
 
 <style scoped>
+.container {
+    height: 48vh;
+}
+
 /* Desktop Screen Size Styling */
 @media only screen and (min-width: 1280px) {
 

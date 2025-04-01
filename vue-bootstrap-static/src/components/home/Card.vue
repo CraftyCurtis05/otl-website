@@ -2,11 +2,11 @@
 <template>
     <article 
       class="card" 
-      :id="`#${id}`"         
+      :id="`${id}`"         
       aria-label="Click to learn more" 
       title="Click to learn more"
       >
-      <router-link :to="link" class="card-link">
+      <router-link :to="`/services#${id}`" class="card-link">
         <img 
           :src="require(`@/assets/images/home/icons/${image}`)" 
           :alt="`${title} Icon Image`" 
@@ -17,7 +17,7 @@
           <p class="text">{{ description }}</p>
         </section>
         <ul class="list">
-          <li class="text" v-for="(item, index) in listItems" :key="index">
+          <li class="text" v-for="(item, index) in list" :key="index">
             <b>{{ item.label }}: </b>{{ item.description }}
           </li>
         </ul>
@@ -46,12 +46,8 @@ export default {
       type: String,
       required: true,
     },
-    listItems: {
+    list: {
       type: Array,
-      required: true,
-    },
-    link: {
-      type: String,
       required: true,
     }
   }

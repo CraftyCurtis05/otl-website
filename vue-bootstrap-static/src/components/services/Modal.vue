@@ -66,8 +66,8 @@
             >Contact Us
           </router-link>
           <router-link 
-            v-if="modalLink" 
-            :to="`/pricing${modalLink}`" 
+            v-if="id" 
+            :to="`/pricing#${id}`" 
             class="btn btn-pricing" 
             aria-label="Go to pricing page" 
             title="Go to pricing page"
@@ -91,6 +91,10 @@
 export default {
   name: "ServicesModal",
   props: {
+    id: {
+      type: String,
+      required: true
+    },
     title: {
       type: String,
       required: true
@@ -121,10 +125,6 @@ export default {
       default: () => []
     },
     modalContact: { 
-      type: String, 
-      required: true 
-    },
-    modalLink: { 
       type: String, 
       required: true 
     },

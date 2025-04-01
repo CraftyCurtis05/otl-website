@@ -223,15 +223,6 @@
           </li>
           <li>
             <router-link 
-              to="/sitemap" 
-              class="link" 
-              aria-label="View sitemap"
-              title="View sitemap"
-              >Sitemap
-            </router-link>
-          </li>
-          <li>
-            <router-link 
               to="/terms" 
               class="link" 
               aria-label="View terms & conditions"

@@ -4,6 +4,7 @@
     <ServicesCard
       v-for="(card, index) in serviceCards"
       :key="index"
+      :id="card.id"
       :title="card.title"
       :description="card.description"
       :image="card.image"
@@ -13,7 +14,6 @@
       :modalOffer="card.modalOffer"
       :modalOfferings="card.modalOfferings"
       :modalContact="card.modalContact"
-      :modalLink="card.modalLink"
       :isModalVisible="card.isModalVisible"
       @update:isModalVisible="updateModalVisibility(index, $event)"
     />
@@ -32,6 +32,7 @@ export default {
     return {
       serviceCards: [
         {
+          id: 'consulting',
           title: "Consulting Services",
           description: "Let us tailor a solution that drives efficiency, productivity, and growth for your business.",
           image: 'consulting.png',
@@ -44,11 +45,10 @@ export default {
             { label: 'Network Analysis', text: 'Our team conducts thorough performance analyses to identify areas for improvement, optimizing your network’s efficiency and monitoring it for real-time performance with email notifications.' },
             { label: 'IT Management', text: 'Outsource your IT management to us and get comprehensive support, including desktop management, reporting, and strategic IT direction tailored to your needs.' }
           ],
-          modalContact: "Contact us today for a personalized quote and let us help you choose and implement the right technology solutions for your business.",
-          modalLink: "#consulting",
           isModalVisible: false
         },
         {
+          id: 'support',
           title: "Support Services",
           description: "Count on our support to minimize downtime and keep your business running smoothly.",
           image: 'support.png',
@@ -63,10 +63,10 @@ export default {
             { label: 'Flexible Access', text: 'All support is provided remotely via platforms like Microsoft Teams or Zoom, with the option for onsite assistance (travel expenses apply).'}
           ],
           modalContact: "Contact us to learn more about how our support services can help maintain your IT environment’s efficiency and security.",
-          modalLink: "#support",
           isModalVisible: false
         },
         {
+          id: 'video-security',
           title: "Video Security Services",
           description: "Secure your business with advanced video surveillance for peace of mind.",
           image:'video_security.png',
@@ -80,10 +80,10 @@ export default {
             { label: 'NVR (Network Video Recorder)', text: 'Robust systems to store, manage, and review your video footage with ease.' }
           ],
           modalContact: "Contact us for a personalized quote and to learn more about how we can help safeguard your business.",
-          modalLink: "#video-security",
           isModalVisible: false
         },
         {
+          id: 'voip',
           title: "VoIP Services",
           description: "Enhance communication with reliable, cost-effective VoIP solutions.",
           image: 'voip.png',
@@ -98,7 +98,6 @@ export default {
             { text: '*Our system is compatible with all SIP phones, but we recommend using Yealink phones for the best experience.'}
           ],
           modalContact: "Contact us today to learn more or get started with a tailored VoIP solution for your business.",
-          modalLink: "#voip",
           isModalVisible: false
         }
       ]

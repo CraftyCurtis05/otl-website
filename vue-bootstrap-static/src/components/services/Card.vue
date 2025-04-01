@@ -1,7 +1,7 @@
 <!-- src/components/services/Card.vue -->
 <template>
     <article
-      :id="`#${id}`"
+      :id="`${id}`"
       class="card" 
       aria-label="Click to learn more"
       title="Click to learn more"
@@ -28,6 +28,7 @@
 
     <!-- Modal Trigger -->
     <ServicesModal
+      :id="id"
       :title="title"
       :image="image"
       :modalId="modalId"
@@ -36,7 +37,6 @@
       :modalOffer="modalOffer"
       :modalOfferings="modalOfferings"
       :modalContact="modalContact"
-      :modalLink="modalLink"
       :isModalVisible="isModalVisible"
       @update:isModalVisible="isModalVisible = $event"
     />
@@ -51,6 +51,10 @@ export default {
     ServicesModal,
   },
   props: {
+    id: {
+      type: String,
+      required: true
+    },
     title: { 
       type: String, 
       required: true 
@@ -84,10 +88,6 @@ export default {
       default: () => []
     },
     modalContact: { 
-      type: String, 
-      required: true 
-    },
-    modalLink: { 
       type: String, 
       required: true 
     }

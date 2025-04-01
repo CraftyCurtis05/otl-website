@@ -2,7 +2,7 @@
 <template>
     <article 
         class="card" 
-        :id="`#${id}`" 
+        :id="`${id}`" 
         aria-label="Pricing Card" 
         >
         <h1 class="title">{{ title }}</h1>
@@ -20,11 +20,22 @@
         <section class="contact">
             <span v-if="text" class="text">{{ text }}</span>
 
-            <router-link to="/contact" class="btn btn-md" role="button" aria-label="Go to contact page" title="Go to contact page">
+            <router-link 
+                to="/contact" 
+                class="btn btn-md" 
+                role="button" 
+                aria-label="Go to contact page" 
+                title="Go to contact page"
+                >
                 <span class="btn-text">GET STARTED TODAY!</span>
             </router-link>
 
-            <router-link :to="link" class="link" aria-label="Go to services page" title="Go to services page">
+            <router-link 
+                :to="`/services#${id}`" 
+                class="link" 
+                aria-label="Go to services page" 
+                title="Go to services page"
+                >
                 <p>Learn More About Our {{ title }} Services</p>
             </router-link>
         </section>
@@ -48,10 +59,6 @@ export default {
             default: () => []
         },
         text: {
-            type: String,
-            default: ''
-        },
-        link: {
             type: String,
             default: ''
         }

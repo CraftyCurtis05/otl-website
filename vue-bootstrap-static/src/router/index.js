@@ -5,7 +5,6 @@ import SupportView from '@/views/SupportView.vue';
 import PricingView from '@/views/PricingView.vue';
 import ContactView from '@/views/ContactView.vue';
 import PrivacyPolicyView from '@/views/PrivacyPolicyView.vue';
-import SitemapView from '@/views/SitemapView.vue';
 import TermsConditionsView from '@/views/TermsConditionsView.vue';
 
 // Helper function to generate meta tags
@@ -65,11 +64,6 @@ const routes = [
     path: '/privacy',
     name: 'PrivacyPolicyView',
     component: PrivacyPolicyView,
-  },
-  {
-    path: '/sitemap',
-    name: 'SitemapView',
-    component: SitemapView,
   },
   {
     path: '/terms',

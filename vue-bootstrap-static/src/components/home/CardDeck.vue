@@ -8,8 +8,7 @@
       :title="service.title"
       :image="service.image"
       :description="service.description"
-      :listItems="service.listItems"
-      :link="service.link"
+      :list="service.list"
     />
   </article>
 </template>
@@ -30,48 +29,44 @@ export default {
           title: 'Consulting',
           image: 'consulting_icon.png',
           description: 'Personalized consulting services to help you choose the best technology solutions for your business.',
-          listItems: [
+          list: [
             { label: 'Network Analysis', description: 'Optimize performance' },
             { label: 'Network Design', description: 'Custom network solutions' },
             { label: 'Consulting Expertise', description: 'Specialized Guidance' },
-          ],
-          link: '/services#consulting',
+          ]
         },
         {
           id: 'support',
           title: 'Support',
           image: 'support_icon.png',
           description: 'Receive expert assistance for all your VoIP and network communication system needs.',
-          listItems: [
+          list: [
             { label: 'Hourly Support', description: 'Non-emergency assistance' },
             { label: 'Emergency Support', description: 'Critical issue resolution' },
             { label: 'Locations', description: 'Available across multiple locations' },
-          ],
-          link: '/services#support',
+          ]
         },
         {
           id: 'video-security',
           title: 'Video Security',
           image: 'video_security_icon.png',
           description: 'Solutions for your video security needs, including cameras, door access systems and NVR integration.',
-          listItems: [
+          list: [
             { label: 'Cameras', description: 'Advanced surveillance solutions' },
             { label: 'Door Access', description: 'Secure entry systems' },
             { label: 'NVR Integration', description: 'Video storage & management' },
-          ],
-          link: '/services#video-security',
+          ]
         },
         {
           id: 'voip',
           title: 'VoIP Solutions',
           image: 'voip_icon.png',
           description: 'VoIP services including hosting, installation, and support to keep your business connected.',
-          listItems: [
+          list: [
             { label: 'VoIP Service', description: 'Reliable communication solutions' },
             { label: 'Installation', description: 'Professional setup & configuration' },
             { label: 'Support', description: 'Ongoing assistance for connectivity' },
-          ],
-          link: '/services#voip',
+          ]
         }
       ]
     };
