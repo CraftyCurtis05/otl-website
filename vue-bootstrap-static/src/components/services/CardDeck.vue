@@ -13,7 +13,7 @@
       :modalOffer="card.modalOffer"
       :modalOfferings="card.modalOfferings"
       :modalContact="card.modalContact"
-      :modalPricingLink="card.modalPricingLink"
+      :modalLink="card.modalLink"
       :isModalVisible="card.isModalVisible"
       @update:isModalVisible="updateModalVisibility(index, $event)"
     />
@@ -45,7 +45,7 @@ export default {
             { label: 'IT Management', text: 'Outsource your IT management to us and get comprehensive support, including desktop management, reporting, and strategic IT direction tailored to your needs.' }
           ],
           modalContact: "Contact us today for a personalized quote and let us help you choose and implement the right technology solutions for your business.",
-          modalPricingLink: "/pricing#consulting",
+          modalLink: "#consulting",
           isModalVisible: false
         },
         {
@@ -63,7 +63,7 @@ export default {
             { label: 'Flexible Access', text: 'All support is provided remotely via platforms like Microsoft Teams or Zoom, with the option for onsite assistance (travel expenses apply).'}
           ],
           modalContact: "Contact us to learn more about how our support services can help maintain your IT environment’s efficiency and security.",
-          modalPricingLink: "/pricing#support",
+          modalLink: "#support",
           isModalVisible: false
         },
         {
@@ -80,7 +80,7 @@ export default {
             { label: 'NVR (Network Video Recorder)', text: 'Robust systems to store, manage, and review your video footage with ease.' }
           ],
           modalContact: "Contact us for a personalized quote and to learn more about how we can help safeguard your business.",
-          modalPricingLink: "/pricing#video-security",
+          modalLink: "#video-security",
           isModalVisible: false
         },
         {
@@ -98,7 +98,7 @@ export default {
             { text: '*Our system is compatible with all SIP phones, but we recommend using Yealink phones for the best experience.'}
           ],
           modalContact: "Contact us today to learn more or get started with a tailored VoIP solution for your business.",
-          modalPricingLink: "/pricing#voip",
+          modalLink: "#voip",
           isModalVisible: false
         }
       ]

@@ -7,10 +7,8 @@
             :id="card.id"
             :title="card.title"
             :pricing="card.pricing"
-            :contactText="card.contactText"
-            :contactLink="card.contactLink"
-            :learnMoreLink="card.learnMoreLink"
-            :buttonText="card.buttonText"
+            :text="card.text"
+            :link="card.link"
         />
     </div>
 </template>
@@ -33,7 +31,7 @@ export default {
                         {
                             title: 'Consulting Services',
                             amounts: [
-                                { amount: 'Pricing is available by proposal only' }
+                                { label: 'Pricing is available by proposal only' }
                             ]
                         }
                     ],
@@ -45,16 +43,18 @@ export default {
                     title: "Support Services",
                     pricing: [
                         {
-                            title: 'Hourly Support (Business Hours)',
+                            title: 'Hourly Support',
                             amounts: [
-                                { amount: '$150.00 per hour (8 AM - 5 PM EST, Monday to Friday)' }
-                            ]    
+                                { label: 'Per hour: ', amount: '$150.00' }
+                            ],
+                            extra: '(8 AM - 5 PM EST, Monday to Friday)'  
                         },
                         {
                             title: 'Emergency Support',
                             amounts: [
-                                { amount: '$250.00 per hour (after business hours or for urgent issues)' }
-                            ]    
+                                { label: 'Per hour: ', amount: '$250.00' }
+                            ],
+                            extra: '(After business hours or for urgent issues)'
                         },
                         {
                             title: 'Discounted Hourly Blocks (Business Hours)',
@@ -62,16 +62,17 @@ export default {
                                 { label: '10 hours: ', amount: '$1,400.00' },
                                 { label: '25 hours: ', amount: '$3,000.00' },
                                 { label: '50 hours: ', amount: '$5,000.00' }
-                            ]
+                            ],
+                            extra: '(8 AM - 5 PM EST, Monday to Friday)'
                         },
                         {
-                            title: 'Discounted Hourly Blocks (*Anytime Hours)',
+                            title: 'Discounted Hourly Blocks (After Hours)',
                             amounts: [
                                 { label: '10 hours: ', amount: '$2,000.00' },
                                 { label: '25 hours: ', amount: '$4,250.00' },
-                                { label: '50 hours: ', amount: '$6,500.00' },
-                                { amount: '*Anytime hours are available 24/7, ideal for after-hours work or tasks within maintenance windows. These hours must be purchased before the project, with additional blocks available as needed.' }
-                            ]
+                                { label: '50 hours: ', amount: '$6,500.00' }
+                            ],
+                            extra: '(24/7 availability, pre-purchased hours, add-ons)'
                         }
                     ],
                     text: "Contact us to discuss your support needs and find the best solution for your business.",
@@ -84,7 +85,7 @@ export default {
                         {
                             title: 'Cameras, Door Access, and NVR Solutions',
                             amounts: [
-                                { amount: 'Pricing is available by proposal only' }
+                                { label: 'Pricing is available by proposal only' }
                             ]
                         }
                     ],
@@ -96,30 +97,68 @@ export default {
                     title: "VoIP Services",
                     pricing: [
                         {
-                            title: 'Hosted VoIP Extension',
+                            title: 'Hosted VoIP Extension*',
                             amounts: [
-                                { label: 'Per Extension: ', amount: '*$20.00 per month (includes all standard features)' },
-                                { amount: '*Discounts available for multiple extensions and multi-location setups.' }
-                            ]
+                                { label: 'Per Extension: ', amount: '*$20.00 per month' }
+                            ],
+                            extra: '*Discounts for multiple extensions and locations. (includes standard features)'
+                        },
+                        {
+                            title: 'Standard Features',
+                            amounts: [
+                                { label: 'Admin Portal' },
+                                { label: 'Announcements' },
+                                { label: 'Blacklist' },
+                                { label: 'Boss / Administrative Assistant' },
+                                { label: 'Busy Lamp Field (BLF)' },
+                                { label: 'Call Back' },
+                                { label: 'Call Detail Records' },
+                                { label: 'Call Forward', amount: ' (busy, no answer, unconditional)' },
+                                { label: 'Call Monitoring' },
+                                { label: 'Call Pickup' },
+                                { label: 'Call Parking' },
+                                { label: 'Call Screening' },
+                                { label: 'Call Transfer', amount: ' (blind, attended)' },
+                                { label: 'Call Waiting' },
+                                { label: 'Caller ID' },
+                                { label: 'Caller ID Routing' },
+                                { label: 'Do Not Disturb (DND)' },
+                                { label: 'Direct Inward Dial (DID)' },
+                                { label: 'Find / Follow Me' },
+                                { label: 'Hunt / Ring Groups' },
+                                { label: 'Menu Systems (IVR)' },
+                                { label: 'Music On Hold' },
+                                { label: 'Paging', amount: ' (extra equipment may be required)' },
+                                { label: 'Phone Books' },
+                                { label: 'Pickup Groups' },
+                                { label: 'Remote Call Pickup' },
+                                { label: 'Speed Dials' },
+                                { label: 'Three Way Calling' },
+                                { label: 'Time Conditions' },
+                                { label: 'Time Groups' },
+                                { label: 'User Portal' },
+                                { label: 'Voicemail' },
+                                { label: 'Voicemail to Email' }
+                            ],
+                            extra: '(All included with monthly service)'
                         },
                         {
                             title: 'Advanced Features',
                             amounts: [
-                                { label: 'Call Center: ', amount: '*Quoted' },
-                                { label: 'Call Recording: ', amount: '$1.00 per GB, per month' },
-                                { label: 'Conferencing: ', amount: '*Quoted (more than 3-way call)' },
-                                { label: 'Dictation: ', amount: '$1.00 per month, per extension' },
-                                { label: 'Hotelling: ', amount: '*Quoted' },
-                                { label: 'Mobile App: ', amount: '$5.00 per month, per extension' },
-                                { label: 'SMS: ', amount: '$5.00 per month, per extension' },
-                                { label: 'Salesforce Connector: ', amount: '*Quoted' },
-                                { label: 'Switchboard: ', amount: '$1.00 per month, per extension' },
-                                { label: 'Teams Integration: ', amount: '$10.00 per month, per extension' },
-                                { label: 'WhatsApp Connector: ', amount: '$5.00 per month, per extension' },
-                                { label: 'Remote Extension: ', amount: '$5.00 per month, per extension' },
-                                { amount: '*Quoted for custom pricing based on your needs.' },
-                                { label: 'All pricing is per month, excluding taxes and fees.'}
-                            ]
+                                { label: 'Call Center: ', amount: 'Contact for quote' },
+                                { label: 'Call Recording: ', amount: '$1.00 per GB*' },
+                                { label: 'Conferencing: ', amount: 'Contact for quote' },
+                                { label: 'Dictation: ', amount: '$1.00 per extension*' },
+                                { label: 'Hotelling: ', amount: 'Contact for quote' },
+                                { label: 'Mobile App: ', amount: '$5.00 per extension*' },
+                                { label: 'SMS: ', amount: '$5.00 per extension*' },
+                                { label: 'Salesforce Connector: ', amount: 'Contact for quote' },
+                                { label: 'Switchboard: ', amount: '$1.00 per extension*' },
+                                { label: 'Teams Integration: ', amount: '$10.00 per extension*' },
+                                { label: 'WhatsApp Connector: ', amount: '$5.00 per extension*' },
+                                { label: 'Remote Extension: ', amount: '$5.00 per extension*' }
+                            ],
+                            extra: '(*Add-ons pricing is monthly, excluding taxes and fees)'
                         }
                     ],
                     text: "Contact us to learn more about our VoIP solutions and the best plan for your business.",
@@ -130,17 +169,3 @@ export default {
     }
 };
 </script>
-
-<style scoped>
-/* Desktop: 4 cards per row */
-@media (min-width: 1280px) {}
-
-/* Laptop: 2 cards per row */
-@media (max-width: 1279px) and (min-width: 769px) {}
-
-/* Tablet: 1 card per row */
-@media (max-width: 768px) {}
-
-/* Mobile: 1 card per row */
-@media (max-width: 480px) {}
-</style>

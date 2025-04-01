@@ -1,8 +1,17 @@
 <!-- src/components/home/Card.vue -->
 <template>
-    <article class="card" :id="`#${id}`">
+    <article 
+      class="card" 
+      :id="`#${id}`"         
+      aria-label="Click to learn more" 
+      title="Click to learn more"
+      >
       <router-link :to="link" class="card-link">
-        <img :src="require(`@/assets/images/home/icons/${image}`)" :alt="`${title} Icon Image`" loading="lazy"/>
+        <img 
+          :src="require(`@/assets/images/home/icons/${image}`)" 
+          :alt="`${title} Icon Image`" 
+          loading="lazy"
+        />
         <section class="body">
           <h1>{{ title }}</h1>
           <p class="text">{{ description }}</p>

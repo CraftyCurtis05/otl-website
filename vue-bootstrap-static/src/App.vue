@@ -270,7 +270,7 @@ li {
 }
 
 .card:hover {
-  background-color: #b1b1b1;
+  background-color: #cccccc;
   transform: scale(1.05);
   z-index: 10;
   cursor: pointer;

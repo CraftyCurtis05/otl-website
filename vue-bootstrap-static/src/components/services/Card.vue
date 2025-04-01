@@ -1,11 +1,23 @@
 <!-- src/components/services/Card.vue -->
 <template>
-    <article class="card" @click="openModal" v-bind="$attrs">
+    <article
+      :id="`#${id}`"
+      class="card" 
+      aria-label="Click to learn more"
+      title="Click to learn more"
+      @click="openModal" 
+      v-bind="$attrs"
+      >
       <div class="body">
         <h1>{{ title }}</h1>
         <p class="link">Click to learn more</p>
         <section class="img-container">
-          <img v-if="image" :src="require(`@/assets/images/services/cards/${image}`)" :alt="`${title} Card Image`" loading="lazy"/>
+          <img 
+            v-if="image" 
+            :src="require(`@/assets/images/services/cards/${image}`)" 
+            :alt="`${title} Card Image`" 
+            loading="lazy"
+          />
           <p v-else>Image not available</p>
         </section>
         <section class="text">
@@ -24,7 +36,7 @@
       :modalOffer="modalOffer"
       :modalOfferings="modalOfferings"
       :modalContact="modalContact"
-      :modalPricingLink="modalPricingLink"
+      :modalLink="modalLink"
       :isModalVisible="isModalVisible"
       @update:isModalVisible="isModalVisible = $event"
     />
@@ -75,7 +87,7 @@ export default {
       type: String, 
       required: true 
     },
-    modalPricingLink: { 
+    modalLink: { 
       type: String, 
       required: true 
     }

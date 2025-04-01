@@ -1,11 +1,26 @@
 <!-- src/components/services/Modal.vue -->
 <template>
-  <article v-if="isModalVisible" class="modal fade show" :id="modalId" tabindex="-1" aria-labelledby="modalLabelId" aria-hidden="false" style="display: block;">
+  <article 
+    v-if="isModalVisible" 
+    class="modal fade show" 
+    :id="modalId" 
+    tabindex="-1" 
+    aria-labelledby="modalLabelId" 
+    aria-hidden="false" 
+    style="display: block;"
+    >
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
       <div class="modal-content">
         <section class="modal-header">
           <h1 class="modal-title" :id="modalLabelId">About Our {{ title }}</h1>
-          <button type="button" class="btn-close btn-close-white" @click="closeModal" aria-label="Close"></button>
+          <button 
+            type="button" 
+            class="btn-close btn-close-white" 
+            @click="closeModal" 
+            aria-label="Close"
+            title="Close"
+            >
+          </button>
         </section>
         <section class="modal-body">
           <aside class="modal-top">
@@ -15,7 +30,13 @@
               <p>{{ modalNeeds }}</p>
             </div>
             <div class="col-3 img-container">
-              <img v-if="image" :src="require(`@/assets/images/services/modals/${image}`)" :alt="`${title} Modal Image`" class="img-fluid" loading="lazy"/>
+              <img 
+                v-if="image" 
+                :src="require(`@/assets/images/services/modals/${image}`)" 
+                :alt="`${title} Modal Image`" 
+                class="img-fluid" 
+                loading="lazy"
+              />
               <p v-else>Image not available</p>
             </div>
           </aside>
@@ -37,9 +58,29 @@
           </aside>
         </section>
         <section class="modal-footer">
-          <router-link to="/contact" class="btn btn-contact">Contact Us</router-link>
-          <router-link v-if="modalPricingLink" :to="modalPricingLink" class="btn btn-pricing">View Pricing</router-link>
-          <button type="button" class="btn btn-secondary" @click="closeModal">Close</button>
+          <router-link 
+            to="/contact" 
+            class="btn btn-contact"
+            aria-label="Go to contact page"
+            title="Go to contact page"
+            >Contact Us
+          </router-link>
+          <router-link 
+            v-if="modalLink" 
+            :to="`/pricing${modalLink}`" 
+            class="btn btn-pricing" 
+            aria-label="Go to pricing page" 
+            title="Go to pricing page"
+            >View Pricing
+          </router-link>
+          <button 
+            type="button" 
+            class="btn btn-secondary" 
+            @click="closeModal" 
+            aria-label="Close" 
+            title="Close"
+            >Close
+          </button>
         </section>
       </div>
     </div>
@@ -83,7 +124,7 @@ export default {
       type: String, 
       required: true 
     },
-    modalPricingLink: { 
+    modalLink: { 
       type: String, 
       required: true 
     },
