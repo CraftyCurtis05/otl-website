@@ -26,11 +26,11 @@ import imageWhite from "@/assets/images/icons/button_arrow_white.png";
 export default {
     name: 'HomeJumbotron',
     data() {
-    return {
-        imageBlack: imageBlack,
-        imageWhite: imageWhite
-    };
-  }
+        return {
+            imageBlack: imageBlack,
+            imageWhite: imageWhite
+        };
+    }
 };
 </script>
 

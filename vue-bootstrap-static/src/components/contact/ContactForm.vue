@@ -1,32 +1,76 @@
 <!-- src/components/contact/ContactForm.vue -->
 <template>
-  <main class="col-md-7 text-start">
+  <article class="container col-7">
+    <!-- Error Handling -->
+    <section class="error">
+      <p v-if="errorMessage" class="alert alert-danger">{{ errorMessage }}</p>
+      <p v-if="successMessage" class="alert alert-success">{{ successMessage }}</p>
+    </section>
+
     <form @submit.prevent="sendEmail" ref="form">
-
-      <section class="d-flex flex-row">
-        <div class="form-input d-flex flex-column">
+      <section class="name-container">
+        <div class="form-input">
           <label for="first-name">First Name <span class="required">*</span></label>
-          <input class="input" type="text" id="first_name" name="first_name" v-model="formData.firstName" required>
+          <input 
+            class="input" 
+            type="text" 
+            id="first_name" 
+            name="first_name" 
+            placeholder="Enter your first name"
+            v-model="formData.firstName" 
+            required
+          />
         </div>
-        <div class="form-input d-flex flex-column">
+        <div class="form-input">
           <label for="last-name">Last Name <span class="required">*</span></label>
-          <input class="input" type="text" id="last_name" name="last_name" v-model="formData.lastName" required>
+          <input 
+            class="input" 
+            type="text" 
+            id="last_name" 
+            name="last_name"
+            placeholder="Enter your last name"
+            v-model="formData.lastName" 
+            required
+          />
         </div>
       </section>
 
-      <section class="form-input d-flex flex-column">
+      <section class="form-input">
         <label for="email">Email Address <span class="required">*</span></label>
-        <input class="input" type="email" id="email" name="user_email" v-model="formData.email" required>
+        <input 
+          class="input" 
+          type="email" 
+          id="from_email" 
+          name="email"
+          placeholder="example@email.com" 
+          v-model="formData.fromEmail" 
+          required
+        />
       </section>
 
-      <section class="form-input d-flex flex-column">
+      <section class="form-input">
         <label for="company">Company Name (if applicable)</label>
-        <input class="input" type="text" id="company" name="company" v-model="formData.company">
+        <input 
+          class="input" 
+          type="text" 
+          id="company" 
+          name="company"
+          placeholder="Enter company name (Leave blank if not applicable)" 
+          v-model="formData.company"
+        />
       </section>
 
-      <section class="form-input d-flex flex-column">
+      <section class="form-input">
         <label for="service">Service you are interested in: <span class="required">*</span></label>
-        <select class="input" type="text" id="service" name="service" v-model="formData.service" required>
+        <select 
+          class="input" 
+          id="service" 
+          name="service" 
+          placeholder="Choose service"
+          v-model="formData.service" 
+          required
+        >
+          <option value="" disabled selected>Select an option</option>
           <option value="consulting">Consulting</option>
           <option value="support">Support</option>
           <option value="video-security">Video Security</option>
@@ -35,16 +79,21 @@
         </select>
       </section>
 
-      <section class="form-input d-flex flex-column">
+      <section class="form-input">
         <label for="message">Message <span class="required">*</span></label>
-        <textarea id="message" name="message" v-model="formData.message" required></textarea>
+        <textarea 
+          id="message" 
+          name="message"
+          placeholder="Enter your message here..." 
+          v-model="formData.message"
+          rows="5"
+          required
+        ></textarea>
       </section>
 
       <button type="submit" class="btn">Send</button>
-      <div v-if="successMessage" class="success-message">{{ successMessage }}</div>
-      <div v-if="errorMessage" class="error-message">{{ errorMessage }}</div>
     </form>
-  </main>
+  </article>
 </template>
 
 <script>
@@ -57,7 +106,7 @@ export default {
       formData: {
         firstName: '',
         lastName: '',
-        email: '',
+        fromEmail: '',
         company: '',
         service: '',
         message: ''
@@ -67,33 +116,78 @@ export default {
     };
   },
   methods: {
-    async sendEmail() {
-      try {
-        await emailjs.sendForm(
-          'YOUR_SERVICE_ID',
-          'YOUR_TEMPLATE_ID',
-          this.$refs.form,
-          {
-            publicKey: 'YOUR_PUBLIC_KEY',
-          }
-        );
-        this.successMessage = 'Email sent successfully!';
-        this.errorMessage = '';
-        this.formData = { firstName: '', lastName: '', email: '', company: '', service: '', message: '' }; // Clear form
-      } catch (error) {
+    sendEmail() {
+      emailjs.send(
+        "service_ug8f75f", // EmailJS Service ID
+        "template_bqvi72t", // EmailJS Template ID
+        {
+          firstName: this.formData.firstName,
+          lastName: this.formData.lastName,
+          fromEmail: this.formData.fromEmail,
+          company: this.formData.company,
+          service: this.formData.service,
+          message: this.formData.message
+        },
+        "PBn8z_QyI9TZT19D7" // EmailJS User ID
+      )
+      .then((response) => {
+        console.log('Email sent successfully!', response);
+        this.successMessage = "Your message has been sent successfully!";
+        this.resetForm();
+      })
+      .catch((error) => {
         console.error('Failed to send email:', error);
-        this.errorMessage = 'Failed to send email. Please try again later.';
-        this.successMessage = '';
-      }
+        this.errorMessage = "Something went wrong. Please try again later.";
+        this.clearMessages();
+      });
+    },
+    resetForm() {
+      this.formData = {
+        firstName: '',
+        lastName: '',
+        fromEmail: '',
+        company: '',
+        service: '',
+        message: ''
+      };
+      this.clearMessages();
+    },
+    clearMessages() {
+      setTimeout(() => {
+        this.successMessage = "";
+        this.errorMessage = "";
+      }, 4000);
     }
   }
 };
 </script>
 
 <style scoped>
-main {
+.container {
+  text-align: start;
   padding-block: 2vw;
   padding-inline: 8vw;
+  margin: 0 auto;
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
 }
 
 label {
@@ -117,17 +211,12 @@ textarea {
   height: 10vw;
 }
 
-.success-message {
-  color: green;
-  margin-top: 10px;
-}
-
-.error-message {
-  color: red;
-  margin-top: 10px;
-}
-
-button {
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
   margin: auto;
+  margin-inline: 40%;
 }
 </style>
