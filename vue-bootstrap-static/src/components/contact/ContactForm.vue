@@ -1,7 +1,7 @@
 <!-- src/components/contact/ContactForm.vue -->
 <template>
   <article class="container col-7">
-    <!-- Error Handling -->
+
     <section class="error">
       <p v-if="errorMessage" class="alert alert-danger">{{ errorMessage }}</p>
       <p v-if="successMessage" class="alert alert-success">{{ successMessage }}</p>
@@ -10,64 +10,64 @@
     <form @submit.prevent="sendEmail" ref="form">
       <section class="name-container">
         <div class="form-input">
-          <label for="first-name">First Name <span class="required">*</span></label>
+          <label for="from_first">First Name <span class="required">*</span></label>
           <input 
             class="input" 
             type="text" 
-            id="first_name" 
-            name="first_name" 
+            id="from_first" 
+            name="from_first" 
             placeholder="Enter your first name"
-            v-model="formData.firstName" 
+            v-model="formData.from_first" 
             required
           />
         </div>
         <div class="form-input">
-          <label for="last-name">Last Name <span class="required">*</span></label>
+          <label for="from_last">Last Name <span class="required">*</span></label>
           <input 
             class="input" 
             type="text" 
-            id="last_name" 
-            name="last_name"
+            id="from_last" 
+            name="from_last"
             placeholder="Enter your last name"
-            v-model="formData.lastName" 
+            v-model="formData.from_last" 
             required
           />
         </div>
       </section>
 
       <section class="form-input">
-        <label for="email">Email Address <span class="required">*</span></label>
+        <label for="from_email">Email Address <span class="required">*</span></label>
         <input 
           class="input" 
           type="email" 
           id="from_email" 
-          name="email"
+          name="from_email"
           placeholder="example@email.com" 
-          v-model="formData.fromEmail" 
+          v-model="formData.from_email" 
           required
         />
       </section>
 
       <section class="form-input">
-        <label for="company">Company Name (if applicable)</label>
+        <label for="from_company">Company Name (if applicable)</label>
         <input 
           class="input" 
           type="text" 
-          id="company" 
-          name="company"
+          id="from_company" 
+          name="from_company"
           placeholder="Enter company name (Leave blank if not applicable)" 
-          v-model="formData.company"
+          v-model="formData.from_company"
         />
       </section>
 
       <section class="form-input">
-        <label for="service">Service you are interested in: <span class="required">*</span></label>
+        <label for="from_service">Service you are interested in: <span class="required">*</span></label>
         <select 
           class="input" 
-          id="service" 
-          name="service" 
+          id="from_service" 
+          name="from_service" 
           placeholder="Choose service"
-          v-model="formData.service" 
+          v-model="formData.from_service" 
           required
         >
           <option value="" disabled selected>Select an option</option>
@@ -80,12 +80,12 @@
       </section>
 
       <section class="form-input">
-        <label for="message">Message <span class="required">*</span></label>
+        <label for="from_message">Message <span class="required">*</span></label>
         <textarea 
-          id="message" 
-          name="message"
+          id="from_message" 
+          name="from_message"
           placeholder="Enter your message here..." 
-          v-model="formData.message"
+          v-model="formData.from_message"
           rows="5"
           required
         ></textarea>
@@ -104,12 +104,12 @@ export default {
   data() {
     return {
       formData: {
-        firstName: '',
-        lastName: '',
-        fromEmail: '',
-        company: '',
-        service: '',
-        message: ''
+        from_first: '',
+        from_last: '',
+        from_email: '',
+        from_company: '',
+        from_service: '',
+        from_message: ''
       },
       successMessage: '',
       errorMessage: ''
@@ -118,17 +118,10 @@ export default {
   methods: {
     sendEmail() {
       emailjs.send(
-        "service_ug8f75f", // EmailJS Service ID
-        "template_bqvi72t", // EmailJS Template ID
-        {
-          firstName: this.formData.firstName,
-          lastName: this.formData.lastName,
-          fromEmail: this.formData.fromEmail,
-          company: this.formData.company,
-          service: this.formData.service,
-          message: this.formData.message
-        },
-        "PBn8z_QyI9TZT19D7" // EmailJS User ID
+        process.env.EMAILJS_SERVICE_ID,
+        process.env.EMAILJS_TEMPLATE_ID,
+        this.formData,
+        process.env.EMAILJS_USER_ID
       )
       .then((response) => {
         console.log('Email sent successfully!', response);
@@ -143,12 +136,12 @@ export default {
     },
     resetForm() {
       this.formData = {
-        firstName: '',
-        lastName: '',
-        fromEmail: '',
-        company: '',
-        service: '',
-        message: ''
+        from_first: '',
+        from_last: '',
+        from_email: '',
+        from_company: '',
+        from_service: '',
+        from_message: ''
       };
       this.clearMessages();
     },
