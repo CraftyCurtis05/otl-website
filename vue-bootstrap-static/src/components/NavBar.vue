@@ -345,16 +345,68 @@ form .btn {
   width: 50%;
 }
 
-/* Desktop Screen Size Styling */
-@media only screen and (min-width: 1280px) {
+/* Large desktop screens (2560px and above) */
+@media only screen and (min-width: 2560px) {
+
+  nav {
+    height: 5rem;
+  }
+
+  .nav-item {
+    font-size: 1.7rem;
+  }
+
+  .navbar-brand img {
+    width: 4.5rem;
+  }
+
+  form input,
+  form .btn {
+    height: 3rem;
+    font-size: 1.5rem;
+  }
 }
 
-/* Laptop Screen Size Styling */
-@media only screen and (min-width: 769px) and (max-width: 1279px) {}
+/* Laptop screens (1024px and above) */
+@media (min-width: 1024px) and (max-width: 1430px) {
 
-/* Tablet Screen Size Styling */
-@media only screen and (min-width: 481px) and (max-width: 768px) {}
+  nav,
+  .navbar-collapse {
+    height: 3rem;
+  }
 
-/* Mobile Screen Size Styling */
-@media only screen and (max-width: 480px) {}
+  .nav-item {
+    font-size: 1rem;
+  }
+
+  .navbar-brand img {
+    width: 2.9rem;
+  }
+
+  form input,
+  form .btn {
+    height: 2rem;
+    font-size: .8rem;
+  }
+}
+
+/* Tablet screens (768px and above) */
+@media (min-width: 768px) {
+  
+}
+
+/* Large mobile screens (600px and above) */
+@media (min-width: 600px) {
+
+}
+
+/* Medium mobile screens (480px and above) */
+@media (min-width: 480px) {
+
+}
+
+/* Small mobile screens (320px and above) */
+@media (min-width: 320px) {
+
+}
 </style>

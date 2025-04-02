@@ -293,6 +293,8 @@ li {
   .card {
     flex: 1 1 calc(25% - 2rem); /* Each card takes up 25% of the row width */
   }
+
+  
 }
 
 /* Laptop: 2 cards per row */

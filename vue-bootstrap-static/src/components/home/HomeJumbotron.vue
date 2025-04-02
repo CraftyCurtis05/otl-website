@@ -66,4 +66,27 @@ h1 {
     margin-top: 1vw;
     width: 30%;
 }
+
+/* 4k Screen Size Styling */
+@media only screen and (min-width: 2560px) {
+
+    .jumbotron {
+        height: 30rem;
+    }
+}
+
+/* Laptop Screen Size Styling */
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+    
+}
+
+/* Tablet Screen Size Styling */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    
+}
+
+/* Mobile Screen Size Styling */
+@media only screen and (max-width: 480px) {
+    
+}
 </style>

@@ -45,6 +45,7 @@ export default {
             { label: 'Network Analysis', text: 'Our team conducts thorough performance analyses to identify areas for improvement, optimizing your network’s efficiency and monitoring it for real-time performance with email notifications.' },
             { label: 'IT Management', text: 'Outsource your IT management to us and get comprehensive support, including desktop management, reporting, and strategic IT direction tailored to your needs.' }
           ],
+          modalContact: 'Contact us today for a personalized quote and let us help you choose and implement the right technology solutions for your business.',
           isModalVisible: false
         },
         {
