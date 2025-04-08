@@ -6,6 +6,7 @@
     aria-label="Navigation Bar"
     >
     <div class="container-fluid">
+
       <!-- Logo Link  -->
       <header class="navbar-brand">
         <router-link to="/" aria-label="Go to homepage">
@@ -20,18 +21,21 @@
 
       <!-- Toggler Button -->
       <button 
-        class="navbar-toggler" 
+        class="navbar-toggler custom-toggler" 
         type="button" 
         data-bs-toggle="collapse" 
         data-bs-target="#navbarScroll" 
         aria-controls="navbarScroll" 
         aria-expanded="false" 
         aria-label="Toggle navigation"
-        ><span class="navbar-toggler-icon"></span>
+        >
+        <span class="navbar-toggler-icon"></span>
       </button>
 
+      <!-- Link List -->
       <section class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav navbar-nav-scroll">
+
           <!-- Home Link -->
           <li class="nav-item">
             <router-link 
@@ -269,6 +273,10 @@ nav {
   height: 3.5rem;
 }
 
+.dropdown-menu {
+  border: 1px solid #545454;
+}
+
 .navbar-brand,
 .navbar-nav,
 .dropdown-item,
@@ -322,13 +330,13 @@ form {
 
 .dropdown-item {
   justify-content: start;
-  margin-left: 19%;
+  margin-left: 18.5%;
   width: 100%;
   transition: all 0.3s ease;
 }
 
 .dropdown-item:hover {
-  background-color: rgb(84, 84, 84, 0.5);
+  background-color: rgb(113, 205, 220, 0.7);
   font-weight: bold;
 }
 
@@ -367,12 +375,12 @@ form .btn {
   }
 }
 
-/* Laptop screens (1024px and above) */
-@media (min-width: 1024px) and (max-width: 1430px) {
+/* Laptop screens (992px - 1430px) */
+@media (min-width: 992px) and (max-width: 1430px) {
 
   nav,
   .navbar-collapse {
-    height: 3rem;
+    height: 3.1rem;
   }
 
   .nav-item {
@@ -390,23 +398,91 @@ form .btn {
   }
 }
 
-/* Tablet screens (768px and above) */
-@media (min-width: 768px) {
+/* Tablet screens (up to 991px) */
+@media (max-width: 991px) {
   
+  nav {
+    height: 3.7rem;
+  }
+
+  .navbar-toggler {
+    background-color: transparent;
+    border: none;
+    padding: .25vw 0;
+  }
+
+  .custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0)' stroke-width='2' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    width: 2.75rem;
+  }
+
+  .navbar-collapse {
+    background-color: transparent;
+    height: 16rem;
+  }
+
+  .navbar-nav,
+  .form-container {
+    background-color: #545454;
+    width: 25vw;
+    margin-left: 77%;
+    padding: 2%;
+  }
+
+  .dropdown-menu {
+    background-color: #545454;
+    border: none;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+  }
+
+  .dropdown-item {
+    color: white;
+  }
+
+  .navbar-brand img {
+    width: 3rem;
+  }
+
+  form input,
+  form .btn {
+    font-size: .8rem;
+    height: 2rem;
+  }
+
+  form input {
+    width: 75%;
+  }
+
+  form .btn {
+    width: 50%;
+  }
 }
 
-/* Large mobile screens (600px and above) */
-@media (min-width: 600px) {
+@media (max-width: 790px) {
 
+  .form-container {
+    display: none;
+  }
 }
 
-/* Medium mobile screens (480px and above) */
-@media (min-width: 480px) {
-
+/* Medium mobile screens (Up to 480px) */
+@media (max-width: 480px) {
+ 
+  .navbar-nav {
+    margin-left: 50%;
+    padding: 0 50% 1% 5%;
+  }
 }
 
-/* Small mobile screens (320px and above) */
-@media (min-width: 320px) {
+/* Small mobile screens (Up to 340px) */
+@media (max-width: 340px) {
 
+  .navbar-nav {
+    margin-left: 40%;
+    padding: 0 60% 1% 5%;
+  }
 }
 </style>
