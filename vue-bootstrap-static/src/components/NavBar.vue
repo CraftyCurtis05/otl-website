@@ -424,8 +424,8 @@ form .btn {
   .navbar-nav,
   .form-container {
     background-color: #545454;
-    width: 25vw;
-    margin-left: 77%;
+    width: 35vw;
+    margin-left: 66%;
     padding: 2%;
   }
 
@@ -453,11 +453,11 @@ form .btn {
   }
 
   form input {
-    width: 75%;
+    width: 70%;
   }
 
   form .btn {
-    width: 50%;
+    width: 30%;
   }
 }
 

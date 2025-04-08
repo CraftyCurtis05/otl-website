@@ -36,7 +36,7 @@
           </router-link>
         </div>
         <div class="text-container">
-          <span>Your Technology Needs, Our Expertise.</span>
+          <span>Your Technology Needs,<br>Our Expertise.</span>
         </div>
       </section>
 
@@ -192,6 +192,7 @@
             <ul>
               <li class="title">Business Hours</li>
               <li 
+                class="text-white"
                 aria-label="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
                 title="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
                 >Monday - Friday: &nbsp; 8:00am - 5:00pm EST
@@ -349,13 +350,14 @@ footer {
 }
 
 .left-container {
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  margin-left: 10%;
   width: 80%;
 }
 
 .logo-container {
-  width: 15%;
+  width: 20%;
 }
 
 .navbar-brand img {
@@ -365,8 +367,8 @@ footer {
 .text-container {
   flex-wrap: wrap;
   text-align: left;
-  padding: 1%;
-  width: 25%;
+  padding: 2%;
+  width: 40%;
 }
 
 .right-container {
@@ -427,6 +429,25 @@ ul {
 .link {
   color: black;
   padding-inline: 1.5vw;
+}
+
+/* Large desktop screens (2560px and above) */
+@media only screen and (min-width: 2560px) {
+
+  .text-container,
+  .title,
+  .text-white {
+    font-size: 1.5rem;
+  }
+
+  .right-container {
+    width: 80%;
+  }
+
+  .copyright-container .text,
+  .link {
+    font-size: 1.2rem;
+  }
 }
 
 /* Desktop Screen Size Styling */
