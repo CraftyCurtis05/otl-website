@@ -154,8 +154,8 @@
             </ul>
           </section>
 
-          <!-- Contact Us Section -->
-          <section class="contact-container col-6">
+          <!-- Contact Us 1 Section -->
+          <section class="contact-container1 col-6">
             <ul>
               <li class="title">Contact Us</li>
               <li>
@@ -201,7 +201,172 @@
           </section>
         </div>
       </section>
-    </div>  
+    </div>
+
+    <!-- Contact Us 2 Section -->
+    <section class="contact-container2 col-6">
+      <ul>
+        <li class="title">Business Hours</li>
+        <li 
+          class="text-white"
+          aria-label="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
+          title="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
+          >Monday - Friday: &nbsp; 8:00am - 5:00pm EST
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <img 
+            :src="image1" 
+            class="icon" 
+            alt="Phone icon" 
+            loading="lazy"
+          />
+          <a 
+            href="tel:18448898885" 
+            class="text-white" 
+            aria-label="Call us at +1 (844) 889-8885"
+            title="Call us at +1 (844) 889-8885"
+            >+1 (844) 889-8885
+          </a>
+        </li>
+        <li>
+          <img 
+            :src="image2" 
+            class="icon" 
+            alt="Email icon" 
+            loading="lazy"
+          />
+          <a 
+            href="mailto:support@otlcommunications.com" 
+            class="text-white" 
+            aria-label="Email us at support@otlcommunications.com"
+            title="Email us at support@otlcommunications.com"
+            >support@otlcommunications.com
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Mobile Section -->
+    <section class="mobile-container">
+
+      <!-- Services Section -->
+      <div class="services-container col-2">
+        <ul>
+          <li class="title">Services</li>
+          <li>
+            <router-link 
+              to="/services#consulting" 
+              class="text-white" 
+              aria-label="Go to consulting services"
+              title="Go to consulting services"
+              >Consulting
+            </router-link>
+          </li>
+          <li>
+            <router-link 
+              to="/services#support" 
+              class="text-white" 
+              aria-label="Go to support services"
+              title="Go to support services"
+              >Support
+            </router-link>
+          </li>
+          <li>
+            <router-link 
+              to="/services#video-security" 
+              class="text-white" 
+              aria-label="Go to video security services"
+              title="Go to video security services"
+              >Video Security
+            </router-link>
+          </li>
+          <li>
+            <router-link 
+              to="/services#voip" 
+              class="text-white" 
+              aria-label="Go to voip services"
+              title="Go to voip services"
+              >VoIP
+            </router-link>
+          </li>
+        </ul>
+      </div>
+      <hr>
+      <ul>
+        <li class="title">Contact Us<span class="blue-arrow">></span></li>
+        <li>
+          <img 
+            :src="image1" 
+            class="icon" 
+            alt="Phone icon" 
+            loading="lazy"
+          />
+          <a 
+            href="tel:18448898885" 
+            class="text-white" 
+            aria-label="Call us at +1 (844) 889-8885"
+            title="Call us at +1 (844) 889-8885"
+            >+1 (844) 889-8885
+          </a>
+        </li>
+        <li>
+          <img 
+            :src="image2" 
+            class="icon" 
+            alt="Email icon" 
+            loading="lazy"
+          />
+          <a 
+            href="mailto:support@otlcommunications.com" 
+            class="text-white" 
+            aria-label="Email us at support@otlcommunications.com"
+            title="Email us at support@otlcommunications.com"
+            >support@otlcommunications.com
+          </a>
+        </li>
+      </ul>
+      <hr/>
+      <ul>
+        <li class="title">Business Hours</li>
+        <li 
+          class="text-white"
+          aria-label="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
+          title="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
+          >Monday - Friday: &nbsp; 8:00am - 5:00pm EST
+        </li>
+      </ul>
+      <hr>
+      <div class="copyright-container2">
+        <section class="links-container">
+          <ul class="links">
+            <li>
+              <router-link 
+                to="/privacy" 
+                class="link" 
+                aria-label="View privacy policy"
+                title="View privacy policy"
+                >Privacy Policy
+              </router-link>
+            </li>
+            <span class="divider">|</span>
+            <li>
+              <router-link 
+                to="/terms" 
+                class="link" 
+                aria-label="View terms & conditions"
+                title="View terms & conditions"
+                >Terms & Conditions
+              </router-link>
+            </li>
+          </ul>
+        </section>
+        <section class="text">
+          <span>&copy; 2025 Five Nine Technologies, LLC. All rights reserved.</span>
+        </section>
+      </div>
+    </section>  
 
     <!-- Line Divider -->
     <hr/>
@@ -209,9 +374,9 @@
     <!-- Bottom part: Copyright and Legal Links -->
     <div class="copyright-container">
       <section class="text">
-        <p>&copy; 2025 Five Nine Technologies, LLC. All rights reserved.</p>
+        <span>&copy; 2025 Five Nine Technologies, LLC. All rights reserved.</span>
       </section>
-      <nav>
+      <section>
         <ul class="links">
           <li>
             <router-link 
@@ -232,7 +397,7 @@
             </router-link>
           </li>
         </ul>
-      </nav>
+      </section>
     </div>
   </footer>
 </template>
@@ -333,6 +498,7 @@ footer {
 .footer-container,
 .left-container,
 .text-container,
+hr,
 .copyright-container,
 .copyright-container ul,
 .links,
@@ -352,7 +518,7 @@ footer {
 .left-container {
   justify-content: start;
   align-items: center;
-  margin-left: 10%;
+  margin-left: 5%;
   width: 80%;
 }
 
@@ -365,6 +531,8 @@ footer {
 }
 
 .text-container {
+  font-size: 1.2rem;
+  font-weight: bold;
   flex-wrap: wrap;
   text-align: left;
   padding: 2%;
@@ -431,10 +599,18 @@ ul {
   padding-inline: 1.5vw;
 }
 
+.contact-container2,
+.mobile-container {
+  display: none;
+}
+
 /* Large desktop screens (2560px and above) */
 @media only screen and (min-width: 2560px) {
 
-  .text-container,
+  .text-container {
+    font-size: 1.7rem;
+  }
+
   .title,
   .text-white {
     font-size: 1.5rem;
@@ -451,20 +627,176 @@ ul {
 }
 
 /* Desktop Screen Size Styling */
-@media only screen and (min-width: 1280px) {}
+@media only screen and (max-width: 1542px) {
+
+  .text-container {
+    font-size: 1rem;
+  }
+
+  .right-container {
+    width: 90%;
+  }
+
+  .title,
+  .text-white {
+    font-size: .95rem;
+  }
+
+  .icon {
+    width: 6%;
+  }
+
+  .copyright-container .text,
+  .links {
+    font-size: .9rem;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+
+  .logo-container {
+    width: 25%;
+  }
+}
+
+/* Laptop L Screen Size Styling */
+@media only screen and (max-width: 1180px) {
+
+  .explore-container {
+    display: none;
+  }
+
+  .left-container {
+    width: 100%;
+  }
+
+  .right-container {
+    width: 100%;
+  }
+
+  .services-container,
+  .support-container {
+    width: 20%;
+  }
+
+  .contact-container1 {
+    width: 60%;
+  }
+}
 
 /* Laptop Screen Size Styling */
-@media only screen and (min-width: 769px) and (max-width: 1279px) {
+@media only screen and (max-width: 1065px) {
+
+  .logo-container {
+    width: 35%;
+  }
+
+  .text-container {
+    font-size: .95rem;
+    width: 90%;
+  }
     
+  .right-container {
+    width: 120%;
+  }
+
+  .title,
+  .text-white {
+    font-size: .9rem;
+  }
+
+  .copyright-container .text,
+  .link {
+    font-size: .8rem;
+  }
 }
 
 /* Tablet Screen Size Styling */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (max-width: 874px) {
+
+  .logo-container {
+    margin-bottom: 10%;
+    width: 35%;
+  }
+
+  .navbar-brand img {
+    width: 85%;
+  }
+
+  .text-container {
+    display: none;
+  }
     
+  .services-container,
+  .support-container {
+    width: 50%;
+  }
+
+  .contact-container1 {
+    display: none;
+  }
+
+  .contact-container2 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+    margin-left: 5%;
+    width: 100%;
+  }
 }
 
 /* Mobile Screen Size Styling */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 521px) {
     
+  .left-container,
+  .right-container,
+  .contact-container2,
+  .copyright-container {
+    display: none;
+  }
+
+  .mobile-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  hr {
+    margin-bottom: 2%;
+  }
+
+  .blue-arrow {
+    color: #71cddc;
+    margin-inline: 1vw;
+  }
+
+  .icon {
+    width: 4%;
+  }
+
+  .copyright-container2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .links-container {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+
+  .link {
+    color: white;
+  }
+
+  .divider {
+    text-align: center;
+    margin-top: 2%;
+    margin-right: 5%;
+  }
+
+  .text {
+    font-size: .75rem;
+    padding-block: 2%;
+  }
 }
 </style>

@@ -376,7 +376,7 @@ form .btn {
 }
 
 /* Laptop screens (992px - 1430px) */
-@media (min-width: 992px) and (max-width: 1430px) {
+@media only screen and (min-width: 992px) and (max-width: 1430px) {
 
   nav,
   .navbar-collapse {
@@ -399,7 +399,7 @@ form .btn {
 }
 
 /* Tablet screens (up to 991px) */
-@media (max-width: 991px) {
+@media only screen and (max-width: 991px) {
   
   nav {
     height: 3.7rem;
@@ -461,7 +461,7 @@ form .btn {
   }
 }
 
-@media (max-width: 790px) {
+@media only screen and (max-width: 790px) {
 
   .form-container {
     display: none;
@@ -469,7 +469,7 @@ form .btn {
 }
 
 /* Medium mobile screens (Up to 480px) */
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
  
   .navbar-nav {
     margin-left: 50%;
@@ -478,7 +478,7 @@ form .btn {
 }
 
 /* Small mobile screens (Up to 340px) */
-@media (max-width: 340px) {
+@media only screen and (max-width: 340px) {
 
   .navbar-nav {
     margin-left: 40%;
