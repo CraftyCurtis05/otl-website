@@ -52,7 +52,10 @@ export default {
 }
 
 .jumbotron {
-  height: 18rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
   text-align: center;
 }
 
@@ -69,6 +72,7 @@ hr,
 h1 {
   width: 30%;
   font-size: 2.1rem;
+  font-weight: bold;
 }
 
 h1,
@@ -85,5 +89,197 @@ h1,
   display: flex;
   flex-direction: row;
   width: 10%;
+}
+
+/* 4k Screen Size Styling */
+@media only screen and (min-width: 2001px) {
+
+  h1,
+  .text {
+    width: 60%;
+  }
+
+  h1 {
+    font-size: 3rem;
+    width: 35%;
+  }
+
+  .text {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    width: 15rem;
+  }
+}
+
+/* Desktop Screen Size Styling */
+@media only screen and (min-width: 1440px) and (max-width: 2000px) {
+
+  h1 {
+    font-size: 2rem;
+    width: 30%;
+  }
+
+  .text {
+    font-size: 1.25rem;
+    width: 60%;
+  }
+
+  .btn {
+    font-size: 1rem;
+    width: 11rem;
+  }
+}
+
+/* Laptop L Screen Size Styling */
+@media only screen and (min-width: 1024px) and (max-width: 1439px){
+
+  h1 {
+    font-size: 1.8rem;
+    width: 30%;
+  }
+
+  .text {
+    font-size: 1.15rem;
+  }
+
+  .btn {
+    font-size: .95rem;
+    width: 11rem;
+  }
+}
+
+@media only screen and (max-width: 1217px) {
+
+  h1 {
+    width: 35%;
+  }
+
+  .text {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 1043px) {
+  
+  h1 {
+    width: 40%;
+  }
+}
+
+/* Laptop Screen Size Styling */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+  h1 {
+    font-size: 1.6rem;
+    width: 35%;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: .9rem;
+    width: 10rem;
+  }
+}
+
+@media only screen and (max-width: 927px) {
+
+  h1 {
+    width: 40%;
+  }
+
+  .text {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 811px) {
+
+  h1 {
+    width: 45%;
+  }
+}
+
+/* Tablet Screen Size Styling */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+
+  h1 {
+    font-size: 1.5rem;
+    width: 45%;
+  }
+
+  .text {
+    font-size: .95rem;
+    width: 90%;
+  }
+
+  .btn {
+    font-size: .8rem;
+    width: 9rem;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+
+  h1 {
+    width: 55%;
+  }
+
+  .text {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 553px) {
+
+  h1 {
+    width: 65%;
+  }
+}
+
+/* Mobile Screen Size Styling */
+@media only screen and (max-width: 480px) {
+
+  .jumbotron {
+    height: 35vh;
+  }
+
+  h1 {
+    font-size: 1.35rem;
+    width: 70%;
+  }
+
+  .text {
+    font-size: .9rem;
+  }
+
+  .btn {
+    font-size: .75rem;
+    width: 8rem;
+  }
+}
+
+@media only screen and (max-width: 417px) {
+  
+  h1 {
+    width: 77%;
+  }
+
+  .text {
+    width: 99%;
+  }
+}
+
+/* Mobile S Screen Size Styling */
+@media only screen and (max-width: 380px) {
+
+  h1 {
+    width: 90%;
+  }
 }
 </style>

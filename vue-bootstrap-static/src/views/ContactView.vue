@@ -1,6 +1,6 @@
 <!-- src/views/ContactView.vue -->
 <template>
-  <main class="d-flex flex-row">
+  <main>
     <ContactJumbotron />
     <ContactForm />
   </main>
@@ -18,13 +18,13 @@ export default {
     },
     data() {
         return {
-            title: 'Contact Us',
-            description: 'This is the contact us page of OTL On The Line Communications website.',
-            keywords: 'OTL, On The Line Communications, Contact Us, Contact, Contact Information, Contact Form, Request A Quote',
-            imageUrl: 'https://otlcommunications.com/images/logo.png',
-            url: 'https://otlcommunications.com/contact',
-            siteName: 'OTL On The Line Communications',
-            locale: 'en_US',
+          title: 'Contact Us',
+          description: 'This is the contact us page of OTL On The Line Communications website.',
+          keywords: 'OTL, On The Line Communications, Contact Us, Contact, Contact Information, Contact Form, Request A Quote',
+          imageUrl: 'https://otlcommunications.com/images/logo.png',
+          url: 'https://otlcommunications.com/contact',
+          siteName: 'OTL On The Line Communications',
+          locale: 'en_US',
         };
     },
     metaInfo() {
@@ -49,23 +49,21 @@ export default {
 </script>
 
 <style scoped>
-/* Desktop Screen Size Styling */
-@media only screen and (min-width: 1280px) {
-
-}
-
-/* Laptop Screen Size Styling */
-@media only screen and (min-width: 769px) and (max-width: 1279px) {
-    
+/* Base Styling */
+main {
+  display: flex;
+  flex-direction: row;
 }
 
 /* Tablet Screen Size Styling */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-    
-}
+@media only screen and (max-width: 768px) {
 
-/* Mobile Screen Size Styling */
-@media only screen and (max-width: 480px) {
-    
+  main {
+    height: 105vh;
+    flex-direction: column;
+    background-image: url('@/assets/images/contact/contact_jumbotron.png');
+    background-size: cover;
+    background-position: center center;
+  }
 }
 </style>

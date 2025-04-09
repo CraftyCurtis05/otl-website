@@ -1,6 +1,6 @@
 <!-- src/components/contact/ContactForm.vue -->
 <template>
-  <article class="container col-7">
+  <article class="container">
 
     <section class="error">
       <p v-if="errorMessage" class="alert alert-danger">{{ errorMessage }}</p>
@@ -156,10 +156,11 @@ export default {
 </script>
 
 <style scoped>
+/* Base Styling */
 .container {
   text-align: start;
-  padding-block: 2vw;
-  padding-inline: 8vw;
+  padding-block: 4vh;
+  padding-inline: 5vw;
   margin: 0 auto;
 }
 
@@ -197,11 +198,11 @@ label {
 }
 
 .input {
-  height: 2vw;
+  height: 5vh;
 }
 
 textarea {
-  height: 10vw;
+  height: 20vh;
 }
 
 .btn {
@@ -211,5 +212,40 @@ textarea {
   width: 25%;
   margin: auto;
   margin-inline: 40%;
+}
+
+/* Tablet Screen Size Styling */
+@media only screen and (max-width: 768px) {
+
+  .container {
+    padding: 0;
+    padding-bottom: 10vh;
+    margin: 0 auto;
+    width: 90vw;
+  }
+
+  label {
+    color: white;
+    font-size: .95rem;
+  }
+
+  textarea {
+    height: 15vh;
+  }
+
+  .btn {
+    font-size: 1rem;
+    margin-top: 1vh;
+    margin-bottom: 15vh;
+  }
+}
+
+/* Mobile Screen Size Styling */
+@media only screen and (max-width: 425px) {
+
+  .name-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

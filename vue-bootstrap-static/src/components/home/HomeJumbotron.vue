@@ -214,7 +214,7 @@ hr {
 @media only screen and (max-width: 328px) {
 
     .jumbotron {
-        height: 40dvb;
+        height: 40vh;
     }
 
     h1 {
