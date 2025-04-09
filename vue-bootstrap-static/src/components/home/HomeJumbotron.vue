@@ -2,7 +2,7 @@
 <template>
     <main class="jumbotron">
         <article class="text-container col-md-6">
-            <h1>Your Technology Needs, Our Expertise.</h1>
+            <h1>Your Technology Needs,<br>Our Expertise.</h1>
             <hr>
             <section class="text">
                 <p>We specialize in providing top-tier services designed to meet all your business technology needs, including:</p>
@@ -36,57 +36,200 @@ export default {
 
 <style scoped>
 .jumbotron {
-    height: 23rem;
+    height: 45vh;
     background-image: url('@/assets/images/home/home_jumbotron.png');
 }
 
 .text-container {
-    margin-top: 2vw;
+    margin-block: 5vh;
 }
 
 h1,
-hr,
 .text {
-    width: 70%;
+    width: 50%;
     margin: auto;
-}
-
-h1,
-.text {
-    margin-block: 1vw;
+    margin-block: 1%;
 }
 
 h1 {
+    font-size: 1.9rem;
     font-weight: bold;
+}
+
+hr {
+    margin: auto;
 }
 
 .btn {
     display: flex;
     flex-direction: row;
-    margin-top: 1vw;
-    width: 30%;
+    font-size: .9rem;
+    margin-top: 1vh;
+    width: 10rem;
 }
 
 /* 4k Screen Size Styling */
-@media only screen and (min-width: 2560px) {
+@media only screen and (min-width: 2001px) {
 
-    .jumbotron {
-        height: 30rem;
+    h1,
+    .text {
+        width: 60%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .text {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        width: 15rem;
+    }
+}
+
+/* Desktop Screen Size Styling */
+@media only screen and (min-width: 1440px) and (max-width: 2000px) {
+
+    h1,
+    .text {
+        width: 60%;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: .9rem;
+        width: 10rem;
+    }
+}
+
+/* Laptop L Screen Size Styling */
+@media only screen and (min-width: 1024px) and (max-width: 1439px){
+    
+    .text-container {
+        margin-block: 4vh;
+        margin-left: -15%;
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .text {
+        font-size: .9rem;
     }
 }
 
 /* Laptop Screen Size Styling */
-@media only screen and (min-width: 769px) and (max-width: 1279px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
     
+    .text-container {
+        margin-block: 4vh;
+        margin-left: -20%;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .text {
+        font-size: .9rem;
+    }
 }
 
 /* Tablet Screen Size Styling */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+
+    .jumbotron {
+        background-image: url('@/assets/images/home/home_jumbotron_tablet.png');
+        height: 40vh;
+    }
     
+    .text-container {
+        margin-block: 1%;
+        margin-left: -15%;
+        width: 90%;
+    }
+
+    h1,
+    .text,
+    .btn {
+        margin-block: 1%;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        width: 100%;
+    }
+
+    .text {
+        font-size: .9rem;
+        width: 50%;
+    }
+
+    .btn {
+        font-size: .8rem;
+        width: 9rem;
+    }
 }
 
 /* Mobile Screen Size Styling */
 @media only screen and (max-width: 480px) {
+
+    .jumbotron {
+        background-image: url('@/assets/images/home/home_jumbotron_mobile.png');
+    }
     
+    .text-container {
+        margin: 3vh auto;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+        width: 100%;
+    }
+
+    .text {
+        width: 75%;
+    }
+
+    .btn {
+        font-size: .8rem;
+        width: 8rem;
+    }
+}
+
+/* Mobile S Screen Size Styling */
+@media only screen and (max-width: 328px) {
+
+    .jumbotron {
+        height: 40dvb;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .text {
+        font-size: .9rem;
+        width: 80%;
+    }
+
+    .btn {
+        font-size: .75rem;
+        width: 7.5rem;
+    }
 }
 </style>

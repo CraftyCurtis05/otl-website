@@ -93,7 +93,7 @@ li {
 .jumbotron hr {
   width: 20%;
   color: #545454;
-  border: .3rem solid #545454;
+  border: .2rem solid #545454;
 }
 
 /* Banner Styling */
@@ -290,15 +290,15 @@ li {
 
 /* Desktop: 4 cards per row */
 @media (min-width: 1280px) {
+  
   .card {
     flex: 1 1 calc(25% - 2rem); /* Each card takes up 25% of the row width */
   }
-
-  
 }
 
 /* Laptop: 2 cards per row */
 @media (max-width: 1279px) and (min-width: 769px) {
+  
   .card {
     flex: 1 1 calc(45% - 2rem); /* Each card takes up 45% of the row width */
    }
@@ -306,6 +306,7 @@ li {
 
 /* Tablet: 1 card per row */
 @media (max-width: 768px) {
+  
   .card {
     flex: 1 1 calc(90% - 2rem); /* Each card takes up 90% of the row width */
   }
@@ -313,6 +314,7 @@ li {
 
 /* Mobile: 1 card per row */
 @media (max-width: 480px) {
+  
   .card {
     flex: 1 1 calc(100% - 2rem); /* Each card takes up 100% of the row width */
   }
