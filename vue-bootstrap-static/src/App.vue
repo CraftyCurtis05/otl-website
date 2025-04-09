@@ -81,6 +81,7 @@ li {
   color: #80E0FC;
 }
 
+
 /* Jumbotron Styling */
 .jumbotron {
   color: white;
@@ -144,7 +145,7 @@ li {
 @media only screen and (min-width: 1500px) and (max-width: 2559px) {
 
   .banner {
-    padding: .5vw;
+    padding: .6vh;
   }
 
   .banner h1 {
@@ -156,7 +157,7 @@ li {
 @media only screen and (min-width: 1280px) and (max-width: 1499px) {
 
   .banner {
-    padding: .4vw;
+    padding: .55vh;
   }
 
   .banner h1 {
@@ -168,11 +169,15 @@ li {
 @media only screen and (min-width: 769px) and (max-width: 1279px) {
 
   .banner {
-    padding: .4vw;
+    padding: .5vh;
   }
 
   .banner h1 {
     font-size: 1.1rem;
+  }
+
+  .banner hr {
+    width: 15%;
   }
 }
 
@@ -180,11 +185,15 @@ li {
 @media only screen and (min-width: 481px) and (max-width: 768px) {
 
   .banner {
-    padding: .3vw;
+    padding: .45vh;
   }
 
   .banner h1 {
     font-size: 1rem;
+  }
+
+  .banner hr {
+    width: 20%;
   }
 }
 
@@ -192,11 +201,15 @@ li {
 @media only screen and (max-width: 480px) {
 
   .banner {
-    padding: .3vw;
+    padding: .4vh;
   }
 
   .banner h1 {
     font-size: .95rem;
+  }
+
+  .banner hr {
+    width: 25%;
   }
 }
 
@@ -277,6 +290,7 @@ li {
   opacity: 1;
 }
 
+
 /* Link Styling */
 .link {
   color: #002373;
@@ -286,6 +300,7 @@ li {
 .link:hover {
   text-decoration: underline;
 }
+
 
 /* Card Styling */
 .card-deck {
@@ -298,6 +313,7 @@ li {
 
 .card {
   border: 0;
+  flex-direction: column;
   line-height: 1.5;
   padding: .25vw;
   padding-top: 1vw;
@@ -312,11 +328,14 @@ li {
 }
 
 .card .body {
-  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1vh;
 }
 
 .card h1 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
@@ -336,6 +355,12 @@ li {
 .card li {
   text-align: start;
   width: 100%;
+}
+
+.card .link {
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
 
 .card .link-blue {
@@ -360,6 +385,80 @@ li {
   border-color: #0a65b0;
   box-shadow: 0 0 15px 5px rgba(124, 237, 254, 0.9);
   transform: translateY(-1px);
+}
+
+/* Laptop Screen Size Styling */
+@media only screen and (max-width: 1024px) {
+
+  .card .body,
+  .card .list {
+    padding-inline: 5vw;
+  }
+
+  .card img {
+    width: 15%;
+  }
+
+  .card h1 {
+    font-size: 1.2rem;
+  }
+
+  .card .text,
+  .card .link {
+    font-size: .95rem;
+  }
+}
+
+/* Tablet Screen Size Styling */
+@media only screen and (max-width: 768px) {
+
+  .card img {
+    width: 10%;
+  }
+
+  .card h1 {
+    font-size: 1.1rem;
+  }
+
+  .card .text,
+  .card .link {
+    font-size: .9rem;
+  }
+
+  .card ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 25%;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+
+  .card ul {
+    margin: 0 15%;
+  }
+}
+
+/* Mobile Screen Size Styling */
+@media only screen and (max-width: 480px) {
+
+  .card img {
+    width: 15%;
+  }
+
+  .card h1 {
+    font-size: 1rem;
+  }
+
+  .card .text {
+    font-size: .85rem;
+  }
+
+  .card ul {
+    margin: 0 5%;
+  }
 }
 
 /* Desktop: 4 cards per row */

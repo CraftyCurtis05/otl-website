@@ -104,6 +104,7 @@ export default {
 </script>
 
 <style scoped>
+/*Base Styling */
 .list {
   padding-inline: 5%;
   padding-block: .5%;
@@ -157,5 +158,20 @@ li {
 
 .contact-info .text {
   font-weight: bold;
+}
+
+/* Laptop Screen Size Styling */
+@media only screen and (max-width: 1024px) {
+
+}
+
+/* Tablet Screen Size Styling */
+@media only screen and (max-width: 768px) {
+
+}
+
+/* Mobile Screen Size Styling */
+@media only screen and (max-width: 480px) {
+
 }
 </style>
