@@ -36,7 +36,7 @@ export default {
 
 <style scoped>
 .jumbotron {
-    height: 45vh;
+    height: 45%;
     background-image: url('@/assets/images/home/home_jumbotron.png');
 }
 
@@ -153,7 +153,6 @@ hr {
 
     .jumbotron {
         background-image: url('@/assets/images/home/home_jumbotron_tablet.png');
-        height: 40vh;
     }
     
     .text-container {

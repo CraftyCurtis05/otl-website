@@ -360,7 +360,8 @@ form .btn {
     height: 5rem;
   }
 
-  .nav-item {
+  .nav-item,
+  .dropdown-item {
     font-size: 1.7rem;
   }
 

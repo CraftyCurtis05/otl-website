@@ -96,6 +96,7 @@ li {
   border: .2rem solid #545454;
 }
 
+
 /* Banner Styling */
 .banner {
   padding: .5vw;
@@ -126,6 +127,79 @@ li {
   justify-content: center;
   width: 100%;
 }
+
+/* 4k Screen Size Styling */
+@media only screen and (min-width: 2560px) {
+
+  .banner {
+    padding: .75vw;
+  }
+
+  .banner h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Desktop L Screen Size Styling */
+@media only screen and (min-width: 1500px) and (max-width: 2559px) {
+
+  .banner {
+    padding: .5vw;
+  }
+
+  .banner h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Desktop Screen Size Styling */
+@media only screen and (min-width: 1280px) and (max-width: 1499px) {
+
+  .banner {
+    padding: .4vw;
+  }
+
+  .banner h1 {
+    font-size: 1.15rem;
+  }
+}
+
+/* Laptop L Screen Size Styling */
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+
+  .banner {
+    padding: .4vw;
+  }
+
+  .banner h1 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Laptop Screen Size Styling */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+  .banner {
+    padding: .3vw;
+  }
+
+  .banner h1 {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet Screen Size Styling */
+@media only screen and (max-width: 480px) {
+
+  .banner {
+    padding: .3vw;
+  }
+
+  .banner h1 {
+    font-size: .95rem;
+  }
+}
+
 
 /* Button Styling */
 .btn {
