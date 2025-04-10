@@ -44,9 +44,9 @@
             <div>
               <h2>What do we offer?</h2>
               <hr>
-              <p>{{ modalOffer }}:</p>
+              <p class="text">{{ modalOffer }}:</p>
               <ul v-if="modalOfferings && modalOfferings.length">
-                <li v-for="(offering, index) in modalOfferings" :key="index">
+                <li class="text" v-for="(offering, index) in modalOfferings" :key="index">
                   <b>{{ offering.label }}: </b>{{ offering.text }}
                 </li>
               </ul>
@@ -252,5 +252,111 @@ h3 {
   margin-left: 15%;
   width: 10%;
 }
-</style>
-  
+
+/* 4k Screen Size Styling */
+@media only screen and (max-width: 1560px) {
+
+  .modal-title {
+    font-size: 1.7rem;
+  }
+}
+
+/* Laptop Screen Size Styling */
+@media only screen and (max-width: 1024px) {
+
+  .modal-title {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .text {
+    font-size: 1rem !important;
+  }
+
+  h3 {
+    font-size: 1rem;
+    width: 95%;
+  }
+
+  .btn {
+    font-size: .9rem;
+  }
+
+  .btn-secondary {
+    width: 15%;
+  }
+}
+
+/* Tablet Screen Sze Styling */
+@media only screen and (max-width: 768px) {
+
+  .modal {
+    left: 15%;
+    width: 70%;
+  }
+
+  .text {
+    width: 100% !important;
+  }
+
+  img {
+    display: none;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .btn-secondary {
+    width: 50%;
+  }
+}
+
+/* Mobile Screen Size Styling */
+@media only screen and (max-width: 425px) {
+
+  .modal {
+    left: 5%;
+    width: 90%;
+  }
+
+  .modal-title {
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .text {
+    font-size: .9rem !important;
+  }
+
+  h3 {
+    font-size: .85rem;
+    width: 95%;
+  }
+
+  .btn {
+    font-size: .75rem;
+    width: 200%;
+  }
+
+  .btn-secondary {
+    margin-inline: 1%;
+    width: 100%;
+  }
+}
+
+/* Mobile S Screen Size Styling */
+@media only screen and (max-width: 320px) {
+
+  .modal {
+    left: 3%;
+    width: 95%;
+  }
+}
+</style>  
