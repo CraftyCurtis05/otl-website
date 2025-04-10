@@ -1,17 +1,17 @@
 <!-- src/components/pricing/Card.vue -->
 <template>
     <article 
-        class="card" 
+        class="card pricing-card" 
         :id="`${id}`" 
         aria-label="Pricing Card" 
         >
-        <h1 class="title">{{ title }}</h1>
+        <h1>{{ title }}</h1>
         <section v-if="pricing" class="body">
             <details v-for="(item, index) in pricing" :key="index">
-                <summary aria-label="Show pricing information" title="Click to show pricing information">{{ item.title }}</summary>
-                <span v-if="item.extra" class="text">{{ item.extra }}</span>
+                <summary class="summary" aria-label="Show pricing information" title="Click to show pricing information">{{ item.title }}</summary>
+                <span v-if="item.extra" class="text extra">{{ item.extra }}</span>
                 <ul v-for="(subItem, subIndex) in item.amounts" :key="subIndex">
-                    <li><b>{{ subItem.label }}</b>{{ subItem.amount }}</li>
+                    <li><b class="label">{{ subItem.label }}</b>{{ subItem.amount }}</li>
                 </ul>
             </details>
         </section>
@@ -67,6 +67,7 @@ export default {
 </script>
 
 <style scoped>
+/* Base Styling */
 .card {
     width: 390px;
     text-align: center;
@@ -79,8 +80,18 @@ export default {
     margin: 0;
 }
 
-.card details {
-    text-align: left;
+.pricing-card .body {
+  text-align: left !important;
+
+}
+
+.pricing-card details {
+  width: 100%;
+}
+
+.pricing-card summary {
+  text-align: left !important;
+  font-weight: bold;
 }
 
 .body ul {
@@ -91,8 +102,14 @@ export default {
 }
 
 .body li {
+    color: #002373; 
     list-style-type: disc;
-    margin-left: 10%;
+    margin-left: 10% !important;
+    margin: 1% 0;
+}
+
+.extra {
+    color: #545454;
 }
 
 .body .text {
@@ -110,12 +127,16 @@ export default {
 }
 
 .contact {
+    display: flex;
+    flex-direction: column;
     padding-top: 10%;
     margin-top: auto;
 }
 
 .btn {
+    font-size: .95rem;
     margin-block: 5%;
+    width: 80% !important;
 }
 
 p {
@@ -137,5 +158,70 @@ p {
 summary:hover,
 .contact p:hover {
     text-decoration: underline;
+}
+
+/* Laptop Screen Size Styling */
+@media only screen and (max-width: 1440px) {
+
+    p {
+        font-size: .85rem;
+    }
+}
+
+/* Laptop S Screen Size Styling */
+@media only screen and (max-width: 1024px) {
+
+    .contact .text {
+        font-size: 1rem;
+        width: 95%;
+    }
+
+    .btn {
+        font-size: .9rem;
+    }
+}
+
+/* Tablet Screen Size Styling */
+@media only screen and (max-width: 768px) {
+
+    .pricing-card details {
+        font-size: 1rem !important;
+    }
+
+    .btn {
+        width: 50%;
+    }
+}
+
+/* Mobile Screen Size Styling */
+@media only screen and (max-width: 425px) {
+
+    .pricing-card details,
+    li,
+    .text {
+        font-size: .95rem !important;
+    }
+
+    .contact .text {
+        font-size: .9rem;
+        margin: auto;
+        width: 90%;
+    }
+
+    .btn {
+        font-size: .8rem;
+    }
+}
+
+/* Mobile S Screen Size Styling */
+@media only screen and (max-width: 320px) {
+
+    .contact p {
+        font-size: .75rem;
+    }
+
+    .contact .text {
+        font-size: .85rem;
+    }
 }
 </style>
