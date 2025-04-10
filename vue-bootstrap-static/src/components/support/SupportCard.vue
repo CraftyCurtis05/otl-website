@@ -6,7 +6,7 @@
       <hr>
       <ul>
         <li v-for="(subItem, subIndex) in item.details" :key="subIndex" class="list-item">
-          <b>{{ subItem.label }}:</b>{{ subItem.text }}
+          <b>{{ subItem.label }}: </b>{{ subItem.text }}
         </li>
       </ul>
     </section>
@@ -121,7 +121,7 @@ li {
 }
 
 h1 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
@@ -130,7 +130,6 @@ hr {
   border: .2rem solid #545454;
   margin-block: .3%;
   width: 15%;
-  min-width: 10rem;
 }
 
 li {
@@ -160,18 +159,110 @@ li {
   font-weight: bold;
 }
 
+/* 4k Screen Size Styling */
+@media only screen and (min-width: 2560px) {
+
+  hr {
+    width: 10%;
+  }
+}
+
 /* Laptop Screen Size Styling */
 @media only screen and (max-width: 1024px) {
 
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  hr {
+    border: .15rem solid #545454;
+    width: 18%;
+  }
+
+  li {
+    font-size: .95rem;
+  }
+
+  .btn-container {
+    width: 40%;
+  }
+
+  .btn {
+    font-size: .9rem;
+    width: 50%;
+  }
+
+  .contact-info {
+    font-size: .95rem;
+    width: 70%;
+  }
 }
 
 /* Tablet Screen Size Styling */
 @media only screen and (max-width: 768px) {
 
+  h1 {
+    font-size: 1.05rem;
+  }
+
+  hr {
+    border: .15rem solid #545454;
+    width: 22%;
+  }
+
+  li {
+    font-size: .9rem;
+  }
+
+  .btn-container {
+    width: 60%;
+  }
+
+  .btn {
+    font-size: .8rem;
+    width: 50%;
+  }
+
+  .contact-info {
+    font-size: .9rem;
+    width: 80%;
+  }
 }
 
 /* Mobile Screen Size Styling */
 @media only screen and (max-width: 480px) {
 
+  h1 {
+    font-size: .95rem;
+  }
+
+  hr {
+    width: 35%;
+  }
+
+  li {
+    font-size: .85rem;
+  }
+
+  .btn-container {
+    width: 90%;
+  }
+
+  .btn {
+    font-size: .75rem;
+  }
+
+  .contact-info {
+    font-size: .85rem;
+    width: 90%;
+  }
+}
+
+/* Mobile M Screen Size Styling */
+@media only screen and (max-width: 375px) {
+
+  hr {
+  width: 40%;
+}
 }
 </style>
