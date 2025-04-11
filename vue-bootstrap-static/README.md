@@ -3,8 +3,8 @@
 ## Project setup
 ```
 npm install                            (v 10.9.0)
-npm install -g @vue/cli                (v 3.5.13)
-npm install bootstrap                  (v 5.3.3)
+npm install vue@^3.5.13                (v 3.5.13)
+npm install bootstrap@^5.3.5           (v 5.3.5)
 npm install vue-meta@^3.0.0-alpha.7    (v 3.0.0)
 npm install @emailjs/browser@latest    (v 4.4.1)
 ```

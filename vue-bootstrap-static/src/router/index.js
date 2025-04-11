@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+
 import HomeView from '@/views/HomeView.vue';
 import ServicesView from '@/views/ServicesView.vue';
 import SupportView from '@/views/SupportView.vue';
@@ -7,7 +8,6 @@ import ContactView from '@/views/ContactView.vue';
 import PrivacyPolicyView from '@/views/PrivacyPolicyView.vue';
 import TermsConditionsView from '@/views/TermsConditionsView.vue';
 
-// Helper function to generate meta tags
 const generateMetaTags = (title, description) => ([
   { name: 'description', content: description },
   { property: 'og:title', content: title },
@@ -75,15 +75,25 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth'
+      };
+    } else {
+      return { top: 0 };
+    }
+  }
 });
 
 router.beforeEach((to, from, next) => {
   const { meta } = to;
-  
-  // Set document title
+
   if (meta?.title) document.title = meta.title;
 
-  // Set meta tags dynamically
   if (meta?.metaTags) {
     meta.metaTags.forEach(({ name, content }) => {
       const existingTag = document.querySelector(`meta[name="${name}"]`);

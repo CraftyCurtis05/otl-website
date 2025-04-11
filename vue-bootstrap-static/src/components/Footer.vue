@@ -36,7 +36,7 @@
           </router-link>
         </div>
         <div class="text-container">
-          <span>Your Technology Needs,<br>Our Expertise.</span>
+          <span title="Your technology needs, our expertise." aria-label="Your technology needs, our expertise.">Your Technology Needs,<br>Our Expertise.</span>
         </div>
       </section>
 
@@ -67,20 +67,20 @@
               </li>
               <li>
                 <router-link 
-                  to="/pricing" 
-                  class="text-white" 
-                  aria-label="Go to pricing page"
-                  title="Go to pricing page"
-                  >Pricing
-                </router-link>
-              </li>
-              <li>
-                <router-link 
                   to="/support" 
                   class="text-white" 
                   aria-label="Go to support page"
                   title="Go to support page"
                   >Support
+                </router-link>
+              </li>
+              <li>
+                <router-link 
+                  to="/pricing" 
+                  class="text-white" 
+                  aria-label="Go to pricing page"
+                  title="Go to pricing page"
+                  >Pricing
                 </router-link>
               </li>
             </ul>
@@ -144,7 +144,7 @@
               </li>
               <li>
                 <router-link 
-                  to="/support#non-emergency" 
+                  to="/support#hourly" 
                   class="text-white" 
                   aria-label="Go to non-emergency support"
                   title="Go to non-emergency support"
@@ -192,7 +192,7 @@
             <ul>
               <li class="title">Business Hours</li>
               <li 
-                class="text-white"
+                class="text-white hours"
                 aria-label="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
                 title="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
                 >Monday - Friday: &nbsp; 8:00am - 5:00pm EST
@@ -208,7 +208,7 @@
       <ul>
         <li class="title">Business Hours</li>
         <li 
-          class="text-white"
+          class="text-white hours"
           aria-label="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
           title="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
           >Monday - Friday: &nbsp; 8:00am - 5:00pm EST
@@ -331,7 +331,7 @@
       <ul>
         <li class="title">Business Hours</li>
         <li 
-          class="text-white"
+          class="text-white hours"
           aria-label="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
           title="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
           >Monday - Friday: &nbsp; 8:00am - 5:00pm EST
@@ -363,7 +363,11 @@
           </ul>
         </section>
         <section class="text">
-          <span>&copy; 2025 Five Nine Technologies, LLC. All rights reserved.</span>
+          <span 
+            title="Copyright 2025 Five Nine Technologies, LLC. All rights reserved." 
+            aria-label="Copyright 2025 Five Nine Technologies, LLC. All rights reserved."
+            >&copy; 2025 Five Nine Technologies, LLC. All rights reserved.
+          </span>
         </section>
       </div>
     </section>  
@@ -374,7 +378,11 @@
     <!-- Bottom part: Copyright and Legal Links -->
     <div class="copyright-container">
       <section class="text">
-        <span>&copy; 2025 Five Nine Technologies, LLC. All rights reserved.</span>
+        <span
+          title="Copyright 2025 Five Nine Technologies, LLC. All rights reserved." 
+          aria-label="Copyright 2025 Five Nine Technologies, LLC. All rights reserved."
+          >&copy; 2025 Five Nine Technologies, LLC. All rights reserved.
+        </span>
       </section>
       <section>
         <ul class="links">
@@ -558,6 +566,10 @@ ul {
 
 .text-white:hover {
   text-decoration: underline;
+}
+
+.hours:hover {
+  text-decoration: none;
 }
 
 .icon {

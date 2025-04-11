@@ -1,198 +1,157 @@
-<!-- src/components/Navbar.vue -->
 <template>
   <nav 
     class="navbar navbar-expand-lg navbar-dark" 
-    role="navigation"
+    role="navigation" 
     aria-label="Navigation Bar"
     >
     <div class="container-fluid">
 
-      <!-- Logo Link  -->
+      <!-- Logo (hidden in offcanvas) -->
       <header class="navbar-brand">
         <router-link to="/" aria-label="Go to homepage">
           <img 
             :src="image" 
-            alt="Logo Image" 
+            alt="Logo image" 
             loading="eager" 
             title="Go to homepage"
           />
         </router-link>
       </header>
 
-      <!-- Toggler Button -->
-      <button 
-        class="navbar-toggler custom-toggler" 
-        type="button" 
-        data-bs-toggle="collapse" 
-        data-bs-target="#navbarScroll" 
-        aria-controls="navbarScroll" 
-        aria-expanded="false" 
+      <!-- Logo and Toggler Button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
         aria-label="Toggle navigation"
-        >
+        title="Toggle navigation menu"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Link List -->
-      <section class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav navbar-nav-scroll">
-
-          <!-- Home Link -->
-          <li class="nav-item">
-            <router-link 
-              class="nav-link" 
-              to="/" 
-              aria-current="page" 
-              role="link"
-              active-class="active-nav-item"
-              aria-label="Go to homepage"
-              title="Go to homepage"
-              >Home
-            </router-link>
-          </li>
-
-          <!-- Services Dropdown -->
-          <li class="nav-item dropdown">
-            <router-link 
-              class="nav-link dropdown-toggle" 
-              to="/services"
-              aria-expanded="false" 
-              aria-label="Navigate to services page"
-              data-bs-toggle="dropdown"
-              active-class="active-nav-item"
-              title="Navigate to services page"
-              >Services
-            </router-link>
-            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li>
-                <router-link 
-                  class="dropdown-item" 
-                  to="/services#consulting" 
-                  role="link"
-                  aria-label="Go to Consulting services"
-                  title="Go to Consulting services"
-                  @click="closeDropdown"
-                  >Consulting</router-link>
-              </li>
-              <li>
-                <router-link 
-                  class="dropdown-item" 
-                  to="/services#support" 
-                  role="link"
-                  aria-label="Go to Support services"
-                  title="Go to Support services"
-                  @click="closeDropdown"
-                  >Support</router-link>
-              </li>
-              <li>
-                <router-link 
-                  class="dropdown-item" 
-                  to="/services#video-security" 
-                  role="link"
-                  aria-label="Go to Video Security services"
-                  title="Go to Video Security services"
-                  @click="closeDropdown"
-                  >Video Security</router-link>
-              </li>
-              <li>
-                <router-link 
-                  class="dropdown-item" 
-                  to="/services#voip" 
-                  role="link"
-                  aria-label="Go to VoIP services"
-                  title="Go to VoIP services"
-                  @click="closeDropdown"
-                  >VoIP</router-link>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Support Dropdown -->
-          <li class="nav-item dropdown">
-            <router-link 
-              class="nav-link dropdown-toggle" 
-              to="/support"
-              aria-expanded="false" 
-              aria-label="Navigate to Support page"
-              title="Navigate to Support page"
-              data-bs-toggle="dropdown"
-              active-class="active-nav-item"
-              >Support
-            </router-link>
-            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li>
-                <router-link 
-                  class="dropdown-item" 
-                  to="/support#hourly" 
-                  role="link"
-                  aria-label="Go to Hourly Support"
-                  title="Go to Hourly Support"
-                  @click="closeDropdown"
-                  >Hourly
-                </router-link>
-              </li>
-              <li>
-                <router-link 
-                  class="dropdown-item" 
-                  to="/support#emergency" 
-                  role="link"
-                  aria-label="Go to Emergency Support"
-                  title="Go to Emergency Support"
-                  @click="closeDropdown"
-                  >Emergency
-                </router-link>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Pricing Link -->
-          <li class="nav-item">
-            <router-link 
-              class="nav-link" 
-              to="/pricing" 
-              role="link" 
-              aria-label="Navigate to Pricing page"
-              title="Navigate to Pricing page"
-              active-class="active-nav-item"
-              >Pricing
-            </router-link>
-          </li>
-
-          <!-- Contact Link -->
-          <li class="nav-item">
-            <router-link 
-              class="nav-link" 
-              to="/contact" 
-              role="link" 
-              aria-label="Navigate to Contact page"
-              title="Navigate to Contact page"
-              active-class="active-nav-item"
-              >Contact
-            </router-link>
-          </li>
-        </ul>
-
-        <!-- Search Section -->
-        <aside class="form-container">
-          <form @submit.prevent="submitSearch" role="search" aria-label="Search Form">
-            <label for="navbarSearch" class="visually-hidden">Search</label>
-            <input 
-              id="navbarSearch" 
-              class="form-control me-2" 
-              type="search"
-              v-model="searchQuery"
-              placeholder="Search" 
-              aria-label="Enter search term"
-              title="Enter search term"
+      <!-- Offcanvas Navbar -->
+      <section 
+        class="offcanvas offcanvas-end bg-dark text-white" 
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title" id="offcanvasNavbarLabel">
+            <section class="logo" data-bs-dismiss="offcanvas">
+              <router-link to="/">
+                <img 
+                  :src="image" 
+                  alt="Logo"
+                  aria-label="Go to homepage"
+                  title="Go to homepage"
+                />
+              </router-link>
+            </section>  
+          </h1>
+          <button 
+            type="button" 
+            class="btn-close text-white" 
+            data-bs-dismiss="offcanvas" 
+            aria-label="Close"
+            title="Close menu"
             >
-            <button 
-              class="btn" 
-              type="submit" 
-              aria-label="Submit search" 
-              title="Submit search"
-              >Search
-            </button>
-          </form>
-        </aside>
+          </button>
+        </div>
+
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 lead">
+
+            <!-- Home Link -->
+            <li class="nav-item" data-bs-dismiss="offcanvas">
+              <router-link 
+                class="nav-link" 
+                to="/" 
+                exact-active-class="active"
+                aria-label="Go to homepage"
+                title="Go to homepage"
+                >Home
+              </router-link>
+            </li>
+
+            <!-- Services Link -->
+            <li class="nav-item" data-bs-dismiss="offcanvas">
+              <router-link 
+                class="nav-link" 
+                to="/services"
+                exact-active-class="active"
+                aria-label="Go to services page"
+                title="Go to services page"
+                >Services
+              </router-link>
+            </li>
+
+            <!-- Support Link -->
+            <li class="nav-item" data-bs-dismiss="offcanvas">
+              <router-link 
+                class="nav-link" 
+                to="/support"
+                exact-active-class="active"
+                aria-label="Go to support page"
+                title="Go to support page"
+                >Support
+              </router-link>
+            </li>
+
+            <!-- Pricing Link -->
+            <li class="nav-item" data-bs-dismiss="offcanvas">
+              <router-link 
+                class="nav-link" 
+                to="/pricing" 
+                exact-active-class="active"
+                aria-label="Go to pricing page"
+                title="Go to pricing page"
+                >Pricing
+              </router-link>
+            </li>
+
+            <!-- Contact Link-->
+            <li class="nav-item" data-bs-dismiss="offcanvas">
+              <router-link 
+                class="nav-link" 
+                to="/contact" 
+                exact-active-class="active"
+                aria-label="Go to contact page"
+                title="Go to contact page"
+                >Contact
+              </router-link>
+            </li>
+
+            <!-- Search Bar -->
+            <li class="nav-item search">
+              <form 
+                @submit.prevent="submitSearch" 
+                role="search"
+                aria-label="Search Form"
+                title="Search form"
+                >
+                <input 
+                  id="navbarSearch" 
+                  class="form-control" 
+                  type="search"
+                  v-model="searchQuery"
+                  placeholder="Search" 
+                  aria-label="Enter search term"
+                  title="Enter search term"
+                >
+                <button 
+                  class="btn" 
+                  type="submit"
+                  aria-label="Submit search"
+                  title="Submit search"
+                  ><i class="bi bi-search"></i>
+                </button>
+              </form>
+            </li>
+          </ul>
+        </div>
       </section>
     </div>
   </nav>
@@ -210,12 +169,6 @@ export default {
     }
   },
   methods: {
-    closeDropdown() {
-      const dropdowns = document.querySelectorAll('.dropdown-menu');
-      dropdowns.forEach((dropdown) => {
-        dropdown.classList.remove('show');
-      });
-    },
     submitSearch() {
       if (this.searchQuery.trim() !== '') {
         this.handleSearchNavigation(this.searchQuery);
@@ -267,105 +220,111 @@ export default {
 </script>
 
 <style scoped>
-/* Base styling for all screen sizes */
+/* Core Navbar Styling */
 nav {
   background-color: #545454;
   height: 3.5rem;
 }
 
-.dropdown-menu {
-  border: 1px solid #545454;
+.navbar-toggler {
+  background-color: transparent;
+  border: none;
+  padding: .25vw 0;
 }
 
-.navbar-brand,
-.navbar-nav,
-.dropdown-item,
-form {
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0)' stroke-width='2' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  width: 2.75rem;
+}
+
+/* Logo */
+.navbar-brand {
   display: flex;
   align-items: center;
-}
-
-.navbar-brand {
   justify-content: start;
   flex-shrink: 0;
   width: 25%;
   padding: 0;
   margin: 0;
 }
-
 .navbar-brand img {
   width: 3.25rem;
   height: auto;
 }
 
-.navbar-collapse {
+/* Offcanvas styles */
+.offcanvas-body {
   background-color: #545454;
   color: white;
-  height: 3.5rem;
+}
+.offcanvas-header {
+  background-color: #333;
+}
+.offcanvas-title img {
+  width: 3.25rem;
+  height: auto;
 }
 
+/* Nav Items */
 .navbar-nav {
-  justify-content: center;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 3.0rem;
 }
-
 .nav-item {
   font-size: 1.1rem;
-  padding: 0;
-  margin: 0;
   transition: all 0.3s ease;
 }
-
 .nav-item:hover {
   transform: scale(1.05);
 }
-
-.active-nav-item {
+.nav-link {
+  color: white;
+}
+.nav-link.active {
   text-decoration: line-through;
 }
 
-.dropdown {
-  z-index: 20;
+/* Search Form */
+.nav-item.search {
+  display: flex;
+  align-items: center;
 }
-
-.dropdown-item {
-  justify-content: start;
-  margin-left: 18.5%;
-  width: 100%;
-  transition: all 0.3s ease;
-}
-
-.dropdown-item:hover {
-  background-color: rgb(113, 205, 220, 0.7);
-  font-weight: bold;
-}
-
-.form-container {
-  width: 35%;
-}
-
-form {
+.nav-item.search form {
+  display: flex;
   flex-direction: row;
-  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0;
+  width: 100%;
 }
-
-form .btn {
-  width: 50%;
+.nav-item.search input,
+.nav-item.search .btn {
+  height: 2.3rem;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+.nav-item.search .btn {
+  color: black;
+  width: 30%;
+}
+.nav-item.search .btn:hover {
+  color: white;
 }
 
 /* Large desktop screens (2560px and above) */
 @media only screen and (min-width: 2560px) {
-
   nav {
     height: 5rem;
   }
 
-  .nav-item,
-  .dropdown-item {
+  .nav-item {
     font-size: 1.7rem;
   }
 
-  .navbar-brand img {
+  .navbar-brand img,
+  .offcanvas-title img {
     width: 4.5rem;
   }
 
@@ -378,9 +337,7 @@ form .btn {
 
 /* Laptop screens (992px - 1430px) */
 @media only screen and (min-width: 992px) and (max-width: 1430px) {
-
-  nav,
-  .navbar-collapse {
+  nav {
     height: 3.1rem;
   }
 
@@ -388,7 +345,8 @@ form .btn {
     font-size: 1rem;
   }
 
-  .navbar-brand img {
+  .navbar-brand img,
+  .offcanvas-title img {
     width: 2.9rem;
   }
 
@@ -399,91 +357,30 @@ form .btn {
   }
 }
 
-/* Tablet screens (up to 991px) */
+/* Tablet and smaller screens (up to 991px) */
 @media only screen and (max-width: 991px) {
-  
+
+  .offcanvas .navbar-nav {
+    flex-direction: column !important;
+    align-items: flex-start;
+    height: auto;
+    gap: 1rem;
+  }
+
   nav {
     height: 3.7rem;
   }
 
-  .navbar-toggler {
-    background-color: transparent;
-    border: none;
-    padding: .25vw 0;
-  }
-
-  .custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0)' stroke-width='2' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-    width: 2.75rem;
-  }
-
-  .navbar-collapse {
-    background-color: transparent;
-    height: 16rem;
-  }
-
-  .navbar-nav,
-  .form-container {
-    background-color: #545454;
-    width: 35vw;
-    margin-left: 66%;
-    padding: 2%;
-  }
-
-  .dropdown-menu {
-    background-color: #545454;
-    border: none;
-  }
-
-  .nav-item {
-    font-size: 1rem;
-  }
-
-  .dropdown-item {
-    color: white;
+  .navbar-nav {
+    padding-left: 1rem;
   }
 
   .navbar-brand img {
     width: 3rem;
   }
 
-  form input,
-  form .btn {
-    font-size: .8rem;
-    height: 2rem;
-  }
-
-  form input {
-    width: 70%;
-  }
-
-  form .btn {
-    width: 30%;
-  }
-}
-
-@media only screen and (max-width: 790px) {
-
-  .form-container {
+  .nav-item.search {
     display: none;
-  }
-}
-
-/* Medium mobile screens (Up to 480px) */
-@media only screen and (max-width: 480px) {
- 
-  .navbar-nav {
-    margin-left: 50%;
-    padding: 0 50% 1% 5%;
-  }
-}
-
-/* Small mobile screens (Up to 340px) */
-@media only screen and (max-width: 340px) {
-
-  .navbar-nav {
-    margin-left: 40%;
-    padding: 0 60% 1% 5%;
   }
 }
 </style>
