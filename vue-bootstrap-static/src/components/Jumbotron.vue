@@ -1,4 +1,3 @@
-<!-- src/components/Jumbotron.vue -->
 <template>
   <article class="jumbotron-deck">
     <div 
@@ -11,11 +10,25 @@
         <h1>{{ item.title }}</h1>
         <hr>
         <p class="text">{{ item.text1 }}<span class="text-blue">{{ item.blueText }}</span>{{ item.text2 }}</p>
-        <router-link v-if="item.buttonText" :to="item.buttonLink" class="btn btn-md" role="button">
-          <span class="btn-text">{{ item.buttonText }}&nbsp;</span>
+        <router-link 
+          v-if="item.buttonText" 
+          :to="item.buttonLink" 
+          class="btn btn-md" 
+          role="button"
+          :aria-label="item.buttonLabel"
+          :title="item.buttonLabel"
+          ><span class="btn-text">{{ item.buttonText }}&nbsp;</span>
           <div class="img-container">
-            <img class="img-black" :src="imageBlack" loading="lazy" />
-            <img class="img-white" :src="imageWhite" loading="lazy" />
+            <img 
+              class="img-black" 
+              :src="imageBlack" 
+              loading="lazy" 
+            />
+            <img 
+              class="img-white" 
+              :src="imageWhite" 
+              loading="lazy" 
+            />
           </div>
         </router-link>
       </section>
@@ -55,12 +68,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40vh;
   text-align: center;
+  height: 45vh;
 }
 
 .text-container {
-  margin-top: 2vw;
+  margin-top: 1vw;
 }
 
 h1,
@@ -91,7 +104,6 @@ h1,
   width: 10%;
 }
 
-/* 4k Screen Size Styling */
 @media only screen and (min-width: 2001px) {
 
   h1,
@@ -114,7 +126,6 @@ h1,
   }
 }
 
-/* Desktop Screen Size Styling */
 @media only screen and (min-width: 1440px) and (max-width: 2000px) {
 
   h1 {
@@ -133,7 +144,6 @@ h1,
   }
 }
 
-/* Laptop L Screen Size Styling */
 @media only screen and (min-width: 1024px) and (max-width: 1439px){
 
   h1 {
@@ -169,7 +179,6 @@ h1,
   }
 }
 
-/* Laptop Screen Size Styling */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 
   h1 {
@@ -205,7 +214,6 @@ h1,
   }
 }
 
-/* Tablet Screen Size Styling */
 @media only screen and (min-width: 481px) and (max-width: 767px) {
 
   h1 {
@@ -242,7 +250,6 @@ h1,
   }
 }
 
-/* Mobile Screen Size Styling */
 @media only screen and (max-width: 480px) {
 
   .jumbotron {
@@ -275,7 +282,6 @@ h1,
   }
 }
 
-/* Mobile S Screen Size Styling */
 @media only screen and (max-width: 380px) {
 
   h1 {

@@ -1,4 +1,3 @@
-<!-- src/views/ContactView.vue -->
 <template>
   <main>
     <ContactJumbotron />
@@ -49,13 +48,11 @@ export default {
 </script>
 
 <style scoped>
-/* Base Styling */
 main {
   display: flex;
   flex-direction: row;
 }
 
-/* Tablet Screen Size Styling */
 @media only screen and (max-width: 768px) {
 
   main {

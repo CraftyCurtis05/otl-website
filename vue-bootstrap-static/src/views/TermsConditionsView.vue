@@ -1,4 +1,3 @@
-<!-- src/views/TermsConditionsView.vue -->
 <template>
     <article class="container">
         <h1>Terms & Conditions View</h1>
@@ -14,26 +13,18 @@ export default {
 
 <style scoped>
 .container {
-    height: 48vh;
+    height: 52vh;
 }
 
-/* Desktop Screen Size Styling */
-@media only screen and (min-width: 1280px) {
-
+h1 {
+    font-weight: bold;
 }
 
-/* Laptop Screen Size Styling */
-@media only screen and (min-width: 769px) and (max-width: 1279px) {
-    
-}
+@media only screen and (min-width: 1280px) {}
 
-/* Tablet Screen Size Styling */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-    
-}
+@media only screen and (min-width: 769px) and (max-width: 1279px) {}
 
-/* Mobile Screen Size Styling */
-@media only screen and (max-width: 480px) {
-    
-}
+@media only screen and (min-width: 481px) and (max-width: 768px) {}
+
+@media only screen and (max-width: 480px) {}
 </style>

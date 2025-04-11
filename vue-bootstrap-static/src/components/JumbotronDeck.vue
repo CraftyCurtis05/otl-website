@@ -1,4 +1,3 @@
-<!-- src/components/JumbotronDeck.vue -->
 <template>
     <JumbotronMain :jumbotrons="filteredJumbotrons" />
   </template>
@@ -22,6 +21,7 @@
             text2: '—designed to optimize your business with tailored, innovative technology.',
             buttonText: 'CONTACT US',
             buttonLink: '/contact',
+            buttonLabel: 'Contact us today to learn more',
             routeName: 'ServicesView'
           },
           {
@@ -32,6 +32,7 @@
             text2: 'we have flexible options.',
             buttonText: 'GET SUPPORT',
             buttonLink: '/contact',
+            buttonLabel: 'Contact us today for support',
             routeName: 'SupportView'
           },
           {
@@ -42,6 +43,7 @@
             text2: ', we offer clear, affordable options tailored to your needs.',
             buttonText: 'GET A QUOTE',
             buttonLink: '/contact',
+            buttonLabel: 'Contact us today for a quote',
             routeName: 'PricingView'
           }
         ]

@@ -1,4 +1,3 @@
-<!-- src/components/services/Modal.vue -->
 <template>
   <article 
     v-if="isModalVisible" 
@@ -253,7 +252,6 @@ h3 {
   width: 10%;
 }
 
-/* 4k Screen Size Styling */
 @media only screen and (max-width: 1560px) {
 
   .modal-title {
@@ -261,7 +259,6 @@ h3 {
   }
 }
 
-/* Laptop Screen Size Styling */
 @media only screen and (max-width: 1024px) {
 
   .modal-title {
@@ -290,7 +287,6 @@ h3 {
   }
 }
 
-/* Tablet Screen Sze Styling */
 @media only screen and (max-width: 768px) {
 
   .modal {
@@ -315,7 +311,6 @@ h3 {
   }
 }
 
-/* Mobile Screen Size Styling */
 @media only screen and (max-width: 425px) {
 
   .modal {
@@ -351,7 +346,6 @@ h3 {
   }
 }
 
-/* Mobile S Screen Size Styling */
 @media only screen and (max-width: 320px) {
 
   .modal {

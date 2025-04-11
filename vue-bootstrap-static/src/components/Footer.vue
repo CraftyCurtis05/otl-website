@@ -1,200 +1,128 @@
-<!-- src/components/Footer.vue -->
 <template>
   <footer aria-label="Footer">
 
-    <!-- Scroll to Top Button Section -->
     <section class="top-btn">
       <button 
         @click="scrollToTop" 
         class="btn btn-container" 
-        aria-label="Back to top"
-        title="Back to top"
       >
         <div class="img-container">
-          <img class="img-black" :src="image3" loading="lazy"/>
-          <img class="img-white" :src="image4" loading="lazy"/>
+          <img 
+            class="img-black" 
+            :src="image3" 
+            loading="lazy"
+            aria-label="Back to top"
+            title="Back to top"
+          />
+          <img 
+            class="img-white" 
+            :src="image4" 
+            loading="lazy"
+            aria-label="Back to top"
+            title="Back to top"
+          />
         </div>  
       </button>
     </section>
 
     <div class="footer-container">
 
-      <!-- Left side: Logo and Phrase -->
       <section class="left-container">
         <div class="logo-container">
-          <router-link 
-            class="navbar-brand" 
-            to="/" 
+          <router-link
+            to="/"
+            class="navbar-brand"  
             aria-label="Go to homepage"
             >
             <img 
               :src="logo" 
               alt="Logo Image" 
-              loading="lazy"
+              loading="lazy" 
               title="Go to homepage"
             />
           </router-link>
         </div>
         <div class="text-container">
-          <span title="Your technology needs, our expertise." aria-label="Your technology needs, our expertise.">Your Technology Needs,<br>Our Expertise.</span>
+          <span 
+            title="Your technology needs, our expertise." 
+            aria-label="Your technology needs, our expertise."
+            >Your Technology Needs,<br>Our Expertise.
+          </span>
         </div>
       </section>
 
-      <!-- Right side: Links -->
       <section class="right-container">
         <div class="row">
-          <!-- Explore Section -->
-          <section class="explore-container col-2">
+          <section class="col-2">
             <ul>
               <li class="title">Explore</li>
-              <li>
+              <li v-for="link in exploreLinks" :key="link.text">
                 <router-link 
-                  to="/"
+                  :to="link.to" 
                   class="text-white" 
-                  aria-label="Go to homepage"
-                  title="Go to homepage"
-                  >Home
-                </router-link>
-              </li>
-              <li>
-                <router-link 
-                  to="/services" 
-                  class="text-white" 
-                  aria-label="Go to services page"
-                  title="Go to services page"
-                  >Services
-                </router-link>
-              </li>
-              <li>
-                <router-link 
-                  to="/support" 
-                  class="text-white" 
-                  aria-label="Go to support page"
-                  title="Go to support page"
-                  >Support
-                </router-link>
-              </li>
-              <li>
-                <router-link 
-                  to="/pricing" 
-                  class="text-white" 
-                  aria-label="Go to pricing page"
-                  title="Go to pricing page"
-                  >Pricing
+                  :aria-label="link.label" 
+                  :title="link.label"
+                  >{{ link.text }}
                 </router-link>
               </li>
             </ul>
           </section>
 
-          <!-- Services Section -->
-          <section class="services-container col-2">
+          <section class="col-2">
             <ul>
               <li class="title">Services</li>
-              <li>
+              <li v-for="service in servicesLinks" :key="service.text">
                 <router-link 
-                  to="/services#consulting" 
+                  :to="service.to" 
                   class="text-white" 
-                  aria-label="Go to consulting services"
-                  title="Go to consulting services"
-                  >Consulting
-                </router-link>
-              </li>
-              <li>
-                <router-link 
-                  to="/services#support" 
-                  class="text-white" 
-                  aria-label="Go to support services"
-                  title="Go to support services"
-                  >Support
-                </router-link>
-              </li>
-              <li>
-                <router-link 
-                  to="/services#video-security" 
-                  class="text-white" 
-                  aria-label="Go to video security services"
-                  title="Go to video security services"
-                  >Video Security
-                </router-link>
-              </li>
-              <li>
-                <router-link 
-                  to="/services#voip" 
-                  class="text-white" 
-                  aria-label="Go to voip services"
-                  title="Go to voip services"
-                  >VoIP
+                  :aria-label="service.label" 
+                  :title="service.label"
+                  >{{ service.text }}
                 </router-link>
               </li>
             </ul>
           </section>
 
-          <!-- Support Section -->
-          <section class="support-container col-2">
+          <section class="col-2">
             <ul>
               <li class="title">Support</li>
-              <li>
+              <li v-for="support in supportLinks" :key="support.text">
                 <router-link 
-                  to="/support#emergency" 
+                  :to="support.to" 
                   class="text-white" 
-                  aria-label="Go to emergency support"
-                  title="Go to emergency support"
-                  >Emergency
-                </router-link>
-              </li>
-              <li>
-                <router-link 
-                  to="/support#hourly" 
-                  class="text-white" 
-                  aria-label="Go to non-emergency support"
-                  title="Go to non-emergency support"
-                  >Non-Emergency
+                  :aria-label="support.label" 
+                  :title="support.label"
+                  >{{ support.text }}
                 </router-link>
               </li>
             </ul>
           </section>
 
-          <!-- Contact Us 1 Section -->
-          <section class="contact-container1 col-6">
+          <section class="col-6">
             <ul>
               <li class="title">Contact Us</li>
-              <li>
+              <li v-for="contact in contactLinks" :key="contact.text">
                 <img 
-                  :src="image1" 
+                  :src="contact.icon" 
                   class="icon" 
-                  alt="Phone icon" 
+                  :alt="contact.alt" 
                   loading="lazy"
                 />
                 <a 
-                  href="tel:18448898885" 
+                  :href="contact.href" 
                   class="text-white" 
-                  aria-label="Call us at +1 (844) 889-8885"
-                  title="Call us at +1 (844) 889-8885"
-                  >+1 (844) 889-8885
-                </a>
-              </li>
-              <li>
-                <img 
-                  :src="image2" 
-                  class="icon" 
-                  alt="Email icon" 
-                  loading="lazy"
-                />
-                <a 
-                  href="mailto:support@otlcommunications.com" 
-                  class="text-white" 
-                  aria-label="Email us at support@otlcommunications.com"
-                  title="Email us at support@otlcommunications.com"
-                  >support@otlcommunications.com
+                  :aria-label="contact.label" 
+                  :title="contact.label"
+                  >{{ contact.text }}
                 </a>
               </li>
             </ul>
             <ul>
               <li class="title">Business Hours</li>
               <li 
-                class="text-white hours"
-                aria-label="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
-                title="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
+                class="text-white hours" 
+                :aria-label="businessHoursText" 
+                :title="businessHoursText"
                 >Monday - Friday: &nbsp; 8:00am - 5:00pm EST
               </li>
             </ul>
@@ -203,141 +131,57 @@
       </section>
     </div>
 
-    <!-- Contact Us 2 Section -->
-    <section class="contact-container2 col-6">
-      <ul>
-        <li class="title">Business Hours</li>
-        <li 
-          class="text-white hours"
-          aria-label="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
-          title="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
-          >Monday - Friday: &nbsp; 8:00am - 5:00pm EST
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <img 
-            :src="image1" 
-            class="icon" 
-            alt="Phone icon" 
-            loading="lazy"
-          />
-          <a 
-            href="tel:18448898885" 
-            class="text-white" 
-            aria-label="Call us at +1 (844) 889-8885"
-            title="Call us at +1 (844) 889-8885"
-            >+1 (844) 889-8885
-          </a>
-        </li>
-        <li>
-          <img 
-            :src="image2" 
-            class="icon" 
-            alt="Email icon" 
-            loading="lazy"
-          />
-          <a 
-            href="mailto:support@otlcommunications.com" 
-            class="text-white" 
-            aria-label="Email us at support@otlcommunications.com"
-            title="Email us at support@otlcommunications.com"
-            >support@otlcommunications.com
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Mobile Section -->
     <section class="mobile-container">
-
-      <!-- Services Section -->
-      <div class="services-container col-2">
+      <div class="col-2">
         <ul>
           <li class="title">Services</li>
-          <li>
+          <li v-for="service in servicesLinks" :key="service.text">
             <router-link 
-              to="/services#consulting" 
+              :to="service.to" 
               class="text-white" 
-              aria-label="Go to consulting services"
-              title="Go to consulting services"
-              >Consulting
-            </router-link>
-          </li>
-          <li>
-            <router-link 
-              to="/services#support" 
-              class="text-white" 
-              aria-label="Go to support services"
-              title="Go to support services"
-              >Support
-            </router-link>
-          </li>
-          <li>
-            <router-link 
-              to="/services#video-security" 
-              class="text-white" 
-              aria-label="Go to video security services"
-              title="Go to video security services"
-              >Video Security
-            </router-link>
-          </li>
-          <li>
-            <router-link 
-              to="/services#voip" 
-              class="text-white" 
-              aria-label="Go to voip services"
-              title="Go to voip services"
-              >VoIP
+              :aria-label="service.label" 
+              :title="service.label"
+              >{{ service.text }}
             </router-link>
           </li>
         </ul>
       </div>
-      <hr>
+
+      <hr/>
+
       <ul>
         <li class="title">Contact Us<span class="blue-arrow">></span></li>
-        <li>
+        <li v-for="contact in contactLinks" :key="contact.text">
           <img 
-            :src="image1" 
+            :src="contact.icon" 
             class="icon" 
-            alt="Phone icon" 
+            :alt="contact.alt" 
             loading="lazy"
           />
           <a 
-            href="tel:18448898885" 
+            :href="contact.href" 
             class="text-white" 
-            aria-label="Call us at +1 (844) 889-8885"
-            title="Call us at +1 (844) 889-8885"
-            >+1 (844) 889-8885
-          </a>
-        </li>
-        <li>
-          <img 
-            :src="image2" 
-            class="icon" 
-            alt="Email icon" 
-            loading="lazy"
-          />
-          <a 
-            href="mailto:support@otlcommunications.com" 
-            class="text-white" 
-            aria-label="Email us at support@otlcommunications.com"
-            title="Email us at support@otlcommunications.com"
-            >support@otlcommunications.com
+            :aria-label="contact.label" 
+            :title="contact.label"
+            >{{ contact.text }}
           </a>
         </li>
       </ul>
+
       <hr/>
+
       <ul>
         <li class="title">Business Hours</li>
         <li 
-          class="text-white hours"
-          aria-label="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
-          title="Business Hours: Monday thru Friday 8:00am-5:00pm EST"
+          class="text-white hours" 
+          :aria-label="businessHoursText" 
+          :title="businessHoursText"
           >Monday - Friday: &nbsp; 8:00am - 5:00pm EST
         </li>
       </ul>
+
       <hr>
+
       <div class="copyright-container2">
         <section class="links-container">
           <ul class="links">
@@ -345,7 +189,7 @@
               <router-link 
                 to="/privacy" 
                 class="link" 
-                aria-label="View privacy policy"
+                aria-label="View privacy policy" 
                 title="View privacy policy"
                 >Privacy Policy
               </router-link>
@@ -355,7 +199,7 @@
               <router-link 
                 to="/terms" 
                 class="link" 
-                aria-label="View terms & conditions"
+                aria-label="View terms & conditions" 
                 title="View terms & conditions"
                 >Terms & Conditions
               </router-link>
@@ -372,13 +216,11 @@
       </div>
     </section>  
 
-    <!-- Line Divider -->
     <hr/>
 
-    <!-- Bottom part: Copyright and Legal Links -->
     <div class="copyright-container">
       <section class="text">
-        <span
+        <span 
           title="Copyright 2025 Five Nine Technologies, LLC. All rights reserved." 
           aria-label="Copyright 2025 Five Nine Technologies, LLC. All rights reserved."
           >&copy; 2025 Five Nine Technologies, LLC. All rights reserved.
@@ -390,16 +232,15 @@
             <router-link 
               to="/privacy" 
               class="link" 
-              aria-label="View privacy policy"
+              aria-label="View privacy policy" 
               title="View privacy policy"
               >Privacy Policy
-            </router-link>
-          </li>
+            </router-link></li>
           <li>
             <router-link 
               to="/terms" 
               class="link" 
-              aria-label="View terms & conditions"
+              aria-label="View terms & conditions" 
               title="View terms & conditions"
               >Terms & Conditions
             </router-link>
@@ -425,8 +266,29 @@ export default {
       image1: image1,
       image2: image2,
       image3: image3,
-      image4: image4
-    }
+      image4: image4,
+      exploreLinks: [
+        { text: 'Home', to: '/', label: 'Go to homepage' },
+        { text: 'Services', to: '/services', label: 'Go to services page' },
+        { text: 'Support', to: '/support', label: 'Go to support page' },
+        { text: 'Pricing', to: '/pricing', label: 'Go to pricing page' }
+      ],
+      servicesLinks: [
+        { text: 'Consulting', to: '/services#consulting', label: 'Go to consulting services' },
+        { text: 'Support', to: '/services#support', label: 'Go to support services' },
+        { text: 'Video Security', to: '/services#video-security', label: 'Go to video security services' },
+        { text: 'VoIP', to: '/services#voip', label: 'Go to VoIP services' }
+      ],
+      supportLinks: [
+        { text: 'Emergency', to: '/support#emergency', label: 'Go to emergency support' },
+        { text: 'Non-Emergency', to: '/support#hourly', label: 'Go to non-emergency support' }
+      ],
+      contactLinks: [
+        { text: '+1 (844) 889-8885', href: 'tel:18448898885', icon: image1, alt: 'Phone icon', label: 'Call us at +1 (844) 889-8885' },
+        { text: 'support@otlcommunications.com', href: 'mailto:support@otlcommunications.com', icon: image2, alt: 'Email icon', label: 'Email us at support@otlcommunications.com' }
+      ],
+      businessHoursText: 'Business Hours: Monday thru Friday 8:00am-5:00pm EST'
+    };
   },
   methods: {
     scrollToTop() {
@@ -440,7 +302,6 @@ export default {
 </script>
 
 <style scoped>
-/* Base styling for all screen sizes */
 footer {
   background: #545454;
   color: white;
@@ -616,7 +477,6 @@ ul {
   display: none;
 }
 
-/* Large desktop screens (2560px and above) */
 @media only screen and (min-width: 2560px) {
 
   .text-container {
@@ -638,7 +498,6 @@ ul {
   }
 }
 
-/* Desktop Screen Size Styling */
 @media only screen and (max-width: 1542px) {
 
   .text-container {
@@ -671,7 +530,6 @@ ul {
   }
 }
 
-/* Laptop L Screen Size Styling */
 @media only screen and (max-width: 1180px) {
 
   .explore-container {
@@ -696,7 +554,6 @@ ul {
   }
 }
 
-/* Laptop Screen Size Styling */
 @media only screen and (max-width: 1065px) {
 
   .logo-container {
@@ -723,7 +580,6 @@ ul {
   }
 }
 
-/* Tablet Screen Size Styling */
 @media only screen and (max-width: 874px) {
 
   .logo-container {
@@ -757,7 +613,6 @@ ul {
   }
 }
 
-/* Mobile Screen Size Styling */
 @media only screen and (max-width: 521px) {
     
   .left-container,

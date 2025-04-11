@@ -1,4 +1,3 @@
-<!-- src/components/pricing/Card.vue -->
 <template>
     <article 
         class="card pricing-card" 
@@ -8,7 +7,12 @@
         <h1>{{ title }}</h1>
         <section v-if="pricing" class="body">
             <details v-for="(item, index) in pricing" :key="index">
-                <summary class="summary" aria-label="Show pricing information" title="Click to show pricing information">{{ item.title }}</summary>
+                <summary 
+                    class="summary" 
+                    aria-label="Show pricing information" 
+                    title="Click to show pricing information"
+                    >{{ item.title }}
+                </summary>
                 <span v-if="item.extra" class="text extra">{{ item.extra }}</span>
                 <ul v-for="(subItem, subIndex) in item.amounts" :key="subIndex">
                     <li><b class="label">{{ subItem.label }}</b>{{ subItem.amount }}</li>
@@ -16,7 +20,6 @@
             </details>
         </section>
 
-        <!-- Contact Section -->
         <section class="contact">
             <span v-if="text" class="text">{{ text }}</span>
 
@@ -67,7 +70,6 @@ export default {
 </script>
 
 <style scoped>
-/* Base Styling */
 .card {
     width: 390px;
     text-align: center;
@@ -160,7 +162,6 @@ summary:hover,
     text-decoration: underline;
 }
 
-/* Laptop Screen Size Styling */
 @media only screen and (max-width: 1440px) {
 
     p {
@@ -168,7 +169,6 @@ summary:hover,
     }
 }
 
-/* Laptop S Screen Size Styling */
 @media only screen and (max-width: 1024px) {
 
     .contact .text {
@@ -181,7 +181,6 @@ summary:hover,
     }
 }
 
-/* Tablet Screen Size Styling */
 @media only screen and (max-width: 768px) {
 
     .pricing-card details {
@@ -193,7 +192,6 @@ summary:hover,
     }
 }
 
-/* Mobile Screen Size Styling */
 @media only screen and (max-width: 425px) {
 
     .pricing-card details,
@@ -213,7 +211,6 @@ summary:hover,
     }
 }
 
-/* Mobile S Screen Size Styling */
 @media only screen and (max-width: 320px) {
 
     .contact p {

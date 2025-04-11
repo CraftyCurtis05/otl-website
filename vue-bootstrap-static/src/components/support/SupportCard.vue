@@ -1,7 +1,6 @@
-<!-- src/components/support/SupportList.vue -->
 <template>
-  <article class="list-container" :id="`#${id}`">
-    <section v-for="(item, index) in supportInfo" :key="index" class="list">
+  <article class="list-container">
+    <section class="list" v-for="(item, index) in supportInfo" :key="index" :id="item.id">
       <h1>{{ item.title }}</h1>
       <hr>
       <ul>
@@ -11,7 +10,6 @@
       </ul>
     </section>
 
-    <!-- More Info Section -->
     <section class="more-info">
       <div class="btn-container">
         <router-link 
@@ -104,7 +102,6 @@ export default {
 </script>
 
 <style scoped>
-/*Base Styling */
 .list {
   padding-inline: 5%;
   padding-block: .5%;
@@ -159,7 +156,6 @@ li {
   font-weight: bold;
 }
 
-/* 4k Screen Size Styling */
 @media only screen and (min-width: 2560px) {
 
   hr {
@@ -167,7 +163,6 @@ li {
   }
 }
 
-/* Laptop Screen Size Styling */
 @media only screen and (max-width: 1024px) {
 
   h1 {
@@ -198,7 +193,6 @@ li {
   }
 }
 
-/* Tablet Screen Size Styling */
 @media only screen and (max-width: 768px) {
 
   h1 {
@@ -229,7 +223,6 @@ li {
   }
 }
 
-/* Mobile Screen Size Styling */
 @media only screen and (max-width: 480px) {
 
   h1 {
@@ -258,11 +251,10 @@ li {
   }
 }
 
-/* Mobile M Screen Size Styling */
 @media only screen and (max-width: 375px) {
 
   hr {
-  width: 40%;
-}
+    width: 40%;
+  }
 }
 </style>

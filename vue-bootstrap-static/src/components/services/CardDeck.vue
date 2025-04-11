@@ -1,4 +1,3 @@
-<!-- src/components/services/CardDeck.vue -->
 <template>
   <div class="card-deck">
     <ServicesCard
@@ -111,17 +110,3 @@ export default {
   }
 };
 </script>
-  
-<style scoped>
-/* Desktop: 4 cards per row */
-@media (min-width: 1280px) {}
-
-/* Laptop: 2 cards per row */
-@media (max-width: 1279px) and (min-width: 769px) {}
-
-/* Tablet: 1 card per row */
-@media (max-width: 768px) {}
-
-/* Mobile: 1 card per row */
-@media (max-width: 480px) {}
-</style>

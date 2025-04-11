@@ -3,10 +3,9 @@
     class="navbar navbar-expand-lg navbar-dark" 
     role="navigation" 
     aria-label="Navigation Bar"
-    >
+  >
     <div class="container-fluid">
 
-      <!-- Logo (hidden in offcanvas) -->
       <header class="navbar-brand">
         <router-link to="/" aria-label="Go to homepage">
           <img 
@@ -18,7 +17,6 @@
         </router-link>
       </header>
 
-      <!-- Logo and Toggler Button -->
       <button
         class="navbar-toggler"
         type="button"
@@ -31,7 +29,6 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Offcanvas Navbar -->
       <section 
         class="offcanvas offcanvas-end bg-dark text-white" 
         tabindex="-1"
@@ -63,68 +60,23 @@
 
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 lead">
-
-            <!-- Home Link -->
-            <li class="nav-item" data-bs-dismiss="offcanvas">
+            <li
+              class="nav-item"
+              v-for="(link, index) in navLinks"
+              :key="index"
+              data-bs-dismiss="offcanvas"
+            >
               <router-link 
                 class="nav-link" 
-                to="/" 
+                :to="link.to" 
                 exact-active-class="active"
-                aria-label="Go to homepage"
-                title="Go to homepage"
-                >Home
+                :aria-label="`Go to ${link.aria}`"
+                :title="`Go to ${link.aria}`"
+              >
+                {{ link.label }}
               </router-link>
             </li>
 
-            <!-- Services Link -->
-            <li class="nav-item" data-bs-dismiss="offcanvas">
-              <router-link 
-                class="nav-link" 
-                to="/services"
-                exact-active-class="active"
-                aria-label="Go to services page"
-                title="Go to services page"
-                >Services
-              </router-link>
-            </li>
-
-            <!-- Support Link -->
-            <li class="nav-item" data-bs-dismiss="offcanvas">
-              <router-link 
-                class="nav-link" 
-                to="/support"
-                exact-active-class="active"
-                aria-label="Go to support page"
-                title="Go to support page"
-                >Support
-              </router-link>
-            </li>
-
-            <!-- Pricing Link -->
-            <li class="nav-item" data-bs-dismiss="offcanvas">
-              <router-link 
-                class="nav-link" 
-                to="/pricing" 
-                exact-active-class="active"
-                aria-label="Go to pricing page"
-                title="Go to pricing page"
-                >Pricing
-              </router-link>
-            </li>
-
-            <!-- Contact Link-->
-            <li class="nav-item" data-bs-dismiss="offcanvas">
-              <router-link 
-                class="nav-link" 
-                to="/contact" 
-                exact-active-class="active"
-                aria-label="Go to contact page"
-                title="Go to contact page"
-                >Contact
-              </router-link>
-            </li>
-
-            <!-- Search Bar -->
             <li class="nav-item search">
               <form 
                 @submit.prevent="submitSearch" 
@@ -156,6 +108,7 @@
     </div>
   </nav>
 </template>
+
   
 <script>
 import image from '@/assets/images/logo.png';
@@ -165,7 +118,14 @@ export default {
   data() {
     return {
       image: image,
-      searchQuery: ''
+      searchQuery: '',
+      navLinks: [
+        { to: '/', label: 'Home', aria: 'homepage' },
+        { to: '/services', label: 'Services', aria: 'services page' },
+        { to: '/support', label: 'Support', aria: 'support page' },
+        { to: '/pricing', label: 'Pricing', aria: 'pricing page' },
+        { to: '/contact', label: 'Contact', aria: 'contact page' }
+      ]
     }
   },
   methods: {
@@ -177,7 +137,19 @@ export default {
     handleSearchNavigation(query) {
       query = query.trim().toLowerCase();
 
-      const routes = {
+      const routeMap = {
+        home: '/',
+        services: '/services',
+        consulting: '/services#consulting',
+        support: '/services#support',
+        videoSecurity: '/services#video-security',
+        voip: '/services#voip',
+        assistance: '/support',
+        pricing: '/pricing',
+        contact: '/contact',
+      };
+
+      const searchRoutes = {
         home: /\b(home|about|main|start|welcome|site|on the line|otl|dashboard|who we are|company|meet|mission|what we do|overview|information|what do we offer|learn about|why choose)\b/,
         services: /\b(services|service|offer|offering|solution|benefit|operation|product|capabilities|feature|provision|resource|expertise|option|function|list services|explore|our services|otl communication services|technology solutions|security solutions|communication solutions|professional services|explore services)\b/,
         consulting: /\b(consulting|business consulting|strategic consulting|IT consulting|advice|infrastructure|analysis|strategy|operational efficiency|network design consulting|technology solutions consulting)\b/,
@@ -189,38 +161,19 @@ export default {
         contact: /\b(contact|get in touch|request a quote|reach out|phone|email|form|message|inquiries|representative|connect|correspond|talk|call|notify|approach|interact|engage|consult|speak|inquire|ping)\b/
       };
 
-      for (const [route, regex] of Object.entries(routes)) {
+      for (const [route, regex] of Object.entries(searchRoutes)) {
         if (regex.test(query)) {
-          if (route === 'home') {
-            this.$router.push('/');
-          } else if (route === 'services') {
-            this.$router.push('/services');
-          } else if (route === 'consulting') {
-            this.$router.push('/services#consulting');
-          } else if (route === 'support') {
-            this.$router.push('/services#support');
-          } else if (route === 'videoSecurity') {
-            this.$router.push('/services#video-security');
-          } else if (route === 'voip') {
-            this.$router.push('/services#voip');
-          } else if (route === 'assistance') {
-            this.$router.push('/support');
-          } else if (route === 'pricing') {
-            this.$router.push('/pricing');
-          } else if (route === 'contact') {
-            this.$router.push('/contact');
-          }
+          this.$router.push(routeMap[route]);
           return;
         }
       }
-      alert('No results found for your search. Please try again with different keywords.');
+      alert('No results found for your search.');
     }
   }
 };
 </script>
 
 <style scoped>
-/* Core Navbar Styling */
 nav {
   background-color: #545454;
   height: 3.5rem;
@@ -237,7 +190,6 @@ nav {
   width: 2.75rem;
 }
 
-/* Logo */
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -247,51 +199,56 @@ nav {
   padding: 0;
   margin: 0;
 }
+
 .navbar-brand img {
   width: 3.25rem;
   height: auto;
 }
 
-/* Offcanvas styles */
 .offcanvas-body {
   background-color: #545454;
   color: white;
 }
+
 .offcanvas-header {
   background-color: #333;
 }
+
 .offcanvas-title img {
   width: 3.25rem;
   height: auto;
 }
 
-/* Nav Items */
 .navbar-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 3.0rem;
 }
+
 .nav-item {
   font-size: 1.1rem;
   transition: all 0.3s ease;
 }
+
 .nav-item:hover {
   transform: scale(1.05);
 }
+
 .nav-link {
   color: white;
 }
+
 .nav-link.active {
   text-decoration: line-through;
 }
 
-/* Search Form */
 .nav-item.search {
   display: flex;
   align-items: center;
 }
-.nav-item.search form {
+
+form {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -299,21 +256,23 @@ nav {
   margin-bottom: 0;
   width: 100%;
 }
-.nav-item.search input,
-.nav-item.search .btn {
+
+form input,
+form .btn {
   height: 2.3rem;
   font-size: 1rem;
   padding: 0 0.5rem;
 }
-.nav-item.search .btn {
+
+form .btn {
   color: black;
   width: 30%;
 }
-.nav-item.search .btn:hover {
+
+form .btn:hover {
   color: white;
 }
 
-/* Large desktop screens (2560px and above) */
 @media only screen and (min-width: 2560px) {
   nav {
     height: 5rem;
@@ -335,7 +294,6 @@ nav {
   }
 }
 
-/* Laptop screens (992px - 1430px) */
 @media only screen and (min-width: 992px) and (max-width: 1430px) {
   nav {
     height: 3.1rem;
@@ -357,7 +315,6 @@ nav {
   }
 }
 
-/* Tablet and smaller screens (up to 991px) */
 @media only screen and (max-width: 991px) {
 
   .offcanvas .navbar-nav {

@@ -1,4 +1,3 @@
-<!-- src/App.vue -->
 <template>
   
   <nav id="top">
@@ -33,7 +32,6 @@ export default {
 </script>
 
 <style>
-/* Global Styling */
 #app {
   width: 100%;
   text-align: center;
@@ -129,7 +127,6 @@ li {
   width: 100%;
 }
 
-/* 4k Screen Size Styling */
 @media only screen and (min-width: 2560px) {
 
   .banner {
@@ -141,7 +138,6 @@ li {
   }
 }
 
-/* Desktop L Screen Size Styling */
 @media only screen and (min-width: 1500px) and (max-width: 2559px) {
 
   .banner {
@@ -153,7 +149,6 @@ li {
   }
 }
 
-/* Desktop Screen Size Styling */
 @media only screen and (min-width: 1280px) and (max-width: 1499px) {
 
   .banner {
@@ -165,7 +160,6 @@ li {
   }
 }
 
-/* Laptop L Screen Size Styling */
 @media only screen and (min-width: 769px) and (max-width: 1279px) {
 
   .banner {
@@ -181,7 +175,6 @@ li {
   }
 }
 
-/* Laptop Screen Size Styling */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
 
   .banner {
@@ -197,7 +190,6 @@ li {
   }
 }
 
-/* Tablet Screen Size Styling */
 @media only screen and (max-width: 480px) {
 
   .banner {
@@ -387,7 +379,6 @@ li {
   transform: translateY(-1px);
 }
 
-/* Laptop Screen Size Styling */
 @media only screen and (max-width: 1024px) {
 
   .card .body,
@@ -409,7 +400,6 @@ li {
   }
 }
 
-/* Tablet Screen Size Styling */
 @media only screen and (max-width: 768px) {
 
   .card img {
@@ -441,7 +431,6 @@ li {
   }
 }
 
-/* Mobile Screen Size Styling */
 @media only screen and (max-width: 480px) {
 
   .card img {
@@ -461,35 +450,31 @@ li {
   }
 }
 
-/* Desktop: 4 cards per row */
 @media (min-width: 1280px) {
   
   .card {
-    flex: 1 1 calc(25% - 2rem); /* Each card takes up 25% of the row width */
+    flex: 1 1 calc(25% - 2rem);
   }
 }
 
-/* Laptop: 2 cards per row */
 @media (max-width: 1279px) and (min-width: 769px) {
   
   .card {
-    flex: 1 1 calc(45% - 2rem); /* Each card takes up 45% of the row width */
+    flex: 1 1 calc(45% - 2rem);
    }
 }
 
-/* Tablet: 1 card per row */
 @media (max-width: 768px) {
   
   .card {
-    flex: 1 1 calc(90% - 2rem); /* Each card takes up 90% of the row width */
+    flex: 1 1 calc(90% - 2rem);
   }
 }
 
-/* Mobile: 1 card per row */
 @media (max-width: 480px) {
   
   .card {
-    flex: 1 1 calc(100% - 2rem); /* Each card takes up 100% of the row width */
+    flex: 1 1 calc(100% - 2rem);
   }
 }
 </style>

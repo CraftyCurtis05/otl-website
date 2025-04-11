@@ -1,4 +1,3 @@
-<!-- src/components/home/CardDeck.vue -->
 <template>
   <article class="card-deck">
     <ServiceCard

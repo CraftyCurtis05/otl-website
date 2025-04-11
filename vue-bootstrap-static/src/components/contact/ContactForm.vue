@@ -1,4 +1,3 @@
-<!-- src/components/contact/ContactForm.vue -->
 <template>
   <article class="container">
 
@@ -156,7 +155,6 @@ export default {
 </script>
 
 <style scoped>
-/* Base Styling */
 .container {
   text-align: start;
   padding-block: 4vh;
@@ -214,7 +212,6 @@ textarea {
   margin-inline: 40%;
 }
 
-/* Tablet Screen Size Styling */
 @media only screen and (max-width: 768px) {
 
   .container {
@@ -240,7 +237,6 @@ textarea {
   }
 }
 
-/* Mobile Screen Size Styling */
 @media only screen and (max-width: 425px) {
 
   .name-container {

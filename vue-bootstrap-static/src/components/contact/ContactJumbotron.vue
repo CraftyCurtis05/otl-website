@@ -1,4 +1,3 @@
-<!-- src/components/contact/ContactJumbotron.vue -->
 <template>
     <article class="jumbotron">
         <div class="container">
@@ -74,8 +73,8 @@ export default {
     font-size: 1.1rem;
     text-align: start;
     background-image: url('@/assets/images/contact/contact_jumbotron.png');
-    background-size: cover; /* Optional: Adjusts the image to cover the entire element */
-    background-position: center center; /* Optional: Centers the image */
+    background-size: cover;
+    background-position: center center;
     padding: 4vw 2vw;
     margin: auto;
 }
@@ -108,7 +107,6 @@ hr {
     font-weight: bold;
 }
 
-/* 4k Screen Size Styling */
 @media only screen and (min-width: 2001px) {
 
     header h1 {
@@ -120,7 +118,6 @@ hr {
     }
 }
 
-/* Desktop Screen Size Styling */
 @media only screen and (min-width: 1440px) and (max-width: 2000px) {
 
     header h1 {
@@ -132,7 +129,6 @@ hr {
     }
 }
 
-/* Laptop L Screen Size Styling */
 @media only screen and (min-width: 1024px) and (max-width: 1439px){
 
     header h1 {
@@ -144,7 +140,6 @@ hr {
     }
 }
 
-/* Laptop Screen Size Styling */
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
 
     header h1 {
@@ -156,7 +151,6 @@ hr {
     }
 }
 
-/* Tablet Screen Size Styling */
 @media only screen and (max-width: 768px) {
 
     .jumbotron {
@@ -199,7 +193,6 @@ hr {
     }
 }
 
-/* Mobile Screen Size Styling */
 @media only screen and (max-width: 480px) {
 
     header h1 {
@@ -211,7 +204,6 @@ hr {
     }
 }
 
-/* Mobile S Screen Size Styling */
 @media only screen and (max-width: 425px) {
 
     .none {

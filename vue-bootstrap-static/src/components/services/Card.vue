@@ -1,4 +1,3 @@
-<!-- src/components/services/Card.vue -->
 <template>
     <article
       :id="`${id}`"
@@ -26,7 +25,6 @@
       </div>
     </article>
 
-    <!-- Modal Trigger -->
     <ServicesModal
       :id="id"
       :title="title"

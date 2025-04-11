@@ -1,4 +1,3 @@
-<!-- src/components/home/Card.vue -->
 <template>
     <article 
       class="card" 

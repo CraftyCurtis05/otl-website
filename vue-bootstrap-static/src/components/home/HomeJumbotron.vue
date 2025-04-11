@@ -1,4 +1,3 @@
-<!-- src/components/home/HomeJumbotron.vue -->
 <template>
     <main class="jumbotron">
         <article class="text-container col-md-6">
@@ -7,11 +6,25 @@
             <section class="text">
                 <p>We specialize in providing top-tier services designed to meet all your business technology needs, including:</p>
                 <p class="text-blue">Support, Installation, Maintenance, Consulting & VoIP Solutions</p>
-                <router-link class="btn btn-md" to="/services" role="button">
+                <router-link 
+                    to="/services" 
+                    class="btn btn-md" 
+                    role="button"
+                    aria-label="Learn more about our services"
+                    title="Learn more about our services"
+                    >
                     <span class="btn-text">LEARN MORE&nbsp;</span>
                     <div class="img-container">
-                        <img class="img-black" :src="imageBlack" loading="lazy"/>
-                        <img class="img-white" :src="imageWhite" loading="lazy"/>
+                        <img 
+                            class="img-black" 
+                            :src="imageBlack" 
+                            loading="lazy"
+                        />
+                        <img 
+                            class="img-white" 
+                            :src="imageWhite" 
+                            loading="lazy"
+                        />
                     </div>
                 </router-link>
             </section>
@@ -68,7 +81,6 @@ hr {
     width: 10rem;
 }
 
-/* 4k Screen Size Styling */
 @media only screen and (min-width: 2001px) {
 
     h1,
@@ -90,7 +102,6 @@ hr {
     }
 }
 
-/* Desktop Screen Size Styling */
 @media only screen and (min-width: 1440px) and (max-width: 2000px) {
 
     h1,
@@ -112,7 +123,6 @@ hr {
     }
 }
 
-/* Laptop L Screen Size Styling */
 @media only screen and (min-width: 1024px) and (max-width: 1439px){
     
     .text-container {
@@ -130,7 +140,6 @@ hr {
     }
 }
 
-/* Laptop Screen Size Styling */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     
     .text-container {
@@ -148,7 +157,6 @@ hr {
     }
 }
 
-/* Tablet Screen Size Styling */
 @media only screen and (min-width: 481px) and (max-width: 767px) {
 
     .jumbotron {
@@ -183,7 +191,6 @@ hr {
     }
 }
 
-/* Mobile Screen Size Styling */
 @media only screen and (max-width: 480px) {
 
     .jumbotron {
@@ -210,7 +217,6 @@ hr {
     }
 }
 
-/* Mobile S Screen Size Styling */
 @media only screen and (max-width: 328px) {
 
     .jumbotron {
