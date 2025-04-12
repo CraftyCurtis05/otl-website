@@ -28,7 +28,7 @@ export default {
             title: 'Support',
             description: 'This is the support page of OTL On The Line Communications website.',
             keywords: 'OTL, On The Line Communications, Support, Support Offered, Hourly Support, Monthly Retainer, Emergency Support, Remote Support, Onsite Support',
-            imageUrl: 'https://otlcommunications.com/images/logo.png',
+            imageUrl: 'https://otlcommunications.com/assets/logo.webp',
             url: 'https://otlcommunications.com/support',
             siteName: 'OTL On The Line Communications',
             locale: 'en_US'

@@ -26,3 +26,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### Hosting
+Configure server or hosting platform to always serve index.html for all routes.

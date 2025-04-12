@@ -2,7 +2,7 @@
     <article class="jumbotron">
         <div class="container">
             <header>
-                <h1>Get Started Today!</h1>
+                <h1 class="text-white">Get Started Today!</h1>
                 <hr>
                 <p class="text"><b>We’re here to help your business thrive with the right technology solutions.</b></p>
                 <p class="text none">If you’re ready to learn more about our services, or if you’d like to discuss your project and get a personalized quote, contact us today! Our team is ready to support you every step of the way.</p>
@@ -52,8 +52,8 @@
 </template>
 
 <script>
-import image1 from '@/assets/images/icons/phone_icon_white.png';
-import image2 from '@/assets/images/icons/email_icon_white.png';
+import image1 from '@/assets/icons/phone_icon_white.webp';
+import image2 from '@/assets/icons/email_icon_white.webp';
 
 export default {
     name: 'ContactJumbotron',
@@ -68,11 +68,11 @@ export default {
 
 <style scoped>
 .jumbotron {
-    height: 100vh;
+    height: 100%;
     color: white;
     font-size: 1.1rem;
     text-align: start;
-    background-image: url('@/assets/images/contact/contact_jumbotron.png');
+    background-image: url('@/assets/contact/contact_jumbotron.webp');
     background-size: cover;
     background-position: center center;
     padding: 4vw 2vw;

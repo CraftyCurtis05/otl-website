@@ -20,7 +20,7 @@ export default {
           title: 'Contact Us',
           description: 'This is the contact us page of OTL On The Line Communications website.',
           keywords: 'OTL, On The Line Communications, Contact Us, Contact, Contact Information, Contact Form, Request A Quote',
-          imageUrl: 'https://otlcommunications.com/images/logo.png',
+          imageUrl: 'https://otlcommunications.com/assets/logo.webp',
           url: 'https://otlcommunications.com/contact',
           siteName: 'OTL On The Line Communications',
           locale: 'en_US',
@@ -58,7 +58,7 @@ main {
   main {
     height: 105vh;
     flex-direction: column;
-    background-image: url('@/assets/images/contact/contact_jumbotron.png');
+    background-image: url('@/assets/contact/contact_jumbotron.webp');
     background-size: cover;
     background-position: center center;
   }

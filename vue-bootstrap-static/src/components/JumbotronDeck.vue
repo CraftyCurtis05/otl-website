@@ -14,7 +14,7 @@
       return {
         jumbotrons: [
           {
-            image: 'services/services_jumbotron.png',
+            image: 'services/services_jumbotron.webp',
             title: 'Maximize Your Business Tech Potential.',
             text1: 'We provide a range of services—including ',
             blueText: 'consulting, support, installation, maintenance, and VoIP solutions',
@@ -25,7 +25,7 @@
             routeName: 'ServicesView'
           },
           {
-            image: 'support/support_jumbotron.png',
+            image: 'support/support_jumbotron.webp',
             title: 'Expert Support When You Need It Most.',
             text1: 'We offer expert support for Cisco, Ubiquiti, and Fortinet systems. Whether you need assistance during ',
             blueText: ' business hours, after-hours emergency support, or ongoing IT management, ',
@@ -36,7 +36,7 @@
             routeName: 'SupportView'
           },
           {
-            image: 'pricing/pricing_jumbotron.png',
+            image: 'pricing/pricing_jumbotron.webp',
             title: 'Power Your Success with Flexible Pricing.',
             text1: 'Transparent, flexible pricing for all our tech services—whether its ',
             blueText: 'one-time support, ongoing maintenance, or custom solutions',

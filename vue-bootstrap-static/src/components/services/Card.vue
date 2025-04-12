@@ -13,7 +13,7 @@
         <section class="img-container">
           <img 
             v-if="image" 
-            :src="require(`@/assets/images/services/cards/${image}`)" 
+            :src="require(`@/assets/services/cards/${image}`)" 
             :alt="`${title} Card Image`" 
             loading="lazy"
           />

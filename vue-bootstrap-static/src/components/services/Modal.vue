@@ -31,7 +31,7 @@
             <div class="col-3 img-container">
               <img 
                 v-if="image" 
-                :src="require(`@/assets/images/services/modals/${image}`)" 
+                :src="require(`@/assets/services/modals/${image}`)" 
                 :alt="`${title} Modal Image`" 
                 class="img-fluid" 
                 loading="lazy"
@@ -153,7 +153,7 @@ export default {
 
 .modal-header,
 .modal-footer {
-  background-image: url('@/assets/images/services/modals/modal_header.png');
+  background-image: url('@/assets/services/modals/modal_header.webp');
   background-size: cover;
   background-position: center center;
 }

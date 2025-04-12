@@ -26,7 +26,7 @@ export default {
         {
           id: 'consulting',
           title: 'Consulting',
-          image: 'consulting_icon.png',
+          image: 'consulting_icon.webp',
           description: 'Personalized consulting services to help you choose the best technology solutions for your business.',
           list: [
             { label: 'Network Analysis', description: 'Optimize performance' },
@@ -37,7 +37,7 @@ export default {
         {
           id: 'support',
           title: 'Support',
-          image: 'support_icon.png',
+          image: 'support_icon.webp',
           description: 'Receive expert assistance for all your VoIP and network communication system needs.',
           list: [
             { label: 'Hourly Support', description: 'Non-emergency assistance' },
@@ -48,7 +48,7 @@ export default {
         {
           id: 'video-security',
           title: 'Video Security',
-          image: 'video_security_icon.png',
+          image: 'video_security_icon.webp',
           description: 'Solutions for your video security needs, including cameras, door access systems and NVR integration.',
           list: [
             { label: 'Cameras', description: 'Advanced surveillance solutions' },
@@ -59,7 +59,7 @@ export default {
         {
           id: 'voip',
           title: 'VoIP Solutions',
-          image: 'voip_icon.png',
+          image: 'voip_icon.webp',
           description: 'VoIP services including hosting, installation, and support to keep your business connected.',
           list: [
             { label: 'VoIP Service', description: 'Reliable communication solutions' },

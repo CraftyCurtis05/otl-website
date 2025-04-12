@@ -212,6 +212,15 @@ textarea {
   margin-inline: 40%;
 }
 
+.btn:hover {
+  color: white;
+  border-color: #0a65b0;
+  font-weight: 500;
+  transform: scale(1.1);
+  transform: translateY(-1px);
+  box-shadow: 0 0 15px 5px rgba(124, 237, 254, 0.4);
+}
+
 @media only screen and (max-width: 768px) {
 
   .container {

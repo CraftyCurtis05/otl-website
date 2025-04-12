@@ -7,7 +7,7 @@
       >
       <router-link :to="`/services#${id}`" class="card-link">
         <img 
-          :src="require(`@/assets/images/home/icons/${image}`)" 
+          :src="require(`@/assets/home/icons/${image}`)" 
           :alt="`${title} Icon Image`" 
           loading="lazy"
         />

@@ -1,7 +1,7 @@
 <template>
     <main class="jumbotron">
         <article class="text-container col-md-6">
-            <h1>Your Technology Needs,<br>Our Expertise.</h1>
+            <h1 class="text-white">Your Technology Needs,<br>Our Expertise.</h1>
             <hr>
             <section class="text">
                 <p>We specialize in providing top-tier services designed to meet all your business technology needs, including:</p>
@@ -33,8 +33,8 @@
 </template>
 
 <script>
-import imageBlack from "@/assets/images/icons/button_arrow_black.png";
-import imageWhite from "@/assets/images/icons/button_arrow_white.png";
+import imageBlack from "@/assets/icons/button_arrow_black.webp";
+import imageWhite from "@/assets/icons/button_arrow_white.webp";
 
 export default {
     name: 'HomeJumbotron',
@@ -50,7 +50,7 @@ export default {
 <style scoped>
 .jumbotron {
     height: 45%;
-    background-image: url('@/assets/images/home/home_jumbotron.png');
+    background-image: url('@/assets/home/home_jumbotron.webp');
 }
 
 .text-container {
@@ -160,7 +160,7 @@ hr {
 @media only screen and (min-width: 481px) and (max-width: 767px) {
 
     .jumbotron {
-        background-image: url('@/assets/images/home/home_jumbotron_tablet.png');
+        background-image: url('@/assets/home/home_jumbotron_tablet.webp');
     }
     
     .text-container {
@@ -194,7 +194,7 @@ hr {
 @media only screen and (max-width: 480px) {
 
     .jumbotron {
-        background-image: url('@/assets/images/home/home_jumbotron_mobile.png');
+        background-image: url('@/assets/home/home_jumbotron_mobile.webp');
     }
     
     .text-container {

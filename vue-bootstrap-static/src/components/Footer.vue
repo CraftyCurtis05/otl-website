@@ -100,7 +100,15 @@
 
           <section class="col-6">
             <ul>
-              <li class="title">Contact Us</li>
+              <li class="title">
+                <router-link
+                  to="/contact"
+                  class="text-white no-underline"
+                  aria-label="Contact us today!"
+                  title="Contact us today"
+                  >Contact Us
+                </router-link>
+              </li>
               <li v-for="contact in contactLinks" :key="contact.text">
                 <img 
                   :src="contact.icon" 
@@ -120,7 +128,7 @@
             <ul>
               <li class="title">Business Hours</li>
               <li 
-                class="text-white hours" 
+                class="text-white no-underline" 
                 :aria-label="businessHoursText" 
                 :title="businessHoursText"
                 >Monday - Friday: &nbsp; 8:00am - 5:00pm EST
@@ -150,7 +158,15 @@
       <hr/>
 
       <ul>
-        <li class="title">Contact Us<span class="blue-arrow">></span></li>
+        <li class="title">
+          <router-link
+            to="/contact"
+            class="text-white no-underline"
+            aria-label="Contact us today!"
+            title="Contact us today"
+            >Contact Us<span class="blue-arrow">></span>
+          </router-link>
+        </li>
         <li v-for="contact in contactLinks" :key="contact.text">
           <img 
             :src="contact.icon" 
@@ -173,7 +189,7 @@
       <ul>
         <li class="title">Business Hours</li>
         <li 
-          class="text-white hours" 
+          class="text-white no-underline" 
           :aria-label="businessHoursText" 
           :title="businessHoursText"
           >Monday - Friday: &nbsp; 8:00am - 5:00pm EST
@@ -252,11 +268,11 @@
 </template>
 
 <script>
-import logo from '@/assets/images/logo.png';
-import image1 from '@/assets/images/icons/phone_icon_white.png';
-import image2 from '@/assets/images/icons/email_icon_white.png';
-import image3 from '@/assets/images/icons/top_arrow_black.png';
-import image4 from '@/assets/images/icons/top_arrow_white.png';
+import logo from '@/assets/logo.webp';
+import image1 from '@/assets/icons/phone_icon_white.webp';
+import image2 from '@/assets/icons/email_icon_white.webp';
+import image3 from '@/assets/icons/top_arrow_black.webp';
+import image4 from '@/assets/icons/top_arrow_white.webp';
 
 export default {
   name: 'FooterComponent',
@@ -429,7 +445,7 @@ ul {
   text-decoration: underline;
 }
 
-.hours:hover {
+.no-underline:hover {
   text-decoration: none;
 }
 

@@ -26,7 +26,7 @@ export default {
             title: 'Services',
             description: 'This is the services page of OTL On The Line Communications website.',
             keywords: 'OTL, On The Line Communications, Services, About Our Services, Consulting, Support, Video Security, VoIP',
-            imageUrl: 'https://otlcommunications.com/images/logo.png',
+            imageUrl: 'https://otlcommunications.com/assets/logo.webp',
             url: 'https://otlcommunications.com/services',
             siteName: 'OTL On The Line Communications',
             locale: 'en_US'

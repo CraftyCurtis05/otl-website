@@ -4,10 +4,10 @@
       v-for="(item, index) in jumbotrons" 
       :key="index" 
       class="jumbotron"
-      :style="{ backgroundImage: `url(${require('@/assets/images/' + item.image)})` }"
+      :style="{ backgroundImage: `url(${require('@/assets/' + item.image)})` }"
     >
       <section class="text-container">
-        <h1>{{ item.title }}</h1>
+        <h1 class="text-white">{{ item.title }}</h1>
         <hr>
         <p class="text">{{ item.text1 }}<span class="text-blue">{{ item.blueText }}</span>{{ item.text2 }}</p>
         <router-link 
@@ -37,8 +37,8 @@
 </template>
 
 <script>
-import imageBlack from "@/assets/images/icons/button_arrow_black.png";
-import imageWhite from "@/assets/images/icons/button_arrow_white.png";
+import imageBlack from "@/assets/icons/button_arrow_black.webp";
+import imageWhite from "@/assets/icons/button_arrow_white.webp";
 
 export default {
   name: 'JumbotronMain',

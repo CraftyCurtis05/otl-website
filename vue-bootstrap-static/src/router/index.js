@@ -1,17 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import HomeView from '@/views/HomeView.vue';
-import ServicesView from '@/views/ServicesView.vue';
-import SupportView from '@/views/SupportView.vue';
-import PricingView from '@/views/PricingView.vue';
-import ContactView from '@/views/ContactView.vue';
-import PrivacyPolicyView from '@/views/PrivacyPolicyView.vue';
-import TermsConditionsView from '@/views/TermsConditionsView.vue';
+const HomeView = () => import('@/views/HomeView.vue');
+const ServicesView = () => import('@/views/ServicesView.vue');
+const SupportView = () => import('@/views/SupportView.vue');
+const PricingView = () => import('@/views/PricingView.vue');
+const ContactView = () => import('@/views/ContactView.vue');
+const PrivacyPolicyView = () => import('@/views/PrivacyPolicyView.vue');
+const TermsConditionsView = () => import('@/views/TermsConditionsView.vue');
 
 const generateMetaTags = (title, description) => ([
   { name: 'description', content: description },
   { property: 'og:title', content: title },
   { property: 'og:description', content: description },
+  { property: 'og:url', content: window.location.href },
+  { property: 'og:image', content: 'https://otlcommunications.com/assets/logo.webp' },
 ]);
 
 const routes = [
@@ -69,6 +71,15 @@ const routes = [
     path: '/terms',
     name: 'TermsConditionsView',
     component: TermsConditionsView,
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: () => import('@/views/NotFoundView.vue'),
+    meta: {
+      title: 'OTL | Page Not Found',
+      metaTags: generateMetaTags('404', 'Page not found - OTL On The Line Communications')
+    }
   }
 ];
 
@@ -90,24 +101,23 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  const { meta } = to;
 
-  if (meta?.title) document.title = meta.title;
-
-  if (meta?.metaTags) {
-    meta.metaTags.forEach(({ name, content }) => {
-      const existingTag = document.querySelector(`meta[name="${name}"]`);
-      if (existingTag) {
-        existingTag.content = content;
-      } else {
-        const newTag = document.createElement('meta');
-        newTag.setAttribute('name', name);
-        newTag.setAttribute('content', content);
-        document.head.appendChild(newTag);
-      }
-    });
+  if (to.meta?.title) {
+    document.title = to.meta.title;
   }
 
+  const oldMetaTags = document.querySelectorAll('[data-vue-router-controlled]');
+  oldMetaTags.forEach(tag => tag.parentNode.removeChild(tag));
+
+  if (to.meta?.metaTags) {
+    to.meta.metaTags.forEach(({ name, content }) => {
+      const tag = document.createElement('meta');
+      tag.setAttribute('name', name);
+      tag.setAttribute('content', content);
+      tag.setAttribute('data-vue-router-controlled', '');
+      document.head.appendChild(tag);
+    });
+  }
   next();
 });
 

@@ -28,7 +28,7 @@ export default {
             title: 'Pricing',
             description: 'This is the pricing page of OTL On The Line Communications website.',
             keywords: 'OTL, On The Line Communications, Pricing, Services Pricing, Hourly Pricing, Monthly Retainer Pricing, Emergency Support Pricing, Remote Support Pricing, Onsite Support Pricing, Consulting Pricing, Support Pricing, Video Security Pricing, VoIP Pricing',
-            imageUrl: 'https://otlcommunications.com/images/logo.png',
+            imageUrl: 'https://otlcommunications.com/assets/logo.webp',
             url: 'https://otlcommunications.com/pricing',
             siteName: 'OTL On The Line Communications',
             locale: 'en_US'

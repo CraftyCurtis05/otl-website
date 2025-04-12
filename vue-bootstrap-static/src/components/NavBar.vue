@@ -7,11 +7,12 @@
     <div class="container-fluid">
 
       <header class="navbar-brand">
-        <router-link to="/" aria-label="Go to homepage">
+        <router-link to="/">
           <img 
             :src="image" 
             alt="Logo image" 
-            loading="eager" 
+            loading="lazy"
+            aria-label="Go to homepage"
             title="Go to homepage"
           />
         </router-link>
@@ -41,7 +42,8 @@
               <router-link to="/">
                 <img 
                   :src="image" 
-                  alt="Logo"
+                  alt="Logo image"
+                  loading="lazy"
                   aria-label="Go to homepage"
                   title="Go to homepage"
                 />
@@ -111,7 +113,7 @@
 
   
 <script>
-import image from '@/assets/images/logo.png';
+import image from '@/assets/logo.webp';
 
 export default {
   name: 'NavBarComponent',

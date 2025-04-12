@@ -34,6 +34,7 @@ export default {
 <style>
 #app {
   width: 100%;
+  height: 100%;
   text-align: center;
   font-size: 16px;
   font-family: 'Helvetica', sans-serif;
