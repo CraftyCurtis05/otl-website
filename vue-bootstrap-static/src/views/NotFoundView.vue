@@ -96,7 +96,7 @@ export default {
 @media (min-width: 1441px) and (max-width: 1600px) {
 
     .not-found-container {
-        padding: 9vh 0;
+        padding: 13vh 0;
     }
 
     .not-found-container h1 {
