@@ -114,7 +114,7 @@ To build the project for production (static files ready for deployment), use the
 npm run build
 ```
 
-This will generate a production-ready build in the */dist* folder.
+This will generate a production-ready build in the `/dist` folder.
 
 ---
 
@@ -130,11 +130,11 @@ npm run lint
 ## Deployment Notes
 If you are hosting this website on your own server, please follow these instructions:
 
-1. **Upload the contents of the** */dist* **folder** to the root of your web server (e.g., via FTP, SSH, or any file transfer method).
+1. **Upload the contents of the** `/dist` **folder** to the root of your web server (e.g., via FTP, SSH, or any file transfer method).
 
-2. Make sure your server is configured to always serve *index.html* for any route to support Vue Router's history mode (this is important for handling deep links and page refreshes correctly).
+2. Make sure your server is configured to always serve `index.html` for any route to support Vue Router's history mode (this is important for handling deep links and page refreshes correctly).
 
-    - If you're using **NGINX** or **Apache**, you might need to configure the server to handle *404* errors by redirecting to *index.html* so that the Vue Router can take over and show the correct content.
+    - If you're using **NGINX** or **Apache**, you might need to configure the server to handle `404` errors by redirecting to `index.html` so that the Vue Router can take over and show the correct content.
 
 ---
 
@@ -165,17 +165,17 @@ Each route in the app dynamically injects meta tags using vue-meta. This ensures
 
 ## Tech Stack
 
-- **Vue.js**: *3.5.13*
+- **Vue.js**: `3.5.13`
 
-- **Bootstrap**: *5.3.5*
+- **Bootstrap**: `5.3.5`
 
-- **Vue Router**: *4.5.0*
+- **Vue Router**: `4.5.0`
 
-- **Vue Meta**: *3.0.0-alpha.7*
+- **Vue Meta**: `3.0.0-alpha.7`
 
-- **EmailJS**: *4.4.1*
+- **EmailJS**: `4.4.1`
 
-- **ESLint**: *^7.32.0*
+- **ESLint**: `^7.32.0`
 
 ---
 
@@ -184,7 +184,7 @@ If the contact form is not functioning properly, follow these steps:
 
 1. Reconnect your Outlook account in the [EmailJS Dashboard](https://dashboard.emailjs.com/sign-in).
 
-2. Ensure that the following environment variables are set correctly in your *.env* file:
+2. Ensure that the following environment variables are set correctly in your `.env` file:
 
 ```env
 VUE_APP_EMAILJS_SERVICE_ID=your_service_id
@@ -192,7 +192,7 @@ VUE_APP_EMAILJS_TEMPLATE_ID=your_template_id
 VUE_APP_EMAILJS_USER_ID=your_user_id
 ```
 
-3. After updating *.env*, rebuild the project to apply the changes:
+3. After updating `.env`, rebuild the project to apply the changes:
 
 ```bash
 npm run build
@@ -201,7 +201,7 @@ npm run build
 ---
 
 ## License & Credits
-This project was developed by **Jennifer Curtis** for **OTL On The Line Communications**.
+This project was developed by [Jennifer Curtis](https://github.com/CraftyCurtis05) for **OTL On The Line Communications**.
 All content, design and branding are © Five Nine Technologies, LLC 2025.
 
 ---
