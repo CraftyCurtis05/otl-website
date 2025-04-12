@@ -62,8 +62,6 @@ The contact form is integrated with **EmailJS**, a service that allows you to se
 In your project’s `.env` file, make sure the following values are configured:
 
 ```env
-copy 
-edit
 VUE_APP_EMAILJS_SERVICE_ID=your_service_id
 VUE_APP_EMAILJS_TEMPLATE_ID=your_template_id
 VUE_APP_EMAILJS_USER_ID=your_user_id
