@@ -75,8 +75,8 @@ export default {
           id: 'monthly',
           title: 'Monthly Retainer',
           details: [
-            { label: 'Comprehensive IT Support', text: 'Ongoing management of your IT systems, including network management and VoIP services.' },
-            { label: 'Peace of Mind', text: 'Ensure your systems are always in capable hands with a fixed monthly retainer.' }
+            { label: 'Peace of Mind', text: 'Ensure your systems are always in capable hands with a fixed monthly retainer.' },
+            { label: 'Comprehensive IT Support', text: 'Ongoing management of your IT systems, including network management and VoIP services.' }
           ]
         },
         {
@@ -91,8 +91,8 @@ export default {
           id: 'location',
           title: 'Location Information',
           details: [
-            { label: 'Remote Support', text: 'All support is provided remotely via Teams or Zoom. Remote access to your systems must be granted.' },
-            { label: 'Onsite Support', text: 'Onsite support is available, and travel expenses will be billed at cost.' }
+            { label: 'Onsite Support', text: 'Onsite support is available, and travel expenses will be billed at cost.' },
+            { label: 'Remote Support', text: 'All support is provided remotely via Teams or Zoom. Remote access to your systems must be granted.' }
           ]
         }
       ]
@@ -105,7 +105,7 @@ export default {
 .list-container {
   margin: auto;
   margin-top: 1%;
-  width: 75%;
+  width: 80%;
 }
 
 .list {
@@ -119,6 +119,7 @@ li {
   text-decoration: none;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 h1 {
@@ -130,9 +131,9 @@ h1 {
 hr {
   color: #545454;
   border: .2rem solid #545454;
-  margin: auto;
   margin-block: .3%;
   width: 15%;
+  margin: auto;
 }
 
 li {
@@ -232,7 +233,7 @@ li {
 @media only screen and (max-width: 480px) {
   
   .list-container {
-    width: 90%;
+    width: 95%;
   }
 
   h1 {
@@ -245,6 +246,7 @@ li {
 
   li {
     font-size: .85rem;
+    text-align: start;
   }
 
   .btn-container {
