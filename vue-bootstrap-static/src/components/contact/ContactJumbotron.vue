@@ -43,7 +43,7 @@
                 </ul>
             </section>
             <section class="hours">
-                <h2>Business Hours</h2>
+                <h2 class="text-white">Business Hours</h2>
                 <p class="text">Monday - Friday .......... 8:00am - 5:00pm EST</p>
             </section>
             <p class="text last">Need help outside our business hours?<br><b><em>We offer emergency support 24/7!</em></b></p>
