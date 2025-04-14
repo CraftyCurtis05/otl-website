@@ -325,6 +325,7 @@ li {
   flex-direction: column;
   align-items: center;
   padding-top: 1vh;
+  margin-inline: .5vw;
 }
 
 .card h1 {
@@ -343,6 +344,7 @@ li {
 .card ul {
   list-style-type: disc;
   padding-bottom: 5%;
+  margin-inline: 1vw;
 }
 
 .card li {

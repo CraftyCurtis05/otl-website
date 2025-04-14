@@ -142,7 +142,7 @@ export default {
         from_service: '',
         from_message: ''
       };
-      this.clearMessages();
+      //this.clearMessages();
     },
     clearMessages() {
       setTimeout(() => {
@@ -156,6 +156,7 @@ export default {
 
 <style scoped>
 .container {
+  position: relative;
   text-align: start;
   padding-block: 4vh;
   padding-inline: 5vw;
@@ -170,6 +171,49 @@ export default {
 .error-message {
   color: red;
   margin-top: 10px;
+}
+
+.error,
+.success-message,
+.error-message {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.alert {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  pointer-events: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  animation: fadeInOut 4s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.alert-danger,
+.error-message {
+  background-color: rgba(255, 0, 0, 0.85);
+  color: #fff;
+}
+
+.alert-success,
+.success-message {
+  background-color: rgba(0, 128, 0, 0.85);
+  color: #fff;
 }
 
 .name-container {

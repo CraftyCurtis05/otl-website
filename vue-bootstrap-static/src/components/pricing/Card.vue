@@ -147,6 +147,7 @@ p {
 
 .card:hover {
     background: white;
+    margin-inline: 0vw;
     transform: scale(1);
     cursor: auto;
 }
@@ -166,6 +167,13 @@ summary:hover,
 
     p {
         font-size: .85rem;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+
+    summary {
+        margin-left: 1.5vw;
     }
 }
 

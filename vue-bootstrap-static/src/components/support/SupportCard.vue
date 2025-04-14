@@ -102,16 +102,20 @@ export default {
 </script>
 
 <style scoped>
+.list-container {
+  margin: auto;
+  margin-top: 1%;
+  width: 75%;
+}
+
 .list {
-  padding-inline: 5%;
-  padding-block: .5%;
+  padding-block: 1%;
 }
 
 h1,
 hr,
 li {
   color: black;
-  text-align: start;
   text-decoration: none;
   padding: 0;
   margin: 0;
@@ -120,11 +124,13 @@ li {
 h1 {
   font-size: 1.3rem;
   font-weight: bold;
+  text-align: center;
 }
 
 hr {
   color: #545454;
   border: .2rem solid #545454;
+  margin: auto;
   margin-block: .3%;
   width: 15%;
 }
@@ -138,11 +144,11 @@ li {
   flex-direction: row;
   margin: auto;
   margin-bottom: 2%;
-  width: 25%;
+  width: 50%;
 }
 
 .btn {
-  margin: 0;
+  margin: 0 auto;
   margin-inline: 5%;
 }
 
@@ -178,10 +184,6 @@ li {
     font-size: .95rem;
   }
 
-  .btn-container {
-    width: 40%;
-  }
-
   .btn {
     font-size: .9rem;
     width: 50%;
@@ -194,6 +196,10 @@ li {
 }
 
 @media only screen and (max-width: 768px) {
+
+  .list-container {
+    width: 80%;
+  }
 
   h1 {
     font-size: 1.05rem;
@@ -224,6 +230,10 @@ li {
 }
 
 @media only screen and (max-width: 480px) {
+  
+  .list-container {
+    width: 90%;
+  }
 
   h1 {
     font-size: .95rem;
@@ -238,7 +248,7 @@ li {
   }
 
   .btn-container {
-    width: 90%;
+    width: 100%;
   }
 
   .btn {
