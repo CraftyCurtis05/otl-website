@@ -1,213 +1,124 @@
 # OTL On The Line Communications Website
-This is the official website for **OTL On The Line Communications**, a modern, responsive site built with [Vue.js 3](https://vuejs.org/), [Bootstrap 5](https://getbootstrap.com/), and integrated with [EmailJS](https://www.emailjs.com/) for contact form functionality.
-It’s optimized for desktop, tablet, and mobile users with full SEO meta tag support.
 
----
+### Business Website & Digital Presence Platform
 
-## Table of Contents
+A responsive business website designed and developed for OTL On The Line Communications to establish a professional online presence, communicate service offerings, and improve customer engagement.
 
-- [Project Overview](#project-overview)
-- [How to Use the Website](#how-to-use-the-website)
-- [Managing Your Contact Form](#managing-your-contact-form)
-- [Project Setup](#project-setup)
-- [Development Server](#development-server)
-- [Production Build](#production-build)
-- [Lint & Fix Code](#lint--fix-code)
-- [Deployment Notes](#deployment-notes)
-- [Routing Structure](#routing-structure)
-- [SEO & Meta Tags](#seo--meta-tags)
-- [Tech Stack](#tech-stack)
-- [EmailJS Setup](#emailjs-setup)
-- [License & Credits](#license--credits)
+The project focused on creating a modern, mobile-friendly experience that supports lead generation, improves accessibility to company information, and provides a streamlined communication channel for prospective customers.
 
 ---
 
 ## Project Overview
 
-The **OTL On The Line Communications Website** is designed to offer your visitors a professional and user-friendly experience.  
-Key features of the website include:
+OTL On The Line Communications required a professional web presence that clearly communicated its services while providing visitors with an intuitive and responsive user experience.
 
-- **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices.
-- **SEO-Friendly**: The site is built to be search engine friendly, ensuring that your content is properly indexed by search engines.
-- **Contact Form**: Integrated with **EmailJS** to allow easy email communication from the contact form.
-- **Vue.js and Bootstrap**: The site is built using **Vue.js** for interactivity and **Bootstrap** for layout and design.
+The website was designed to:
 
----
-
-## How to Use the Website
-
-Your website has been designed to provide a seamless experience for your visitors. Here are the core features:
-
-### Navigation
-- Use the **navigation menu** at the top of the page to visit different sections such as Services, Support, Pricing, and Contact.
-- The footer of the page also contains useful links like your Privacy Policy and Terms & Conditions.
-
-### Contact Form
-- Your website includes a **contact form** which users can use to get in touch with you directly. The form sends submissions to your designated email through **EmailJS**. We'll go over how to manage and configure the email functionality in the next section.
+- Improve online visibility
+- Present services in a clear and organized format
+- Provide a direct customer communication channel
+- Support mobile, tablet, and desktop users
+- Improve search engine discoverability through SEO optimization
 
 ---
 
-## Managing Your Contact Form
+## Key Features
 
-The contact form is integrated with **EmailJS**, a service that allows you to send form submissions to your email. To ensure the form works correctly, follow these steps:
+### Responsive Design
 
-### 1. **Set Up Your EmailJS Account**
+- Mobile-first responsive layout
+- Desktop, tablet, and mobile compatibility
+- Consistent user experience across devices
 
-- Create an account on the [EmailJS Dashboard](https://dashboard.emailjs.com/sign-in).
-- Connect your email service (e.g., Gmail, Outlook) to the account.
-- After connecting your email, you'll get your **Service ID**, **Template ID**, and **User ID**. These values will need to be added to the `.env` configuration file in your project.
+### Lead Generation
 
-### 2. **Updating Environment Variables**
+- Contact form integration using EmailJS
+- Direct customer inquiry functionality
+- Streamlined communication workflow
 
-In your project’s `.env` file, make sure the following values are configured:
+### SEO Optimization
 
-```env
-VUE_APP_EMAILJS_SERVICE_ID=your_service_id
-VUE_APP_EMAILJS_TEMPLATE_ID=your_template_id
-VUE_APP_EMAILJS_USER_ID=your_user_id
-```
+- Dynamic page metadata
+- Search engine-friendly page structure
+- Open Graph support for social sharing
 
-If you need to change the email template or adjust the design of the contact form, you can do so in the EmailJS Dashboard.
+### Business Information Architecture
 
-### 3. **Test Your Form**
-
-Once everything is set up, test the contact form by submitting a test message. If you receive the email, the form is working correctly.
-
----
-
-## Project Setup
-To get started with the project, follow these steps:
-
-### 1. Install Dependencies
-Make sure you have **Node.js** (v10.9.0 or higher) installed on your machine. Then, run the following command to install the required dependencies:
-
-```bash
-npm install
-```
-
-### 2. Required Packages Installed
-
-```bash
-npm install vue@^3.5.13
-npm install bootstrap@^5.3.5
-npm install vue-meta@^3.0.0-alpha.7
-npm install @emailjs/browser@latest
-```
+- Service-focused navigation
+- Structured content organization
+- Privacy Policy and Terms pages
+- User-friendly site navigation
 
 ---
 
-## Development Server
-To run the development server locally, execute the following command:
+## Technical Highlights
 
-```bash
-npm run serve
-```
-
-The application will be available at [http://localhost:8080/](http://localhost:8080/).
-
----
-
-## Production Build
-To build the project for production (static files ready for deployment), use the following command:
-
-```bash
-npm run build
-```
-
-This will generate a production-ready build in the `/dist` folder.
+- Designed and developed a responsive business website using Vue.js and Bootstrap
+- Implemented EmailJS integration to support customer inquiry workflows
+- Configured route-specific SEO metadata using Vue Meta
+- Designed reusable Vue components for maintainability and scalability
+- Structured application routing using Vue Router
+- Optimized user experience across desktop and mobile environments
 
 ---
 
-## Lint & Fix Code
-To lint the project files and automatically fix any issues, run:
+## Technology Stack
 
-```bash
-npm run lint
-```
-
----
-
-## Deployment Notes
-If you are hosting this website on your own server, please follow these instructions:
-
-1. **Upload the contents of the** `/dist` **folder** to the root of your web server (e.g., via FTP, SSH, or any file transfer method).
-
-2. Make sure your server is configured to always serve `index.html` for any route to support Vue Router's history mode (this is important for handling deep links and page refreshes correctly).
-
-    - If you're using **NGINX** or **Apache**, you might need to configure the server to handle `404` errors by redirecting to `index.html` so that the Vue Router can take over and show the correct content.
+| Category | Technologies |
+|-----------|-------------|
+| Frontend | Vue.js, JavaScript, HTML5, CSS3 |
+| UI Framework | Bootstrap 5 |
+| Routing | Vue Router |
+| SEO | Vue Meta |
+| Contact Forms | EmailJS |
+| Tools | Git, GitHub, VS Code |
 
 ---
 
-## Routing Structure
-The project uses Vue Router to manage routing. Here are the routes and their corresponding views:
+## Business Value
 
-| Route | View |
-| ----------- | ----------- |
-| / | → HomeView |
-| /services | → ServicesView |
-| /support | → SupportView |
-| /pricing | → PricingView |
-| /contact | → ContactView |
-| /privacy | → PrivacyPolicyView |
-| /terms | → TermsConditionsView |
-| /* | → NotFoundView (404) |
+This project demonstrates:
+
+- Requirements gathering and client collaboration
+- Responsive web design
+- Frontend application development
+- Third-party service integration
+- SEO implementation
+- User experience design
+- Business-focused solution delivery
 
 ---
 
-## SEO & Meta Tags
-Each route in the app dynamically injects meta tags using vue-meta. This ensures that the site is optimized for SEO and social media sharing.
+## Screenshots
 
-- **Meta Tags**: Each page has specific meta tags, including the title, description, and Open Graph tags.
+### Home Page
 
-- **SEO**: By dynamically generating these meta tags for each route, the site ensures it is properly indexed by search engines.
+![Home Page](images/home-page.png)
 
----
+### Services Page
 
-## Tech Stack
+![Services Page](images/services-page.png)
 
-- **Vue.js**: `3.5.13`
+### Contact Page
 
-- **Bootstrap**: `5.3.5`
-
-- **Vue Router**: `4.5.0`
-
-- **Vue Meta**: `3.0.0-alpha.7`
-
-- **EmailJS**: `4.4.1`
-
-- **ESLint**: `^7.32.0`
+![Contact Page](images/contact-page.png)
 
 ---
 
-## EmailJS Setup
-If the contact form is not functioning properly, follow these steps:
+## Live Site
 
-1. Reconnect your Outlook account in the [EmailJS Dashboard](https://dashboard.emailjs.com/sign-in).
-
-2. Ensure that the following environment variables are set correctly in your `.env` file:
-
-```env
-VUE_APP_EMAILJS_SERVICE_ID=your_service_id
-VUE_APP_EMAILJS_TEMPLATE_ID=your_template_id
-VUE_APP_EMAILJS_USER_ID=your_user_id
-```
-
-3. After updating `.env`, rebuild the project to apply the changes:
-
-```bash
-npm run build
-```
+[Visit OTL On The Line Communications](https://your-live-site-url.com)
 
 ---
 
-## License & Credits
-This project was developed by [Jennifer Curtis](https://github.com/CraftyCurtis05) for **OTL On The Line Communications**.
-All content, design and branding are © Five Nine Technologies, LLC 2025.
+## Author
 
----
+**Jennifer Curtis**
 
-## Additional Information for Clients:
+Business Systems Analyst | Full-Stack Developer
 
-If you need to make any changes to the website (such as adding new pages, updating content, or adjusting the design), please reach out to the developer. You may also want to familiarize yourself with the **EmailJS Dashboard** for managing contact form templates and viewing form submissions.
+Portfolio: https://jennifercurtis.me
 
-For ongoing maintenance, it’s important to keep the dependencies up to date. If you want to update any technology stack or library, we recommend doing so carefully and testing the website thoroughly after each update.
+LinkedIn: https://linkedin.com/in/jcurtisdeveloper
+
+GitHub: https://github.com/craftycurtis05
