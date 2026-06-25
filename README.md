@@ -83,7 +83,7 @@ My contributions included:
 
 ## Screenshots
 
-The following screenshots demonstrate the site's evolution, primary user experience, and business-focused page structure.
+The following screenshots demonstrate the primary user experience throughout the website.
 
 ### Original Website
 
