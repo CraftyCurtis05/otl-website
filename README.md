@@ -2,25 +2,25 @@
 
 ### Business Website & Digital Presence Platform
 
-OTL On The Line Communications is a business website developed to establish a professional online presence, improve customer communication, and present company services through a clear and organized user experience.
+OTL On The Line Communications is a business website developed to improve company presentation, customer communication, and overall site organization.
 
-This project demonstrates client collaboration, information architecture, frontend web development, responsive design, and third-party service integration.
+The project demonstrates client collaboration, information architecture, frontend web development, responsive design, and third-party service integration.
 
-The original website contained fragmented content and inconsistent navigation. I reorganized the site's structure, redesigned the user experience, and implemented a more intuitive information architecture to improve usability and content accessibility. The live website has since received additional design updates by others.
+The original website contained fragmented content, inconsistent navigation, and limited clarity. My work focused on reorganizing the site structure, improving navigation, creating a clearer user experience, and implementing a more functional customer contact workflow. The live website has since received additional design updates by others.
 
 ---
 
 ## Project Overview
 
-The project focused on transforming an existing business website into a more organized and user-friendly platform.
+This project focused on transforming an existing business website into a more organized and user-friendly platform.
 
 Primary objectives included:
 
 - Reorganizing website content into a logical navigation structure
-- Improving the overall user experience
-- Presenting company services in a clear and professional format
-- Creating a reliable customer contact workflow
-- Supporting search engine visibility through SEO best practices
+- Improving information flow and page hierarchy
+- Presenting company services in a clearer format
+- Creating a customer contact workflow using EmailJS
+- Supporting search visibility through route-specific metadata
 
 ---
 
@@ -28,25 +28,25 @@ Primary objectives included:
 
 ### Information Architecture
 
-- Reorganized site navigation and page hierarchy
+- Reorganized page structure and navigation
 - Improved content organization and readability
-- Structured business information for easier customer navigation
+- Structured business information for easier customer access
 
 ### Customer Communication
 
 - Contact form integration using EmailJS
 - Streamlined customer inquiry workflow
-- Accessible contact information throughout the site
+- Accessible contact path for prospective customers
 
 ### User Experience
 
-- Responsive layouts for desktop, tablet, and mobile devices
+- Responsive layouts for desktop, tablet, and mobile users
 - Reusable Vue.js components
 - Consistent navigation and page structure
 
 ### SEO Implementation
 
-- Dynamic page metadata
+- Route-specific metadata
 - Open Graph support
 - Search engine-friendly page organization
 
@@ -54,7 +54,7 @@ Primary objectives included:
 
 ## Technical Implementation
 
-The application is built as a Vue.js single-page application utilizing reusable components, client-side routing, and EmailJS integration to support customer communication.
+The website was built as a Vue.js single-page application using reusable components, client-side routing, Bootstrap styling, and EmailJS integration.
 
 My contributions included:
 
@@ -64,7 +64,7 @@ My contributions included:
 - Integrated EmailJS for customer contact functionality
 - Configured route-specific SEO metadata
 - Structured client-side routing using Vue Router
-- Improved overall usability through simplified navigation and page organization
+- Improved usability through simplified navigation and page organization
 
 ---
 
@@ -83,37 +83,45 @@ My contributions included:
 
 ## Screenshots
 
-The following screenshots demonstrate the primary user workflows and business-focused pages throughout the application.
+The following screenshots demonstrate the site organization, customer-facing pages, and contact workflow.
+
+### Original Website
+
+Initial website state before restructuring and content organization.
+
+![Original Website](images/00-original-home.png)
+
+---
 
 ### Home Page
 
 Introduces the company and primary navigation.
 
-![Home](images/01-home.png)
+![Home Page](images/01-home.png)
 
 ---
 
-### Services
+### Services Page
 
 Displays organized service offerings and business information.
 
-![Services](images/02-services.png)
+![Services Page](images/02-services.png)
 
 ---
 
-### Contact
+### Contact Page
 
 Customer contact form powered by EmailJS.
 
-![Contact](images/03-contact.png)
+![Contact Page](images/03-contact.png)
 
 ---
 
 ## Project Notes
 
-This project represents an early freelance engagement completed while building experience in frontend development and client collaboration.
+This project represents an early freelance engagement completed while building experience in frontend development, client collaboration, and business-focused website organization.
 
-Although the live website has since received additional design updates, this repository reflects my original contributions, including restructuring the site's organization, improving navigation, implementing responsive layouts, and integrating customer communication features.
+The live website has since received additional visual design updates by others. This repository reflects my original contributions, including restructuring the site organization, improving navigation, implementing responsive layouts, configuring metadata, and integrating customer communication features.
 
 ---
 
@@ -123,8 +131,8 @@ Although the live website has since received additional design updates, this rep
 
 Business Systems Analyst | Full-Stack Developer
 
-🌐 **Portfolio:** https://jennifercurtis.me
+🌐 **Portfolio:** [jennifercurtis.me](https://jennifercurtis.me)
 
-💼 **LinkedIn:** https://linkedin.com/in/jcurtisdeveloper
+💼 **LinkedIn:** [linkedin.com/in/jcurtisdeveloper](https://linkedin.com/in/jcurtisdeveloper)
 
-💻 **GitHub:** https://github.com/craftycurtis05
+💻 **GitHub:** [github.com/craftycurtis05](https://github.com/craftycurtis05)
