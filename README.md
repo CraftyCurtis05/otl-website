@@ -1,64 +1,70 @@
-# OTL On The Line Communications Website
+# OTL On The Line Communications
 
 ### Business Website & Digital Presence Platform
 
-A responsive business website designed and developed for OTL On The Line Communications to establish a professional online presence, communicate service offerings, and improve customer engagement.
+OTL On The Line Communications is a business website developed to establish a professional online presence, improve customer communication, and present company services through a clear and organized user experience.
 
-The project focused on creating a modern, mobile-friendly experience that supports lead generation, improves accessibility to company information, and provides a streamlined communication channel for prospective customers.
+This project demonstrates client collaboration, information architecture, frontend web development, responsive design, and third-party service integration.
+
+The original website contained fragmented content and inconsistent navigation. I reorganized the site's structure, redesigned the user experience, and implemented a more intuitive information architecture to improve usability and content accessibility. The live website has since received additional design updates by others.
 
 ---
 
 ## Project Overview
 
-OTL On The Line Communications required a professional web presence that clearly communicated its services while providing visitors with an intuitive and responsive user experience.
+The project focused on transforming an existing business website into a more organized and user-friendly platform.
 
-The website was designed to:
+Primary objectives included:
 
-- Improve online visibility
-- Present services in a clear and organized format
-- Provide a direct customer communication channel
-- Support mobile, tablet, and desktop users
-- Improve search engine discoverability through SEO optimization
+- Reorganizing website content into a logical navigation structure
+- Improving the overall user experience
+- Presenting company services in a clear and professional format
+- Creating a reliable customer contact workflow
+- Supporting search engine visibility through SEO best practices
 
 ---
 
 ## Key Features
 
-### Responsive Design
+### Information Architecture
 
-- Mobile-first responsive layout
-- Desktop, tablet, and mobile compatibility
-- Consistent user experience across devices
+- Reorganized site navigation and page hierarchy
+- Improved content organization and readability
+- Structured business information for easier customer navigation
 
-### Lead Generation
+### Customer Communication
 
 - Contact form integration using EmailJS
-- Direct customer inquiry functionality
-- Streamlined communication workflow
+- Streamlined customer inquiry workflow
+- Accessible contact information throughout the site
 
-### SEO Optimization
+### User Experience
+
+- Responsive layouts for desktop, tablet, and mobile devices
+- Reusable Vue.js components
+- Consistent navigation and page structure
+
+### SEO Implementation
 
 - Dynamic page metadata
-- Search engine-friendly page structure
-- Open Graph support for social sharing
-
-### Business Information Architecture
-
-- Service-focused navigation
-- Structured content organization
-- Privacy Policy and Terms pages
-- User-friendly site navigation
+- Open Graph support
+- Search engine-friendly page organization
 
 ---
 
-## Technical Highlights
+## Technical Implementation
 
-- Designed and developed a responsive business website using Vue.js and Bootstrap
-- Implemented EmailJS integration to support customer inquiry workflows
-- Configured route-specific SEO metadata using Vue Meta
-- Designed reusable Vue components for maintainability and scalability
-- Structured application routing using Vue Router
-- Optimized user experience across desktop and mobile environments
+The application is built as a Vue.js single-page application utilizing reusable components, client-side routing, and EmailJS integration to support customer communication.
+
+My contributions included:
+
+- Reorganized website structure and information architecture
+- Designed and implemented reusable Vue.js components
+- Developed responsive layouts using Vue.js and Bootstrap
+- Integrated EmailJS for customer contact functionality
+- Configured route-specific SEO metadata
+- Structured client-side routing using Vue Router
+- Improved overall usability through simplified navigation and page organization
 
 ---
 
@@ -70,44 +76,44 @@ The website was designed to:
 | UI Framework | Bootstrap 5 |
 | Routing | Vue Router |
 | SEO | Vue Meta |
-| Contact Forms | EmailJS |
+| Third-Party Services | EmailJS |
 | Tools | Git, GitHub, VS Code |
-
----
-
-## Business Value
-
-This project demonstrates:
-
-- Requirements gathering and client collaboration
-- Responsive web design
-- Frontend application development
-- Third-party service integration
-- SEO implementation
-- User experience design
-- Business-focused solution delivery
 
 ---
 
 ## Screenshots
 
+The following screenshots demonstrate the primary user workflows and business-focused pages throughout the application.
+
 ### Home Page
 
-![Home Page](images/home-page.png)
+Introduces the company and primary navigation.
 
-### Services Page
-
-![Services Page](images/services-page.png)
-
-### Contact Page
-
-![Contact Page](images/contact-page.png)
+![Home](images/01-home.png)
 
 ---
 
-## Live Site
+### Services
 
-[Visit OTL On The Line Communications](https://your-live-site-url.com)
+Displays organized service offerings and business information.
+
+![Services](images/02-services.png)
+
+---
+
+### Contact
+
+Customer contact form powered by EmailJS.
+
+![Contact](images/03-contact.png)
+
+---
+
+## Project Notes
+
+This project represents an early freelance engagement completed while building experience in frontend development and client collaboration.
+
+Although the live website has since received additional design updates, this repository reflects my original contributions, including restructuring the site's organization, improving navigation, implementing responsive layouts, and integrating customer communication features.
 
 ---
 
@@ -117,8 +123,8 @@ This project demonstrates:
 
 Business Systems Analyst | Full-Stack Developer
 
-Portfolio: https://jennifercurtis.me
+🌐 **Portfolio:** https://jennifercurtis.me
 
-LinkedIn: https://linkedin.com/in/jcurtisdeveloper
+💼 **LinkedIn:** https://linkedin.com/in/jcurtisdeveloper
 
-GitHub: https://github.com/craftycurtis05
+💻 **GitHub:** https://github.com/craftycurtis05
