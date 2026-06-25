@@ -2,7 +2,7 @@
 
 ### Business Website & Digital Presence Platform
 
-OTL On The Line Communications is a business website developed to improve company presentation, customer communication, and overall site organization.
+OTL On The Line Communications is a business website and digital presence platform developed to improve company presentation, customer communication, and overall site organization.
 
 The project demonstrates client collaboration, information architecture, frontend web development, responsive design, and third-party service integration.
 
