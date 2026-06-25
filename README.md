@@ -83,37 +83,53 @@ My contributions included:
 
 ## Screenshots
 
-The following screenshots demonstrate the site organization, customer-facing pages, and contact workflow.
+The following screenshots demonstrate the site's evolution, primary user experience, and business-focused page structure.
 
 ### Original Website
 
-Initial website state before restructuring and content organization.
+Original website before restructuring and navigation improvements.
 
-![Original Website](images/00-original-home.png)
+![Original Website](images/original/01-home.png)
 
 ---
 
 ### Home Page
 
-Introduces the company and primary navigation.
+Introduces the company, primary navigation, and featured services.
 
 ![Home Page](images/01-home.png)
 
 ---
 
-### Services Page
+### Services
 
-Displays organized service offerings and business information.
+Organized service offerings with improved content hierarchy and readability.
 
-![Services Page](images/02-services.png)
+![Services](images/02-services.png)
 
 ---
 
-### Contact Page
+### Support
 
-Customer contact form powered by EmailJS.
+Dedicated support page providing customers with accessible assistance and service information.
 
-![Contact Page](images/03-contact.png)
+![Support](images/03-support.png)
+
+---
+
+### Pricing
+
+Structured pricing information designed to improve transparency and customer decision-making.
+
+![Pricing](images/04-pricing.png)
+
+---
+
+### Contact
+
+Integrated EmailJS contact form providing a streamlined customer communication workflow.
+
+![Contact](images/05-contact.png)
 
 ---
 
